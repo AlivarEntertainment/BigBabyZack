@@ -17,6 +17,12 @@ public class Enemy : MonoBehaviour
     bool chill = false;
     bool angry = false;
     bool goBack = false;
+    [Header("Attack")]
+    public int attackRange;
+    public LayerMask WhatIsPlayer;
+    public Transform attackPoint;
+    private float timeBtwAttack;
+    public float startTimeBtwAttack;
     //121212
     void Start()
     {
@@ -79,6 +85,15 @@ public class Enemy : MonoBehaviour
     {
         transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
         speed = 3;
+        if(timeBtwAttack <= 0)
+        {
+            AttackPlayer();
+            timeBtwAttack = startTimeBtwAttack;
+        }
+        else
+        {
+            timeBtwAttack -= Time.deltaTime;
+        }
     }
     void GoBack()
     {
@@ -89,12 +104,22 @@ public class Enemy : MonoBehaviour
         currentHealth -= Damage;
         if(currentHealth <= 0)
         {
-            Die();
+            DieEnemy();
         }
     }
-    void Die()
+    public void DieEnemy()
     {   
         Debug.Log("Pomer");
-        //animator
+        Destroy(this.gameObject);
+    }
+    void AttackPlayer()
+    {
+        //animator attackRub
+        Collider2D[] hitPlayers = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, WhatIsPlayer);
+        foreach(Collider2D Playerr in hitPlayers)
+        {
+            Playerr.GetComponent<MainLyfe>().PlayerTakeDamage();
+        }
+
     }
 }
