@@ -6,6 +6,8 @@ public class Enemy : MonoBehaviour
 {
     public int maxHeath = 5;
     public int currentHealth;
+    bool facingRight;
+
     [Header("Patroler")]
     public float speed;
     public int positionOfPatrol;
@@ -17,12 +19,15 @@ public class Enemy : MonoBehaviour
     bool chill = false;
     bool angry = false;
     bool goBack = false;
+
     [Header("Attack")]
     public int attackRange;
     public LayerMask WhatIsPlayer;
     public Transform attackPoint;
     private float timeBtwAttack;
     public float startTimeBtwAttack;
+
+  
     //121212
     void Start()
     {
@@ -30,7 +35,7 @@ public class Enemy : MonoBehaviour
         currentHealth = maxHeath;
     }
     void Update()
-    {
+    {   
         if(Vector2.Distance(transform.position, point.position) < positionOfPatrol && angry == false)
         {
             chill = true;
@@ -61,6 +66,7 @@ public class Enemy : MonoBehaviour
     }
     void Chill()
     {   
+      
         speed = 2;
         if(transform.position.x > point.position.x + positionOfPatrol)
         {
@@ -73,13 +79,20 @@ public class Enemy : MonoBehaviour
         if(moveingRight)
         {
             transform.position = new Vector2(transform.position.x + speed * Time.deltaTime, transform.position.y);
-
+            if(facingRight != true)
+            {
+                Flip();
+            }
         }
         else
         {
             transform.position = new Vector2(transform.position.x - speed * Time.deltaTime, transform.position.y);
-
+            if(facingRight == true)
+            {
+                Flip();
+            }
         }
+
     }
     void Angry()
     {
@@ -93,6 +106,14 @@ public class Enemy : MonoBehaviour
         else
         {
             timeBtwAttack -= Time.deltaTime;
+        }
+        if(player.position.x > transform.position.x && facingRight == false)
+        {
+            Flip();
+        }
+        else if(player.position.x < transform.position.x && facingRight != false)
+        {
+            Flip();
         }
     }
     void GoBack()
@@ -121,5 +142,12 @@ public class Enemy : MonoBehaviour
             Playerr.GetComponent<MainLyfe>().PlayerTakeDamage();
         }
 
+    }
+    void Flip()
+    {
+        facingRight = !facingRight;
+        Vector3 Scaler = transform.localScale;
+        Scaler.x *= -1;
+        transform.localScale = Scaler;
     }
 }
