@@ -23,6 +23,9 @@ public class PlayerController : MonoBehaviour
     private float MoveInputYY;
     public bool IsClimbing = false;
 
+    
+    
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -39,13 +42,15 @@ public class PlayerController : MonoBehaviour
         }
     }
     private void Update()
-    {
+    {   
+        
         IsGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
 
         if(IsGrounded == true && Input.GetKeyDown(KeyCode.Space) && IsClimbing == false)
         {
             rb.velocity = Vector2.up * jumpForce;
         }
+        
     }
     public void MoveGround()
     {
@@ -73,4 +78,5 @@ public class PlayerController : MonoBehaviour
         Scaler.x *= -1;
         transform.localScale = Scaler;
     }
+   
 }

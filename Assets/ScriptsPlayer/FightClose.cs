@@ -20,6 +20,7 @@ public class FightClose : MonoBehaviour
             if(TimeStart >= timeToHold)
             {
                 Debug.Log("Колющий удар");
+              
                 AttackDamage = 3;
                 AttackRub();
                 TimeStart = 0;
@@ -44,7 +45,7 @@ public class FightClose : MonoBehaviour
         //animator attackRub
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, WhatIsEnemy);
         foreach(Collider2D enemy in hitEnemies)
-        {
+        {   
             enemy.GetComponent<Enemy>().TakeDamage(AttackDamage);
         }
 
