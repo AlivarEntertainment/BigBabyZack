@@ -5,6 +5,8 @@ using UnityEngine;
 public class OpenChest : MonoBehaviour
 {
     public GameObject sword;
+    public Animator animatorChest;
+
     public void OnTriggerStay2D(Collider2D player)
     {
 
@@ -12,8 +14,14 @@ public class OpenChest : MonoBehaviour
         {
            if (Input.GetKey(KeyCode.E))
             {
-                sword.SetActive(true);
+                StartCoroutine(OpneChestCor());
+                animatorChest.SetTrigger("Open");
             }
         }
+    }
+    public IEnumerator OpneChestCor()
+    {
+        yield return new WaitForSeconds(0.7f);
+        sword.SetActive(true);
     }
 }
