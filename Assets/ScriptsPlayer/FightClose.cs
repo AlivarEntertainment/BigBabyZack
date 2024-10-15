@@ -12,6 +12,11 @@ public class FightClose : MonoBehaviour
     public LayerMask WhatIsEnemy;
     public float timeToHold;
     public float TimeStart = 0;
+    //public Rigidbody2D playerRB;
+    public PlayerController playerController;
+    public float TimeToDash;
+    public float TimeDashing;
+    public bool IsDashing = true;
     public void Update()
     {
         if(pressedAttacking == true)
@@ -25,6 +30,7 @@ public class FightClose : MonoBehaviour
                 AttackRub();
                 TimeStart = 0;
                 pressedAttacking = false;
+                IsDashing = true;
             }
             
         }
@@ -39,6 +45,36 @@ public class FightClose : MonoBehaviour
             }
             
         }
+        if(IsDashing == true)
+        {
+            if(playerController.facingRight == true)
+            {   
+                if(TimeDashing <= TimeToDash)
+                {   
+                    TimeDashing += Time.deltaTime;
+                    playerController.rb.AddForce(Vector3.right * 100);
+                }
+                else
+                {
+                    IsDashing = false;
+                    TimeDashing = 0;
+                }
+            }
+            else
+            {
+                if(TimeDashing <= TimeToDash)
+                {   
+                    TimeDashing += Time.deltaTime;
+                    playerController.rb.AddForce(Vector3.right * -100);
+                }
+                else
+                {
+                    IsDashing = false;
+                    TimeDashing = 0;
+                }
+            }
+        }
+        
     }
     void AttackRub()
     {

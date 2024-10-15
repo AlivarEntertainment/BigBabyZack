@@ -8,8 +8,8 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public float jumpForce;
     private float MoveInput;
-    private Rigidbody2D rb;
-    private bool facingRight = true;
+    public Rigidbody2D rb;
+    public bool facingRight = true;
 
 
     [Header("Jump")]
@@ -51,12 +51,14 @@ public class PlayerController : MonoBehaviour
             rb.velocity = Vector2.up * jumpForce;
         }
         
+        
     }
     public void MoveGround()
     {
         MoveInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(MoveInput * speed, rb.velocity.y);
 
+       
         if(facingRight == false && MoveInput > 0)
         {
             Flip();
@@ -78,5 +80,5 @@ public class PlayerController : MonoBehaviour
         Scaler.x *= -1;
         transform.localScale = Scaler;
     }
-   
+    
 }
