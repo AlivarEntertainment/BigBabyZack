@@ -17,7 +17,8 @@ public class FightClose : MonoBehaviour
     public float TimeToDash;
     public float TimeDashing;
     public bool IsDashing = true;
-    public void Update()
+    public Animator playerAnim;
+    public void FixedUpdate()
     {
         if(pressedAttacking == true)
         {   
@@ -25,7 +26,7 @@ public class FightClose : MonoBehaviour
             if(TimeStart >= timeToHold)
             {
                 Debug.Log("Колющий удар");
-              
+                playerAnim.SetTrigger("Kolit");
                 AttackDamage = 3;
                 AttackRub();
                 TimeStart = 0;
@@ -34,25 +35,24 @@ public class FightClose : MonoBehaviour
             }
             
         }
-        else
-        {   
-            if(TimeStart < timeToHold && TimeStart >= 0.01f)
-            {
-                Debug.Log("рубящий удар");
-                AttackDamage = 1;
-                AttackRub();
-                TimeStart = 0;
-            }
-            
+        else if (TimeStart < timeToHold && TimeStart >= 0.01f)
+        {
+
+            Debug.Log("рубящий удар");
+            playerAnim.SetTrigger("Rubit");
+            AttackDamage = 1;
+            AttackRub();
+            TimeStart = 0;
+            pressedAttacking = false;
         }
-        if(IsDashing == true)
+        if (IsDashing == true)
         {
             if(playerController.facingRight == true)
             {   
                 if(TimeDashing <= TimeToDash)
                 {   
                     TimeDashing += Time.deltaTime;
-                    playerController.rb.AddForce(Vector3.right * 100);
+                    playerController.rb.AddForce(Vector3.right * 600);
                 }
                 else
                 {
@@ -65,7 +65,7 @@ public class FightClose : MonoBehaviour
                 if(TimeDashing <= TimeToDash)
                 {   
                     TimeDashing += Time.deltaTime;
-                    playerController.rb.AddForce(Vector3.right * -100);
+                    playerController.rb.AddForce(Vector3.right * -600);
                 }
                 else
                 {
