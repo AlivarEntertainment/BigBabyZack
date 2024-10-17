@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     private float MoveInput;
     public Rigidbody2D rb;
     public bool facingRight = true;
-
+    public Animator PlayerAnimator;
 
     [Header("Jump")]
     public Transform feetPos;
@@ -39,6 +39,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             MoveGround();
+            PlayerAnimator.SetBool("Leddering", false);
         }
     }
     private void Update()
@@ -46,18 +47,33 @@ public class PlayerController : MonoBehaviour
         
         IsGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
 
-        if(IsGrounded == true && Input.GetKeyDown(KeyCode.Space) && IsClimbing == false)
+        if (IsGrounded == true && Input.GetKeyDown(KeyCode.Space) && IsClimbing == false)
         {
             rb.velocity = Vector2.up * jumpForce;
+
         }
-        
+        else if (IsGrounded == false && IsClimbing == false)
+        {
+            PlayerAnimator.SetBool("Falling", true);
+        }
+        else if (IsGrounded == true)
+        {
+            PlayerAnimator.SetBool("Falling", false);
+        }
         
     }
     public void MoveGround()
     {
         MoveInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(MoveInput * speed, rb.velocity.y);
-
+        if(MoveInput != 0)
+        {
+            PlayerAnimator.SetBool("IsWalking", true);
+        }
+        else
+        {
+            PlayerAnimator.SetBool("IsWalking", false);
+        }
        
         if(facingRight == false && MoveInput > 0)
         {
@@ -70,6 +86,8 @@ public class PlayerController : MonoBehaviour
     }
     public void Laddering()
     {
+        PlayerAnimator.SetBool("IsWalking", false);
+        PlayerAnimator.SetBool("Leddering", true);
         MoveInputYY = Input.GetAxis("Vertical");
         rb.velocity = new Vector2(0, MoveInputYY * LedderSpeed);
     }
