@@ -623,7 +623,7 @@ Transform:
   m_GameObject: {fileID: 413960459}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.8431082, y: 0.17518592, z: -10}
+  m_LocalPosition: {x: -20.469673, y: 3.2889028, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2211,7 +2211,7 @@ Transform:
   m_GameObject: {fileID: 1371378019}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.3899994, y: -1.47, z: -10}
+  m_LocalPosition: {x: -23.78, y: 3.22, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3583,6 +3583,7 @@ MonoBehaviour:
   jumpForce: 6
   rb: {fileID: 0}
   facingRight: 1
+  PlayerAnimator: {fileID: 0}
   feetPos: {fileID: 7326436460810762793}
   checkRadius: 0.6
   whatIsGround:
@@ -3755,6 +3756,7 @@ MonoBehaviour:
   TimeToDash: 0.2
   TimeDashing: 0
   IsDashing: 0
+  playerAnim: {fileID: 0}
 --- !u!4 &1201910476423123354
 Transform:
   m_ObjectHideFlags: 0
@@ -4003,7 +4005,7 @@ Transform:
   m_GameObject: {fileID: 368812289463451988}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.3899994, y: -1.47, z: 0}
+  m_LocalPosition: {x: -23.78, y: 3.22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
