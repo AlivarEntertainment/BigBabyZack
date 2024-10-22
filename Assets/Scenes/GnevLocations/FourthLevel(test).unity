@@ -2500,7 +2500,7 @@ GameObject:
   - component: {fileID: 1372925772}
   - component: {fileID: 1372925771}
   m_Layer: 0
-  m_Name: 5274010
+  m_Name: Chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3396,7 +3396,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   jumpForce: 6
+  rb: {fileID: 0}
   facingRight: 1
+  PlayerAnimator: {fileID: 0}
   feetPos: {fileID: 7326436459873898666}
   checkRadius: 0.6
   whatIsGround:
@@ -3548,6 +3550,11 @@ MonoBehaviour:
     m_Bits: 128
   timeToHold: 1
   TimeStart: 0
+  playerController: {fileID: 0}
+  TimeToDash: 0
+  TimeDashing: 0
+  IsDashing: 1
+  playerAnim: {fileID: 0}
 --- !u!4 &1201910475757730585
 Transform:
   m_ObjectHideFlags: 0
