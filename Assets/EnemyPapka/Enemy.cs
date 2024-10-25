@@ -6,7 +6,8 @@ public class Enemy : MonoBehaviour
 {
     public int maxHeath = 5;
     public int currentHealth;
-    bool facingRight;
+    bool facingRight = true;
+    public Animator EnemyAnimator;
 
     [Header("Patroler")]
     public float speed;
@@ -135,7 +136,7 @@ public class Enemy : MonoBehaviour
     }
     void AttackPlayer()
     {
-        //animator attackRub
+        EnemyAnimator.SetTrigger("Attack");
         Collider2D[] hitPlayers = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, WhatIsPlayer);
         foreach(Collider2D Playerr in hitPlayers)
         {
