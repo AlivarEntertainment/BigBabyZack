@@ -15,13 +15,13 @@ public class LeverLift : MonoBehaviour
     {
         if(PlayerLever.gameObject.tag == "Player")
         {
-            if(Input.GetKeyDown(KeyCode.E))
+            if(Input.GetKey(KeyCode.E))
             {
                 UseLever();
             }
         }
     }
-    public void OnCollisionStay2D(Collision2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Box")
         {
@@ -29,20 +29,15 @@ public class LeverLift : MonoBehaviour
             Debug.Log("Box");
         }
     }
-     public void OnCollisionExit2D(Collision2D collision)
-    {
-        if(collision.gameObject.tag == "Box")
-        {
-            BoxInPosition = false;
-        }
-    }
+     
     public void UseLever()
     {   
         if(BoxInPosition == true)
-        {   
+        {
+            LiftAnimator.SetTrigger("TakeBox");
             BoxDirector.Play();
             LowBox.SetActive(false);
-            LiftAnimator.SetTrigger("TakeBox");
+            
             StartCoroutine("AfterLift");
         }
         else if(BoxInPosition == false)
@@ -50,15 +45,11 @@ public class LeverLift : MonoBehaviour
             BoxDirector.Play();
             //LowBox.SetActive(false);
             LiftAnimator.SetTrigger("UseEmpty");
-        }
-        
-        
-        
-        
+        } 
     }
     IEnumerator AfterLift()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(4.5f);
         HighBox.SetActive(true);
     }
 }

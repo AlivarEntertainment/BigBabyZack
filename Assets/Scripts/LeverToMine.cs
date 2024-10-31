@@ -11,7 +11,7 @@ public class LeverToMine : MonoBehaviour
     {
         if(PlayerCol.gameObject.tag == "Player")
         {
-            if(Input.GetKeyDown(KeyCode.E))
+            if(Input.GetKey(KeyCode.E))
             {
                 UsedLever = true;
                 Blocker.SetActive(false);
