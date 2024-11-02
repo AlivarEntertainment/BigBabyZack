@@ -10,7 +10,7 @@ public class Bow : MonoBehaviour
     public PlayerController playerController;
     public Vector2 direction;
     public float limiUp = 170, limitDown = 10;
-    void Update()
+    public void Update()
     {   
         Vector2 bowPosition = transform.position;
         //Vector3 currentRotation = this.transform.localEulerAngles;
@@ -18,6 +18,7 @@ public class Bow : MonoBehaviour
         if(playerController.facingRight == true)
         {
             direction = mousePosition - bowPosition;
+            Debug.Log("Mv");
         }
         else{
             direction = bowPosition - mousePosition;
