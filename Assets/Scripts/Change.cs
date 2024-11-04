@@ -18,4 +18,9 @@ public class Change : MonoBehaviour
             SceneManager.LoadScene(sceneNumber);
         }
     }
+    public void ChangeSvene()
+    {
+        Debug.Log("Change");
+        SceneManager.LoadScene(sceneNumber);
+    }
 }

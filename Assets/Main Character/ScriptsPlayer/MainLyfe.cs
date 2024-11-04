@@ -5,6 +5,7 @@ using UnityEngine;
 public class MainLyfe : MonoBehaviour
 {
     public LyfeContr[] Lyfes;
+    public Animator DeadPanelAnimator;
     /*public void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.tag == "Player")
@@ -36,6 +37,7 @@ public class MainLyfe : MonoBehaviour
     {   
         Debug.Log("Pomer");
         Destroy(this.gameObject);
+        DeadPanelAnimator.SetTrigger("Appear");
     }
     
 }

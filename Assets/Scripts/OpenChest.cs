@@ -8,6 +8,7 @@ public class OpenChest : MonoBehaviour
     public GameObject sword;
     public Animator animatorChest;
     [SerializeField]private Animator PressE;
+    [SerializeField] private GameObject FightButton;
     public void OnTriggerStay2D(Collider2D player)
     {
 
@@ -15,11 +16,11 @@ public class OpenChest : MonoBehaviour
         {   
             PressE.SetBool("IsInFade", false);
            if (Input.GetKey(KeyCode.E))
-            {
+           {
                 StartCoroutine(OpneChestCor());
                 animatorChest.SetTrigger("Open");
-
-            }
+                FightButton.SetActive(true);
+           }
         }
     }
     public void OnTriggerExit2D()
