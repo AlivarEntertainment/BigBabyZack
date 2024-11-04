@@ -10,16 +10,23 @@ public class LeverLift : MonoBehaviour
     public PlayableDirector BoxDirector;
     public Animator LiftAnimator;
     public bool BoxInPosition;
-
+    [SerializeField]private Animator PressE;
+    [SerializeField]private Animator LeverAnimator;
     public void OnTriggerStay2D(Collider2D PlayerLever)
     {
         if(PlayerLever.gameObject.tag == "Player")
-        {
+        {   
+            PressE.SetBool("IsInFade", false);
             if(Input.GetKey(KeyCode.E))
             {
                 UseLever();
+                LeverAnimator.SetTrigger("UseLever");
             }
         }
+    }
+    public void OnTriggerExit2D()
+    {
+        PressE.SetBool("IsInFade", true);
     }
     public void OnCollisionEnter2D(Collision2D collision)
     {
