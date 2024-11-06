@@ -1542,6 +1542,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1664275917181547206, guid: 14dd372b0c4924f28a6858661d98f153, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4051608198873170752, guid: 14dd372b0c4924f28a6858661d98f153, type: 3}
       propertyPath: rb
       value: 
@@ -2747,6 +2751,7 @@ MonoBehaviour:
   animatorChest: {fileID: 0}
   PressE: {fileID: 0}
   FightButton: {fileID: 0}
+  leverGameObject: {fileID: 0}
 --- !u!4 &1423246280 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6542125691622478499, guid: f15c2f54612d644b29b497e0a3f10e2c, type: 3}

@@ -9,6 +9,7 @@ public class OpenChest : MonoBehaviour
     public Animator animatorChest;
     [SerializeField]private Animator PressE;
     [SerializeField] private GameObject FightButton;
+    [SerializeField] private GameObject leverGameObject;
     public void OnTriggerStay2D(Collider2D player)
     {
 
@@ -20,6 +21,7 @@ public class OpenChest : MonoBehaviour
                 StartCoroutine(OpneChestCor());
                 animatorChest.SetTrigger("Open");
                 FightButton.SetActive(true);
+                leverGameObject.SetActive(true);
            }
         }
     }

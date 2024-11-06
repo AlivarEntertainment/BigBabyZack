@@ -1539,11 +1539,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 455555754916111193, guid: d411173e39e234e8e815aa6e453e9603, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.2245646
+      value: -1.1704655
       objectReference: {fileID: 0}
     - target: {fileID: 455555754916111193, guid: d411173e39e234e8e815aa6e453e9603, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.4412584
+      value: 3.4411407
       objectReference: {fileID: 0}
     - target: {fileID: 455555754916111193, guid: d411173e39e234e8e815aa6e453e9603, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1863,7 +1863,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 945748665}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 54e96fdaf989f4fe6b85987c5fe45e9d, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1914,7 +1914,7 @@ EdgeCollider2D:
   m_GameObject: {fileID: 945748665}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 54e96fdaf989f4fe6b85987c5fe45e9d, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1940,9 +1940,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -9.6, y: 0}
-  - {x: -9.610329, y: -1.354727}
-  - {x: -9.639738, y: -5.21214}
+  - {x: -9.535531, y: -5.280179}
+  - {x: -7.387966, y: -5.518856}
   - {x: -5.573342, y: -5.936215}
   - {x: 0.14069638, y: -6.1225514}
   - {x: 4.2419195, y: -6.039348}
@@ -2255,7 +2254,7 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -3.7552783, y: 3.2156081}
+  - {x: -2.7513707, y: 3.7175622}
   - {x: -0.73643446, y: 4.0893564}
   - {x: 1.3522915, y: 4.071988}
   - {x: 3.0555465, y: 3.909628}
@@ -2954,6 +2953,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4051608198873170752, guid: 14dd372b0c4924f28a6858661d98f153, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 1887857305}
     - target: {fileID: 4895755587983014704, guid: 14dd372b0c4924f28a6858661d98f153, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -3247,6 +3250,11 @@ Transform:
   - {fileID: 1203231178}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1887857305 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 3228261500798661046, guid: 14dd372b0c4924f28a6858661d98f153, type: 3}
+  m_PrefabInstance: {fileID: 1662037485}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1908313830
 GameObject:
   m_ObjectHideFlags: 0
@@ -3740,7 +3748,7 @@ Transform:
   m_GameObject: {fileID: 2060771146}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.79, y: 1.0757, z: 0}
+  m_LocalPosition: {x: -11.92, y: 1.0757, z: 0}
   m_LocalScale: {x: 1.7107, y: 15.37184, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

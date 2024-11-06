@@ -1313,6 +1313,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8240130571586900951, guid: e475b715f041f46aca547201222ad5d4, type: 3}
   m_PrefabInstance: {fileID: 915755849}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &262560970 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2195250036599091975, guid: e475b715f041f46aca547201222ad5d4, type: 3}
+  m_PrefabInstance: {fileID: 915755849}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &274846411
 GameObject:
   m_ObjectHideFlags: 0
@@ -1967,7 +1972,7 @@ Transform:
   m_GameObject: {fileID: 413960459}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.831952, y: 2.0665035, z: -10}
+  m_LocalPosition: {x: -2.8240747, y: 2.0665035, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2814,7 +2819,8 @@ EdgeCollider2D:
   - {x: 7.2035475, y: -5.5120406}
   - {x: 7.04739, y: -6.7838287}
   - {x: 0.17948052, y: -6.7358465}
-  - {x: -0.0023304224, y: -7.7740297}
+  - {x: -0.30575275, y: -8.686916}
+  - {x: 2.6708412, y: -8.652881}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -3152,6 +3158,8 @@ PlayableDirector:
     value: {fileID: 655062734}
   - key: {fileID: -1608351210829849530, guid: 18fe94004dae54a5c82af53558ed96b9, type: 2}
     value: {fileID: 413960464}
+  - key: {fileID: -6434167634583448211, guid: 18fe94004dae54a5c82af53558ed96b9, type: 2}
+    value: {fileID: 262560970}
   m_ExposedReferences:
     m_References:
     - 90ce6c4bef92c4d0ab4362a605495909: {fileID: 1045804084}
@@ -20176,6 +20184,7 @@ GameObject:
   - component: {fileID: 4440177414449530345}
   - component: {fileID: 6448057197293866455}
   - component: {fileID: 6774301258581228515}
+  - component: {fileID: 7664661083265722069}
   m_Layer: 6
   m_Name: Ledder (1)
   m_TagString: Untagged
@@ -20183,6 +20192,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!210 &7664661083265722069
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7664661083265722068}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!4 &7768636513892745598
 Transform:
   m_ObjectHideFlags: 0
