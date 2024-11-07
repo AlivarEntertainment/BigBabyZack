@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class Arrow : MonoBehaviour
 {
-    Rigidbody2D rb;
+    public Rigidbody2D rb;
     bool hasHit;
     public Transform attackPoint;
     public int attackRange;
     public LayerMask WhatIsEnemy;
     public int AttackDamage;
+    
+   
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         StartCoroutine("SelfDestroyer");
+        
     }
 
     // Update is called once per frame
@@ -26,15 +29,19 @@ public class Arrow : MonoBehaviour
         AttackArrow();
         }
     }
-    private void OnCollisionEnter2D(Collision collision)
-    {
-        hasHit = true;
-        rb.velocity = Vector2.zero;
-        rb.isKinematic = true;
-        if(collision.gameObject.tag == "GroundTag")
+    public void OnCollisionEnter2D(Collision2D collision)
+    {   
+        
+        
+        if (collision.gameObject.tag == "GroundTag")
         {
             this.enabled = false;
+            hasHit = true;
+            rb.velocity = Vector2.zero;
+            rb.bodyType = RigidbodyType2D.Static;
+            Debug.Log("1212");
         }
+        
     }
     void AttackArrow()
     {
@@ -49,7 +56,7 @@ public class Arrow : MonoBehaviour
     }
     IEnumerator SelfDestroyer()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(2);
         Destroy(this.gameObject);
     }
 }

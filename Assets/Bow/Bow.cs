@@ -9,21 +9,23 @@ public class Bow : MonoBehaviour
     public Transform shotPoint;
     public PlayerController playerController;
     public Vector2 direction;
+    public Vector2 bowPosition;
+    public Vector2 mousePosition;
     public float limiUp = 170, limitDown = 10;
     public void Update()
     {   
-        Vector2 bowPosition = transform.position;
+        bowPosition = transform.position;
         //Vector3 currentRotation = this.transform.localEulerAngles;
-        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         if(playerController.facingRight == true)
         {
             direction = mousePosition - bowPosition;
-            Debug.Log("Mv");
+           
         }
         else{
             direction = bowPosition - mousePosition;
         }
-        if(direction.x >= bowPosition.x)
+        if(direction.x >= 0)
         {   
            // Mathf.Clamp(direction, limitDown, limiUp);
             transform.right = direction;

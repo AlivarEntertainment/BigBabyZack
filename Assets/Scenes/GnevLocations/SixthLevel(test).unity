@@ -251,7 +251,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: f0e4e6d6b3d22482cb61bfd9ad65dd73, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -531,14 +531,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 517848258}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.18087962, w: 0.98350525}
   m_LocalPosition: {x: 0.56, y: -10.95, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1462260138}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 20.842}
 --- !u!1 &975402613
 GameObject:
   m_ObjectHideFlags: 0
@@ -1022,7 +1022,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 8b22b5ce424b44d01a1fa01e7fd26a4b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1063,14 +1063,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1624441314}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.5915631, w: 0.8062587}
   m_LocalPosition: {x: 14.33, y: -10.68, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1977852233}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 72.536}
 --- !u!1 &1667226890
 GameObject:
   m_ObjectHideFlags: 0
@@ -1167,13 +1167,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1380017115930984789, guid: 14dd372b0c4924f28a6858661d98f153, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5941419456357040678, guid: 14dd372b0c4924f28a6858661d98f153, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.036684
+      value: 8.24
       objectReference: {fileID: 0}
     - target: {fileID: 5941419456357040678, guid: 14dd372b0c4924f28a6858661d98f153, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.8992834
+      value: -5.52
       objectReference: {fileID: 0}
     - target: {fileID: 5941419456357040678, guid: 14dd372b0c4924f28a6858661d98f153, type: 3}
       propertyPath: m_LocalPosition.z

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8557736433978035173}
   m_Layer: 0
   m_Name: Arrow
-  m_TagString: Untagged
+  m_TagString: Arrow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -173,6 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e0361767f8740488bdcfdd643c7303, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 6044245918357130889}
   attackPoint: {fileID: 1447374729465698337}
   attackRange: 1
   WhatIsEnemy:
