@@ -10,6 +10,11 @@ public class OpenChest : MonoBehaviour
     [SerializeField]private Animator PressE;
     [SerializeField] private GameObject FightButton;
     [SerializeField] private GameObject leverGameObject;
+    [SerializeField] private Bow bowScr;
+    public void Start()
+    {
+        //bowScr.enabled = false;
+    }
     public void OnTriggerStay2D(Collider2D player)
     {
 
@@ -22,6 +27,7 @@ public class OpenChest : MonoBehaviour
                 animatorChest.SetTrigger("Open");
                 FightButton.SetActive(true);
                 leverGameObject.SetActive(true);
+                
            }
         }
     }
@@ -35,5 +41,6 @@ public class OpenChest : MonoBehaviour
         IsOpened = true;
         PressE.SetBool("IsInFade", true);
         sword.SetActive(true);
+        bowScr.enabled = true;
     }
 }

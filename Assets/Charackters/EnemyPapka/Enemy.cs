@@ -8,7 +8,8 @@ public class Enemy : MonoBehaviour
     public int currentHealth;
     bool facingRight = true;
     public Animator EnemyAnimator;
-
+    public Collider2D EnemyCollider;
+    public Rigidbody2D rigidbody;
     [Header("Patroler")]
     public float speed;
     public int positionOfPatrol;
@@ -130,9 +131,11 @@ public class Enemy : MonoBehaviour
         }
     }
     public void DieEnemy()
-    {   
-        Debug.Log("Pomer");
-        Destroy(this.gameObject);
+    {
+        EnemyCollider.enabled = false;
+        EnemyAnimator.SetTrigger("Die");
+        rigidbody.bodyType = RigidbodyType2D.Static;
+        this.enabled = false;
     }
     void AttackPlayer()
     {
