@@ -41,7 +41,8 @@ public class Bow : MonoBehaviour
         }
     }
     void Shoot()
-    {   
+    {
+        playerController.PlayerAnimator.SetTrigger("BowShot");
         if(playerController.facingRight == true)
         {
             GameObject newArrow = Instantiate(arrow, shotPoint.position, shotPoint.rotation);
