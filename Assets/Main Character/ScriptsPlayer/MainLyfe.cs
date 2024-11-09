@@ -6,13 +6,24 @@ public class MainLyfe : MonoBehaviour
 {
     public LyfeContr[] Lyfes;
     public Animator DeadPanelAnimator;
-    /*public void OnTriggerEnter2D(Collider2D other)
+    public int lives = 3;
+    public void Start()
     {
-        if(other.gameObject.tag == "Player")
-        {
-            PlayerTakeDamage();
+        lives = PlayerPrefs.GetInt("Lives");
+        if(lives <= 2)
+        {   
+            Debug.Log(lives);
+            Lyfes[0].RedNGreen[0].SetActive(true);
+            Lyfes[0].RedNGreen[1].SetActive(false);
+            Lyfes[0].IsDead = true;
+            if((lives <= 1))
+            {
+                Lyfes[1].RedNGreen[0].SetActive(true);
+                Lyfes[1].RedNGreen[1].SetActive(false);
+                Lyfes[1].IsDead = true;
+            }
         }
-    }*/
+    }
     public void Update()
     {
         if(Lyfes[2].IsDead == true)
@@ -29,6 +40,8 @@ public class MainLyfe : MonoBehaviour
                     Lyfes[i].RedNGreen[0].SetActive(true);
                     Lyfes[i].RedNGreen[1].SetActive(false);
                     Lyfes[i].IsDead = true;
+                    lives -= 1;
+                    PlayerPrefs.SetInt("Lives", lives);
                     break;
                 }
             }
@@ -38,6 +51,8 @@ public class MainLyfe : MonoBehaviour
         Debug.Log("Pomer");
         Destroy(this.gameObject);
         DeadPanelAnimator.SetTrigger("Appear");
+        lives = 3;
+        PlayerPrefs.SetInt("Lives", 3);
     }
     
 }

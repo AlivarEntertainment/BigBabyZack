@@ -6,16 +6,19 @@ public class LeverToMine : MonoBehaviour
 {   
     public bool UsedLever;
     public GameObject Blocker;
-    public Rigidbody2D MinecartRB;
+    public Cart cart;
+       [SerializeField]private Animator PressE;
     public void OnTriggerStay2D(Collider2D PlayerCol)
     {
         if(PlayerCol.gameObject.tag == "Player")
-        {
+        {   
+            PressE.SetBool("IsInFade", false);
             if(Input.GetKey(KeyCode.E))
             {
                 UsedLever = true;
                 Blocker.SetActive(false);
-                MinecartRB.bodyType = RigidbodyType2D.Dynamic;
+                cart.CanRide = true;
+                PressE.SetBool("IsInFade", true);
             }
         }
     }
