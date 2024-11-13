@@ -9,6 +9,7 @@ TagManager:
   - Arrow
   - Sound
   - Boulder
+  - CerberJump
   layers:
   - Default
   - TransparentFX
@@ -51,4 +52,7 @@ TagManager:
     locked: 0
   - name: NonLight
     uniqueID: 1761740793
+    locked: 0
+  - name: Player
+    uniqueID: 1671607383
     locked: 0

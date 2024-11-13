@@ -20,15 +20,20 @@ public class PlayerController : MonoBehaviour
     
     [Header("Leddering")]
     public float LedderSpeed;
-    private float MoveInputYY;
+    public float MoveInputYY;
     public bool IsClimbing = false;
 
+    public bool OnBoss;
     
     
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        if(OnBoss == true)
+        {
+            PlayerAnimator.speed = 1.7f;
+        }
     }
     private void FixedUpdate()
     {
@@ -37,7 +42,15 @@ public class PlayerController : MonoBehaviour
             Laddering();
         }
         else
-        {
+        {   
+            if(OnBoss == true)
+            {
+                rb.gravityScale = 2.5f;
+            }
+            else{
+                rb.gravityScale = 1;
+            }
+            
             MoveGround();
             PlayerAnimator.SetBool("Leddering", false);
         }
@@ -87,8 +100,27 @@ public class PlayerController : MonoBehaviour
     public void Laddering()
     {
         PlayerAnimator.SetBool("IsWalking", false);
-        PlayerAnimator.SetBool("Leddering", true);
+        //PlayerAnimator.SetBool("Leddering", true);
         MoveInputYY = Input.GetAxis("Vertical");
+        rb.gravityScale = 0;
+        if(MoveInputYY != 0)
+        {
+            PlayerAnimator.SetBool("Leddering", true);
+            if(OnBoss == false)
+            {
+                 PlayerAnimator.speed = 1;
+            }
+            else if(OnBoss == true)
+            {
+                 PlayerAnimator.speed = 1.7f;
+            }
+            
+        }
+        else 
+        {
+            PlayerAnimator.SetBool("Leddering", true);
+            PlayerAnimator.speed = 0;
+        }
         rb.velocity = new Vector2(0, MoveInputYY * LedderSpeed);
     }
     void Flip()
