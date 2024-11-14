@@ -14,7 +14,13 @@ public class CerberController : MonoBehaviour
     public Animator CerberAnimator;
     public bool IsInFinalPos;
     public bool CanMove;
+    [Header("ThirdState")]
     public Animator LavaAnimator;
+    public Transform[] RightleftRun;
+    private float timeBtwAttack;
+    public float startTimeBtwAttack;
+    public int NextFinalPoint = 0;
+    public bool CanGoRL = false;
     public void Awake()
     {
         StartCoroutine("StartKD");
@@ -30,10 +36,14 @@ public class CerberController : MonoBehaviour
             SecondState();
         }
         else if(IsInFinalPos == false && CanMove == true && NextPoint >= 13)
-        {
+        {   
+            CerberAnimator.SetTrigger("ThirdState");
             ThirdState();
         }
-         
+         if(CanGoRL == true)
+         {
+            GoRightLeft();
+         }
 
     }
     public void Move()
@@ -103,7 +113,48 @@ public class CerberController : MonoBehaviour
     public void ThirdState()
     {
         LavaAnimator.SetBool("GoUp", true);
-        CerberAnimator.SetBool("IsIdle", true);
+        
+        if(timeBtwAttack <= 0)
+        {
+            CanGoRL = true;
+            timeBtwAttack = startTimeBtwAttack;
+            CerberAnimator.SetBool("Fly", true);
+        }
+        else
+        {   
+            timeBtwAttack -= Time.deltaTime;
+        }
+    }
+    void GoRightLeft()
+    {   
+        float step = 7 * Time.deltaTime;
+        
+        transform.position = Vector3.MoveTowards(transform.position, RightleftRun[NextFinalPoint].position, step);
+        if(transform.position.x == RightleftRun[NextFinalPoint].position.x)
+        {
+            Flip();
+            NextFinalPoint += 1;
+            if(NextFinalPoint >= 3)
+            {
+                NextFinalPoint = 0;
+            }
+            CanGoRL = false;
+            CerberAnimator.SetBool("Fly", false);
+        }
+        
+    }
+    public void GoRight()
+    {
+        CanGoRL = false;
+        float step = 7 * Time.deltaTime;
+        
+        transform.position = Vector3.MoveTowards(transform.position, RightleftRun[0].position, step);
+        if(transform.position.x == RightleftRun[0].position.x)
+        {   
+            Flip();
+            CerberAnimator.SetTrigger("Die");
+            this.enabled = false;
+        }
     }
     void Flip()
     {
@@ -114,7 +165,7 @@ public class CerberController : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D OtherJump)
     {
-        if(OtherJump.gameObject.tag == "CerberJump")
+        if(OtherJump.gameObject.tag == "CerberJump" && CanGoRL == false)
         {
             CerberAnimator.SetTrigger("Jump");
             Debug.Log("Entered");

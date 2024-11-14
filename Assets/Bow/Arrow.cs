@@ -56,7 +56,7 @@ public class Arrow : MonoBehaviour
     }
     IEnumerator SelfDestroyer()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1.3f);
         Destroy(this.gameObject);
     }
 }

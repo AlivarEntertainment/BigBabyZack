@@ -50,7 +50,14 @@ public class PlayerController : MonoBehaviour
             else{
                 rb.gravityScale = 1;
             }
-            
+            if(OnBoss == false)
+            {
+                 PlayerAnimator.speed = 1;
+            }
+            else if(OnBoss == true)
+            {
+                 PlayerAnimator.speed = 1.7f;
+            }
             MoveGround();
             PlayerAnimator.SetBool("Leddering", false);
         }

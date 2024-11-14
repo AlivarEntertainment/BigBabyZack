@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
-
+using UnityEngine.SceneManagement;
 public class DogTimeline : MonoBehaviour
 {
     public PlayableDirector DogTimelineDirector;
@@ -14,6 +14,12 @@ public class DogTimeline : MonoBehaviour
         {
             DogTimelineDirector.Play();
             playerController.enabled = false;
+            StartCoroutine("ToBossScene2");
         }        
+    }
+    public IEnumerator ToBossScene2()
+    {
+        yield return new WaitForSeconds(12);
+        SceneManager.LoadScene(11);
     }
 }

@@ -1,25 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class PlayBgMusic : MonoBehaviour
 {
     public GameObject BgMusic;
     private AudioSource audioSource;
     public GameObject[] objects11;
+    [SerializeField]public bool IsGnevMusic;
     void Awake()
-    {
-        objects11 = GameObject.FindGameObjectsWithTag("Sound");
-        if(objects11.Length == 0)
+    {   
+        int y = SceneManager.GetActiveScene().buildIndex;
+        if(y == 10)
         {
-            BgMusic = Instantiate(BgMusic);
-            BgMusic.name = "BGMusic1";
-            DontDestroyOnLoad(BgMusic.gameObject);
+            Destroy(this.gameObject);
         }
         else
         {
-            BgMusic = GameObject.Find("BGMusic1");
+            objects11 = GameObject.FindGameObjectsWithTag("Sound");
+            if(objects11.Length == 0)
+            {
+            BgMusic = Instantiate(BgMusic);
+            BgMusic.name = "BGMusic1";
+            DontDestroyOnLoad(BgMusic.gameObject);
+            }
+            else
+            {
+                BgMusic = GameObject.Find("BGMusic1");
+            }
         }
+        
     }
 
     // Update is called once per frame

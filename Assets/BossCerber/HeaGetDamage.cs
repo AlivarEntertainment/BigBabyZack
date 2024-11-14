@@ -7,11 +7,26 @@ using UnityEngine.SceneManagement;
 public class HeaGetDamage : MonoBehaviour
 {
     public Slider CerberHealthSlider;
-    public static int Health = 50;
+    public CerberController cerberController;
+    public static int Health = 100;
 
     public void Start()
     {
-        Health = 50;
+        Health = 100;
+    }
+    public void Update()
+    {
+        if(cerberController.NextFinalPoint == 1 && Health <= 0 || cerberController.NextFinalPoint == 3  && Health <= 0)
+        {   
+            cerberController.CanGoRL = false;
+            cerberController.GoRight();
+        }
+        else if(Health <= 1 && cerberController.CanGoRL == false)
+        {
+            cerberController.CerberAnimator.SetTrigger("Die");
+            cerberController.enabled = false;
+        }
+       
     }
     public void OnTriggerEnter2D(Collider2D ArrowOther)
     {
@@ -23,7 +38,7 @@ public class HeaGetDamage : MonoBehaviour
         }
         if(ArrowOther.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene(13);
+            SceneManager.LoadScene(12);
         }
     }
 }
