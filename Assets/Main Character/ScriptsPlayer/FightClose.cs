@@ -18,6 +18,17 @@ public class FightClose : MonoBehaviour
     public float TimeDashing;
     public bool IsDashing = true;
     public Animator playerAnim;
+    public void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            pressedAttacking = true;
+        }
+        if (Input.GetMouseButtonUp(0))
+        {
+            pressedAttacking = false;
+        }
+    }
     public void FixedUpdate()
     {
         if(pressedAttacking == true)
@@ -86,12 +97,12 @@ public class FightClose : MonoBehaviour
         }
 
     }
-    public void OnAttackButDown()
+    /*public void OnDown()
     {
         pressedAttacking = true;
     }
     public void OnAttackButUp()
     {
         pressedAttacking = false;
-    }
+    }*/
 }

@@ -5778,6 +5778,7 @@ MonoBehaviour:
   mousePosition: {x: 0, y: 0}
   limiUp: 40
   limitDown: -90
+  startTimeBtwAttack: 0.35
 --- !u!1 &975402613
 GameObject:
   m_ObjectHideFlags: 0
@@ -6643,6 +6644,7 @@ MonoBehaviour:
   mousePosition: {x: 0, y: 0}
   limiUp: 40
   limitDown: -90
+  startTimeBtwAttack: 0.35
 --- !u!1 &1044662363
 GameObject:
   m_ObjectHideFlags: 0
@@ -9137,7 +9139,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   LedderSpeed: 3
+  MoveInputYY: 0
   IsClimbing: 0
+  OnBoss: 0
 --- !u!95 &1476368161
 Animator:
   serializedVersion: 5

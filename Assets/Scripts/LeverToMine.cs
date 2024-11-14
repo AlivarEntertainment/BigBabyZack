@@ -7,7 +7,8 @@ public class LeverToMine : MonoBehaviour
     public bool UsedLever;
     public GameObject Blocker;
     public Cart cart;
-       [SerializeField]private Animator PressE;
+    [SerializeField]private Animator PressE;
+    public Animator TrolleyAnimator;
     public void OnTriggerStay2D(Collider2D PlayerCol)
     {
         if(PlayerCol.gameObject.tag == "Player")
@@ -19,6 +20,7 @@ public class LeverToMine : MonoBehaviour
                 Blocker.SetActive(false);
                 cart.CanRide = true;
                 PressE.SetBool("IsInFade", true);
+                TrolleyAnimator.SetTrigger("OpenBlock");
             }
         }
     }

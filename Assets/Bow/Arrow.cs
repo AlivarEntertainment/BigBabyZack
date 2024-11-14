@@ -39,7 +39,7 @@ public class Arrow : MonoBehaviour
             hasHit = true;
             rb.velocity = Vector2.zero;
             rb.bodyType = RigidbodyType2D.Static;
-            Debug.Log("1212");
+           
         }
         
     }

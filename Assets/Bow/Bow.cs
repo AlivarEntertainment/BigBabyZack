@@ -12,6 +12,8 @@ public class Bow : MonoBehaviour
     public Vector2 bowPosition;
     public Vector2 mousePosition;
     public float limiUp = 170, limitDown = 10;
+    private float timeBtwAttack;
+    public float startTimeBtwAttack = 0.35f;
     public void Update()
     {   
         bowPosition = transform.position;
@@ -34,10 +36,19 @@ public class Bow : MonoBehaviour
         }
         
 
-        if(Input.GetMouseButtonDown(0))
+        
+        if (timeBtwAttack <= 0)
         {
-            Shoot();
-
+            
+            if (Input.GetMouseButtonDown(0))
+            {
+                timeBtwAttack = startTimeBtwAttack;
+                Shoot();
+            }
+        }
+        else
+        {
+            timeBtwAttack -= Time.deltaTime;
         }
     }
     void Shoot()

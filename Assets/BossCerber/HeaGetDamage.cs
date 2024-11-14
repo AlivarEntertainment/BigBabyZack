@@ -8,20 +8,15 @@ public class HeaGetDamage : MonoBehaviour
 {
     public Slider CerberHealthSlider;
     public CerberController cerberController;
-    public static int Health = 90;
+    public static int Health = 75;
 
     public void Start()
     {
-        Health = 90;
+        Health = 75;
     }
     public void Update()
     {
-        if(cerberController.NextFinalPoint == 1 && Health <= 0 || cerberController.NextFinalPoint == 3  && Health <= 0)
-        {   
-            cerberController.CanGoRL = false;
-            cerberController.GoRight();
-        }
-        else if(Health <= 1 && cerberController.CanGoRL == false)
+        if(Health <= 1 )
         {
             cerberController.CerberAnimator.SetTrigger("Die");
             cerberController.enabled = false;
@@ -32,7 +27,7 @@ public class HeaGetDamage : MonoBehaviour
     {
         if(ArrowOther.gameObject.tag == "Arrow")
         {   
-            Debug.Log("He");
+            
             Health -= 1;
             CerberHealthSlider.value = Health;
         }

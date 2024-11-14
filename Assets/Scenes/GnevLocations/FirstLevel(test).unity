@@ -11189,7 +11189,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 0177463e968abc749819b93b1b33ea35, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -12284,7 +12284,7 @@ MonoBehaviour:
   sword: {fileID: 300271709}
   animatorChest: {fileID: 1161069208}
   PressE: {fileID: 1065638219}
-  FightButton: {fileID: 8483699221322275382}
+  FightButton: {fileID: 1035702224793954923}
   leverGameObject: {fileID: 7664661081795955442}
   bowScr: {fileID: 0}
 --- !u!61 &1161069210
@@ -15238,7 +15238,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 9080332675168256919}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a0cebfcb49c5e44fe9ef2843aa89ef79, type: 3}
   m_Name: 
@@ -16251,6 +16251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BgMusic: {fileID: 5520024859487641916, guid: c73f8faa7fca3af419133430c86491de, type: 3}
   objects11: []
+  IsGnevMusic: 0
 --- !u!114 &6584082393515195077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16449,7 +16450,7 @@ GameObject:
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7909811950938802157
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16650,6 +16651,10 @@ PrefabInstance:
     - target: {fileID: 1300573139537020379, guid: 14dd372b0c4924f28a6858661d98f153, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3671741779581280236, guid: 14dd372b0c4924f28a6858661d98f153, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5034599461022297290, guid: 14dd372b0c4924f28a6858661d98f153, type: 3}
       propertyPath: m_IsActive

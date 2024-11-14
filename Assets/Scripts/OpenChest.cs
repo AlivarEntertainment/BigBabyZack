@@ -8,7 +8,7 @@ public class OpenChest : MonoBehaviour
     public GameObject sword;
     public Animator animatorChest;
     [SerializeField]private Animator PressE;
-    [SerializeField] private GameObject FightButton;
+    [SerializeField] private FightClose FightButton;
     [SerializeField] private GameObject leverGameObject;
     [SerializeField] private Bow bowScr;
     public void Start()
@@ -25,7 +25,7 @@ public class OpenChest : MonoBehaviour
            {
                 StartCoroutine(OpneChestCor());
                 animatorChest.SetTrigger("Open");
-                FightButton.SetActive(true);
+                FightButton.enabled = true;
                 leverGameObject.SetActive(true);
                 
            }

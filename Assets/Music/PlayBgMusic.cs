@@ -10,31 +10,32 @@ public class PlayBgMusic : MonoBehaviour
     [SerializeField]public bool IsGnevMusic;
     void Awake()
     {   
+        objects11 = GameObject.FindGameObjectsWithTag("Sound");
         int y = SceneManager.GetActiveScene().buildIndex;
-        if(y == 10)
+        if (objects11.Length == 0 && y != 2)
         {
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            objects11 = GameObject.FindGameObjectsWithTag("Sound");
-            if(objects11.Length == 0)
-            {
+            Debug.Log(y);
             BgMusic = Instantiate(BgMusic);
             BgMusic.name = "BGMusic1";
             DontDestroyOnLoad(BgMusic.gameObject);
-            }
-            else
-            {
-                BgMusic = GameObject.Find("BGMusic1");
-            }
         }
-        
+        else if (y != 2)
+        {
+           BgMusic = GameObject.Find("BGMusic1");
+        }
     }
 
     // Update is called once per frame
     void Start()
     {
-        audioSource = BgMusic.GetComponent<AudioSource>();
+        int y = SceneManager.GetActiveScene().buildIndex;
+        Debug.Log(y);
+        if (y != 2)
+        {
+            audioSource = BgMusic.GetComponent<AudioSource>();
+            
+        }
+       
+            
     }
 }
