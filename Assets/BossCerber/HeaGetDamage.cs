@@ -8,11 +8,11 @@ public class HeaGetDamage : MonoBehaviour
 {
     public Slider CerberHealthSlider;
     public CerberController cerberController;
-    public static int Health = 100;
+    public static int Health = 90;
 
     public void Start()
     {
-        Health = 100;
+        Health = 90;
     }
     public void Update()
     {

@@ -7,6 +7,7 @@ public class ChaneAndPlay : MonoBehaviour
 {
      public int sceneNumber;
      public PlayableDirector playableDirector;
+    public bool IsPerehod;
     public void Start()
     {
         Debug.Log("����");
@@ -16,7 +17,9 @@ public class ChaneAndPlay : MonoBehaviour
         if (otherPlayer.gameObject.tag == "Player")
         {   
             playableDirector.Play();
-            StartCoroutine("TimelineCor");
+            if (IsPerehod == false) {
+                StartCoroutine("TimelineCor");
+            }
             
         }
     }

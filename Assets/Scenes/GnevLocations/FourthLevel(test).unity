@@ -21832,6 +21832,7 @@ GameObject:
   - component: {fileID: 2025971109}
   - component: {fileID: 2025971108}
   - component: {fileID: 2025971107}
+  - component: {fileID: 2025971110}
   m_Layer: 0
   m_Name: CutSceneTrigger
   m_TagString: Untagged
@@ -21896,7 +21897,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28c7f5722b9d3439b90ffa39a2cb8b05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PerehodDirector: {fileID: 1738315249}
+  PerehodDirector: {fileID: 0}
 --- !u!4 &2025971109
 Transform:
   m_ObjectHideFlags: 0
@@ -21912,6 +21913,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2025971110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025971106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6734e8f9d2a94d12a12339f9cdaea71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneNumber: 0
+  playableDirector: {fileID: 1738315249}
+  IsPerehod: 1
 --- !u!1 &2032256982
 GameObject:
   m_ObjectHideFlags: 0
