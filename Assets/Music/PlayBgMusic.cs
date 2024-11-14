@@ -23,6 +23,9 @@ public class PlayBgMusic : MonoBehaviour
         {
            BgMusic = GameObject.Find("BGMusic1");
         }
+        else if(y == 2){
+            audioSource.clip = null;
+        }
     }
 
     // Update is called once per frame
@@ -35,7 +38,10 @@ public class PlayBgMusic : MonoBehaviour
             audioSource = BgMusic.GetComponent<AudioSource>();
             
         }
-       
-            
+        else if (y == 2)
+        {
+            audioSource.clip = null;
+        }
+
     }
 }
