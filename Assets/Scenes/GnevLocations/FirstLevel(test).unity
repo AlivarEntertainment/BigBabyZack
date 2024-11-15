@@ -15661,7 +15661,6 @@ GameObject:
   - component: {fileID: 5258222154612734353}
   - component: {fileID: 265018796353516178}
   - component: {fileID: 7528051935475745701}
-  - component: {fileID: 6548369124095279443}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -16237,21 +16236,6 @@ Transform:
   - {fileID: 7427238186098064734}
   m_Father: {fileID: 1110831518}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6548369124095279443
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3647038897045036129}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78bf76517102e9f44b90e4f850d3e382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BgMusic: {fileID: 5520024859487641916, guid: c73f8faa7fca3af419133430c86491de, type: 3}
-  objects11: []
-  IsGnevMusic: 0
 --- !u!114 &6584082393515195077
 MonoBehaviour:
   m_ObjectHideFlags: 0

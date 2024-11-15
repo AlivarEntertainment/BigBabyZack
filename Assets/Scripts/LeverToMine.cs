@@ -13,15 +13,14 @@ public class LeverToMine : MonoBehaviour
     {
         if(PlayerCol.gameObject.tag == "Player")
         {   
-            PressE.SetBool("IsInFade", false);
-            if(Input.GetKey(KeyCode.E))
-            {
+            
+            
                 UsedLever = true;
                 Blocker.SetActive(false);
                 cart.CanRide = true;
                 PressE.SetBool("IsInFade", true);
                 TrolleyAnimator.SetTrigger("OpenBlock");
-            }
+            
         }
     }
 }

@@ -13,6 +13,7 @@ public class HeaGetDamage : MonoBehaviour
     public void Start()
     {
         Health = 75;
+        PlayerPrefs.SetString("Cerber", "start");
     }
     public void Update()
     {
@@ -20,6 +21,7 @@ public class HeaGetDamage : MonoBehaviour
         {
             cerberController.CerberAnimator.SetTrigger("Die");
             cerberController.enabled = false;
+            PlayerPrefs.SetString("Cerber", "finish");
         }
        
     }

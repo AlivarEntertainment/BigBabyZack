@@ -12,20 +12,18 @@ public class PlayBgMusic : MonoBehaviour
     {   
         objects11 = GameObject.FindGameObjectsWithTag("Sound");
         int y = SceneManager.GetActiveScene().buildIndex;
-        if (objects11.Length == 0 && y != 2)
+        if (objects11.Length == 0)
         {
             Debug.Log(y);
             BgMusic = Instantiate(BgMusic);
             BgMusic.name = "BGMusic1";
             DontDestroyOnLoad(BgMusic.gameObject);
         }
-        else if (y != 2)
+        else 
         {
            BgMusic = GameObject.Find("BGMusic1");
         }
-        else if(y == 2){
-            audioSource.clip = null;
-        }
+        
     }
 
     // Update is called once per frame
@@ -33,15 +31,9 @@ public class PlayBgMusic : MonoBehaviour
     {
         int y = SceneManager.GetActiveScene().buildIndex;
         Debug.Log(y);
-        if (y != 2)
-        {
-            audioSource = BgMusic.GetComponent<AudioSource>();
-            
-        }
-        else if (y == 2)
-        {
-            audioSource.clip = null;
-        }
+        
+        audioSource = BgMusic.GetComponent<AudioSource>();
+        
 
     }
 }
