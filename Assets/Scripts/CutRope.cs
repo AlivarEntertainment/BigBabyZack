@@ -13,6 +13,7 @@ public class CutRope : MonoBehaviour
     public bool IsForStone;
     public Rigidbody2D StoneRB;
     public PlayableDirector CameraToStone;
+    public Rigidbody2D RopeRigidbody;
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Arrow" && AlreadyShooted == false)
@@ -27,6 +28,7 @@ public class CutRope : MonoBehaviour
                 StoneRB.bodyType = RigidbodyType2D.Dynamic;
                 CameraToStone.Play();
             }
+            RopeRigidbody.bodyType = RigidbodyType2D.Dynamic;
             AlreadyShooted = true;
         }
     }

@@ -10,6 +10,8 @@ public class MegaDoor : MonoBehaviour
     public bool IsTarget;
     public PlayableDirector CameraToLockDirector;
     public Animator LockDoorAnimator;
+    public Animator LeverAnimator;
+    [SerializeField] private Animator PressE;
     public bool IsUsed;
     public void Start()
     {
@@ -19,13 +21,15 @@ public class MegaDoor : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player" && IsTarget == false)
         {
+            PressE.SetBool("IsInFade", false);
             if (Input.GetKey(KeyCode.E) && IsUsed == false)
             {
-                LockSpriteRenderer.color = Color.green;
+                StartCoroutine("greenOnCor");
                 GreenLocks += 1;
                 Debug.Log(GreenLocks);
                 CameraToLockDirector.Play();
                 IsUsed = true;
+                LeverAnimator.SetTrigger("UseLever");
                 if (GreenLocks == 3)
                 {
                     LockDoorAnimator.SetTrigger("OpenLockDoor");
@@ -34,15 +38,24 @@ public class MegaDoor : MonoBehaviour
         }
         if(collision.gameObject.tag == "Arrow" && IsTarget == true && IsUsed == false)
         {
-            LockSpriteRenderer.color = Color.green;
+            StartCoroutine("greenOnCor");
             GreenLocks += 1;
             CameraToLockDirector.Play();
             IsUsed = true;
+            LeverAnimator.SetTrigger("UseLever");
             if (GreenLocks == 3)
             {
                 LockDoorAnimator.SetTrigger("OpenLockDoor");
             }
         }
     }
-    
+    public void OnTriggerExit2D()
+    {
+        PressE.SetBool("IsInFade", true);
+    }
+    IEnumerator greenOnCor()
+    {
+        yield return new WaitForSeconds(1.7f);
+        LockSpriteRenderer.color = Color.green;
+    }
 }
