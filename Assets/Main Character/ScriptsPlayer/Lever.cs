@@ -9,42 +9,64 @@ public class Lever : MonoBehaviour
    private PlayerController player;
    public bool IsLeddering;
    [SerializeField]private Animator PressE;
+    public Collider2D WayPlatform;
+    public Transform myTransform;
+    public float MoveInputYY;
+    public bool OnLedder;
+   public void Start()
+   {
 
-   void Start()
-   {
-       
-   }
-   public void FixedUpdate()
-   {
-        if(IsLeddering == true)
+   }    
+
+    
+//this variable will be made true when the players is just below the platform so that the Box collider of collision checking game object can be disabled that will allow the player to pass through the platform
+
+    
+   public void Update()
+   {    
+     MoveInputYY = Input.GetAxis("Vertical");
+        if(MoveInputYY != 0&& OnLedder == true)
         {   
-            //Debug.Log("Update");
             player.IsClimbing = true;
-            if(Input.GetKey(KeyCode.E))
-            {
-                IsLeddering = false;
-                player.IsClimbing = false;
-            }
+            IsLeddering = true;
         }
+    	if( IsLeddering == true)    
+    	{    
+    		WayPlatform.enabled= false;    
+             
+    	}    
+    	else if(IsLeddering == false)
+    	{    
+    		WayPlatform.enabled=true;    
+
+
+    	}    
+       
+    		 
    }
    public void OnTriggerStay2D(Collider2D other)
    {
     if(other.gameObject.tag == "Player")
     {   
-         PressE.SetBool("IsInFade", false);
-        //Debug.Log("Tag");
-        if(Input.GetKey(KeyCode.E) && IsLeddering == false)
+         OnLedder = true;
+        player = other.GetComponent<PlayerController>();
+         
+         
+        if(MoveInputYY == 0)
         {   
-            Debug.Log("E");
-            IsLeddering = true;
-            //PressE.SetBool("IsInFade", true);
-            player = other.GetComponent<PlayerController>();
+            player.PlayerAnimator.SetBool("Leddering", false);
+            player.IsClimbing = false;
+            IsLeddering=false;
         }
+      
     }
    }
     public void OnTriggerExit2D()
     {
-        PressE.SetBool("IsInFade", true);
+        OnLedder = false;
+        IsLeddering = false;
+        player.IsClimbing = false;
+            
     }
    
 }

@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
     public bool IsClimbing = false;
 
     public bool OnBoss;
-    
+    public Transform PlayerPos;
     
 
     private void Start()
@@ -36,12 +36,13 @@ public class PlayerController : MonoBehaviour
         }
     }
     private void FixedUpdate()
-    {
+    {   
+        PlayerPos.position = transform.position;
         if(IsClimbing == true)
         {
             Laddering();
         }
-        else
+        else if(IsClimbing == false)
         {   
             if(OnBoss == true)
             {
