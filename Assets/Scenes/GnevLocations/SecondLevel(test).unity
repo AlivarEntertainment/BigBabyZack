@@ -350,7 +350,7 @@ GameObject:
   - component: {fileID: 45766195}
   - component: {fileID: 45766194}
   m_Layer: 3
-  m_Name: Platform
+  m_Name: PlatformSmallLedder
   m_TagString: GroundTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -403,7 +403,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0036127567, y: -0.39130113}
+  m_Offset: {x: 0.0036127567, y: -0.43583024}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -414,7 +414,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.6441426, y: 2.2848854}
+  m_Size: {x: 3.6441426, y: 2.1958272}
   m_EdgeRadius: 0
 --- !u!212 &45766195
 SpriteRenderer:
@@ -2254,7 +2254,7 @@ Transform:
   m_GameObject: {fileID: 413960459}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.8427858, y: 2.0665035, z: -10}
+  m_LocalPosition: {x: -2.8342466, y: 2.0665035, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3102,7 +3102,7 @@ EdgeCollider2D:
   - {x: 8.716897, y: -6.528385}
   - {x: 7.8252497, y: -6.5224457}
   - {x: 7.04739, y: -6.3154287}
-  - {x: 0.16996163, y: -6.0470734}
+  - {x: 0.21675429, y: -6.0119786}
   - {x: -0.30575275, y: -8.686916}
   - {x: 2.6708412, y: -8.652881}
   m_AdjacentStartPoint: {x: 0, y: 0}
@@ -4453,7 +4453,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 00f71adc76aa39f43a656368e7d66422, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -11337,7 +11337,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 72fccf82f67b6784e8d1b99269e060d3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -14884,7 +14884,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1818371085}
   - component: {fileID: 1818371084}
-  - component: {fileID: 1818371087}
   - component: {fileID: 1818371086}
   m_Layer: 0
   m_Name: Trolley blocker
@@ -14985,18 +14984,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!210 &1818371087
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1818371082}
-  m_Enabled: 1
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_SortAtRoot: 0
 --- !u!4 &1833071167 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3788880473873068729, guid: a608e959fe09542e082ea97b218461dd, type: 3}
@@ -21568,6 +21555,7 @@ MonoBehaviour:
   myTransform: {fileID: 7427238185830520905}
   MoveInputYY: 0
   OnLedder: 0
+  platformSpriteRenderer: {fileID: 2144329462}
 --- !u!114 &6774301258581228515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21586,6 +21574,7 @@ MonoBehaviour:
   myTransform: {fileID: 7427238184334037368}
   MoveInputYY: 0
   OnLedder: 0
+  platformSpriteRenderer: {fileID: 45766195}
 --- !u!114 &6790156760794326100
 MonoBehaviour:
   m_ObjectHideFlags: 0

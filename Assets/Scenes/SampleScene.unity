@@ -5151,7 +5151,7 @@ Transform:
   m_GameObject: {fileID: 7529061503439140762}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.1598921, y: 3.4411192, z: -10}
+  m_LocalPosition: {x: -1.1587305, y: 3.4411173, z: -10}
   m_LocalScale: {x: 0.64645, y: 0.64645, z: 0.64645}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6852,6 +6852,7 @@ MonoBehaviour:
   myTransform: {fileID: 309009751244828994}
   MoveInputYY: 0
   OnLedder: 0
+  platformSpriteRenderer: {fileID: 2060648500}
 --- !u!114 &4455124046223421041
 MonoBehaviour:
   m_ObjectHideFlags: 0

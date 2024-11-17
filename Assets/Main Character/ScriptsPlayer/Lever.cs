@@ -13,6 +13,7 @@ public class Lever : MonoBehaviour
     public Transform myTransform;
     public float MoveInputYY;
     public bool OnLedder;
+    public SpriteRenderer platformSpriteRenderer;
    public void Start()
    {
 
@@ -31,14 +32,15 @@ public class Lever : MonoBehaviour
             IsLeddering = true;
         }
     	if( IsLeddering == true)    
-    	{    
+    	{   
+            platformSpriteRenderer.sortingOrder = 4;
     		WayPlatform.enabled= false;    
              
     	}    
     	else if(IsLeddering == false)
     	{    
     		WayPlatform.enabled=true;    
-
+            platformSpriteRenderer.sortingOrder = 2;
 
     	}    
        
