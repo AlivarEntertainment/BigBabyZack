@@ -4784,6 +4784,7 @@ MonoBehaviour:
   MoveInputYY: 0
   IsClimbing: 0
   OnBoss: 1
+  PlayerPos: {fileID: 685000087}
 --- !u!70 &685000084
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -12987,51 +12988,6 @@ Transform:
   - {fileID: 3654695972954598969}
   m_Father: {fileID: 2002351549957182946}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &374570689726476578
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7502309789758652451}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 8c771f558f9f84486b26db388e52d4c9, type: 2}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.9085495}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.266492}
-  m_EdgeRadius: 0
 --- !u!61 &374570690123771764
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15168,7 +15124,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0031312108, y: -1.0155611}
+  m_Offset: {x: 0.21465838, y: 0.58317316}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -15179,7 +15135,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.75175834, y: 0.13115776}
+  m_Size: {x: 0.06802814, y: 3.3286264}
   m_EdgeRadius: 0
 --- !u!61 &6448057197621874527
 BoxCollider2D:
@@ -15213,7 +15169,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0031312108, y: -1.0155611}
+  m_Offset: {x: 0.051388897, y: 0.6772932}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -15224,7 +15180,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.75175834, y: 0.13115776}
+  m_Size: {x: 0.09750001, y: 3.5168664}
   m_EdgeRadius: 0
 --- !u!61 &6448057197931406046
 BoxCollider2D:
@@ -15258,7 +15214,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.14745258, y: -1.0155611}
+  m_Offset: {x: 0.25942862, y: 0.5274962}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -15269,7 +15225,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.31673852, y: 0.13115788}
+  m_Size: {x: 0.047911644, y: 3.2172725}
   m_EdgeRadius: 0
 --- !u!212 &6468897606495069217
 SpriteRenderer:
@@ -15540,6 +15496,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsLeddering: 0
   PressE: {fileID: 450322971}
+  WayPlatform: {fileID: 0}
+  myTransform: {fileID: 0}
+  MoveInputYY: 0
+  OnLedder: 0
+  platformSpriteRenderer: {fileID: 0}
 --- !u!114 &6774301258804771179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15554,6 +15515,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsLeddering: 0
   PressE: {fileID: 450322971}
+  WayPlatform: {fileID: 0}
+  myTransform: {fileID: 0}
+  MoveInputYY: 0
+  OnLedder: 0
+  platformSpriteRenderer: {fileID: 0}
 --- !u!114 &6774301259017426154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15568,6 +15534,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsLeddering: 0
   PressE: {fileID: 450322971}
+  WayPlatform: {fileID: 0}
+  myTransform: {fileID: 0}
+  MoveInputYY: 0
+  OnLedder: 0
+  platformSpriteRenderer: {fileID: 0}
 --- !u!4 &6779993838701679422
 Transform:
   m_ObjectHideFlags: 0
@@ -15917,7 +15888,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7427238184691256742}
-  - component: {fileID: 374570689726476578}
   m_Layer: 0
   m_Name: EndPos
   m_TagString: Untagged

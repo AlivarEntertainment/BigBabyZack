@@ -206,6 +206,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 53979487}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4460905 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7427238184239717554, guid: f15c2f54612d644b29b497e0a3f10e2c, type: 3}
+  m_PrefabInstance: {fileID: 1547035485}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7212138
 GameObject:
   m_ObjectHideFlags: 0
@@ -4048,6 +4053,22 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6448057197405126685, guid: f15c2f54612d644b29b497e0a3f10e2c, type: 3}
+      propertyPath: m_Size.x
+      value: 0.02314987
+      objectReference: {fileID: 0}
+    - target: {fileID: 6448057197405126685, guid: f15c2f54612d644b29b497e0a3f10e2c, type: 3}
+      propertyPath: m_Size.y
+      value: 2.8783374
+      objectReference: {fileID: 0}
+    - target: {fileID: 6448057197405126685, guid: f15c2f54612d644b29b497e0a3f10e2c, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.053796615
+      objectReference: {fileID: 0}
+    - target: {fileID: 6448057197405126685, guid: f15c2f54612d644b29b497e0a3f10e2c, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.35802865
+      objectReference: {fileID: 0}
     - target: {fileID: 6542125691622478499, guid: f15c2f54612d644b29b497e0a3f10e2c, type: 3}
       propertyPath: m_LocalScale.y
       value: 5.900321
@@ -4096,6 +4117,10 @@ PrefabInstance:
       propertyPath: PressE
       value: 
       objectReference: {fileID: 924287837}
+    - target: {fileID: 6774301258486838825, guid: f15c2f54612d644b29b497e0a3f10e2c, type: 3}
+      propertyPath: myTransform
+      value: 
+      objectReference: {fileID: 644113293}
     - target: {fileID: 7427238184239717554, guid: f15c2f54612d644b29b497e0a3f10e2c, type: 3}
       propertyPath: m_LocalPosition.y
       value: 2.085
@@ -4104,7 +4129,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ledder
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 374570689937891382, guid: f15c2f54612d644b29b497e0a3f10e2c, type: 3}
     m_RemovedGameObjects:
     - {fileID: 8071684104771123778, guid: f15c2f54612d644b29b497e0a3f10e2c, type: 3}
     m_AddedGameObjects:
@@ -5378,6 +5404,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.3555465, y: 0.6902659}
   m_EdgeRadius: 0
+--- !u!4 &644113293 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7427238184239717554, guid: f15c2f54612d644b29b497e0a3f10e2c, type: 3}
+  m_PrefabInstance: {fileID: 477143828}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &659856598
 GameObject:
   m_ObjectHideFlags: 0
@@ -5851,7 +5882,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ledder (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6448057197405126685, guid: f15c2f54612d644b29b497e0a3f10e2c, type: 3}
     m_RemovedGameObjects:
     - {fileID: 8071684104771123778, guid: f15c2f54612d644b29b497e0a3f10e2c, type: 3}
     m_AddedGameObjects:
@@ -6059,6 +6091,7 @@ MonoBehaviour:
   mousePosition: {x: 0, y: 0}
   limiUp: 40
   limitDown: -90
+  startTimeBtwAttack: 0.35
 --- !u!1 &719432329
 GameObject:
   m_ObjectHideFlags: 0
@@ -6690,6 +6723,7 @@ MonoBehaviour:
   mousePosition: {x: 0, y: 0}
   limiUp: 40
   limitDown: -90
+  startTimeBtwAttack: 0.35
 --- !u!4 &804854710 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1369870176435169285, guid: eaf7e463411ed4a3ab1bc68a9fc6929f, type: 3}
@@ -12639,6 +12673,22 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6448057197405126685, guid: f15c2f54612d644b29b497e0a3f10e2c, type: 3}
+      propertyPath: m_Size.x
+      value: 0.035148658
+      objectReference: {fileID: 0}
+    - target: {fileID: 6448057197405126685, guid: f15c2f54612d644b29b497e0a3f10e2c, type: 3}
+      propertyPath: m_Size.y
+      value: 2.847378
+      objectReference: {fileID: 0}
+    - target: {fileID: 6448057197405126685, guid: f15c2f54612d644b29b497e0a3f10e2c, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.005883249
+      objectReference: {fileID: 0}
+    - target: {fileID: 6448057197405126685, guid: f15c2f54612d644b29b497e0a3f10e2c, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.34254897
+      objectReference: {fileID: 0}
     - target: {fileID: 6542125691622478499, guid: f15c2f54612d644b29b497e0a3f10e2c, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.9790854
@@ -12695,6 +12745,10 @@ PrefabInstance:
       propertyPath: PressE
       value: 
       objectReference: {fileID: 924287837}
+    - target: {fileID: 6774301258486838825, guid: f15c2f54612d644b29b497e0a3f10e2c, type: 3}
+      propertyPath: myTransform
+      value: 
+      objectReference: {fileID: 4460905}
     - target: {fileID: 7427238184239717554, guid: f15c2f54612d644b29b497e0a3f10e2c, type: 3}
       propertyPath: m_LocalPosition.y
       value: 2.38
@@ -12703,7 +12757,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ledder (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 374570689937891382, guid: f15c2f54612d644b29b497e0a3f10e2c, type: 3}
     m_RemovedGameObjects:
     - {fileID: 8071684104771123778, guid: f15c2f54612d644b29b497e0a3f10e2c, type: 3}
     m_AddedGameObjects:
@@ -13118,6 +13173,7 @@ MonoBehaviour:
   mousePosition: {x: 0, y: 0}
   limiUp: 40
   limitDown: -90
+  startTimeBtwAttack: 0.35
 --- !u!1 &1588928085
 GameObject:
   m_ObjectHideFlags: 0
@@ -24252,6 +24308,7 @@ MonoBehaviour:
   mousePosition: {x: 0, y: 0}
   limiUp: 40
   limitDown: -90
+  startTimeBtwAttack: 0.35
 --- !u!4 &3955715418376266997
 Transform:
   m_ObjectHideFlags: 0
@@ -24335,6 +24392,7 @@ MonoBehaviour:
   MoveInputYY: 0
   IsClimbing: 0
   OnBoss: 0
+  PlayerPos: {fileID: 5941419455734296110}
 --- !u!212 &4269287153007749216
 SpriteRenderer:
   m_ObjectHideFlags: 0
