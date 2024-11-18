@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainLyfe : MonoBehaviour
 {
@@ -50,9 +51,11 @@ public class MainLyfe : MonoBehaviour
     {   
         Debug.Log("Pomer");
         Destroy(this.gameObject);
-        DeadPanelAnimator.SetTrigger("Appear");
+        //DeadPanelAnimator.SetTrigger("Appear");
         lives = 3;
+        PlayerPrefs.SetInt("GnevLocation", SceneManager.GetActiveScene().buildIndex);
         PlayerPrefs.SetInt("Lives", 3);
+        SceneManager.LoadScene(14);
     }
     
 }
