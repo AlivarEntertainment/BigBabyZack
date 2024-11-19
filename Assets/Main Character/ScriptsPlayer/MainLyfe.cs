@@ -47,6 +47,21 @@ public class MainLyfe : MonoBehaviour
                 }
             }
     }
+    public void GetHeal()
+    {
+        for(int i = 2; i <= Lyfes.Length; i--)
+            {
+                if(Lyfes[i].IsDead == true)
+                {
+                    Lyfes[i].RedNGreen[1].SetActive(true);
+                    Lyfes[i].RedNGreen[0].SetActive(false);
+                    Lyfes[i].IsDead = false;
+                    lives += 1;
+                    PlayerPrefs.SetInt("Lives", lives);
+                    break;
+                }
+            }
+    }
     void Die()
     {   
         Debug.Log("Pomer");
