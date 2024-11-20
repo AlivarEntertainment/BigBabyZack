@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LeverToMine : MonoBehaviour
-{   
+{
+    public Animator animatorPressed;
     public bool UsedLever;
     public GameObject Blocker;
     public Cart cart;
@@ -20,6 +21,7 @@ public class LeverToMine : MonoBehaviour
                 cart.CanRide = true;
                 PressE.SetBool("IsInFade", true);
                 TrolleyAnimator.SetTrigger("OpenBlock");
+                animatorPressed.SetTrigger("Pressed");
             
         }
     }
