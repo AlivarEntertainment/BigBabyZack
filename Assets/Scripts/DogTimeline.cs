@@ -10,7 +10,7 @@ public class DogTimeline : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if(collision.gameObject.tag == "Player" && playerController.facingRight == false)
         {
             DogTimelineDirector.Play();
             playerController.enabled = false;
@@ -19,7 +19,7 @@ public class DogTimeline : MonoBehaviour
     }
     public IEnumerator ToBossScene2()
     {
-        yield return new WaitForSeconds(13.4f);
+        yield return new WaitForSeconds(14.4f);
         SceneManager.LoadScene(11);
     }
 }

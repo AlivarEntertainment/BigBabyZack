@@ -6,12 +6,14 @@ public class Cart : MonoBehaviour
 {
     public bool CanRide;
     public Animator CartAnimator;
+    public PlayerController playerController;
     
     public void OnTriggerEnter2D(Collider2D PlayerInCart)
     {
         if(PlayerInCart.gameObject.tag == "Player" && CanRide == true)
         {
             CartAnimator.SetTrigger("Ride");
+            playerController.enabled = false;
         }
     }
 }
