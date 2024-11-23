@@ -3846,6 +3846,8 @@ PlayableDirector:
     value: {fileID: 2032377823051235284}
   - key: {fileID: -4023783913115445136, guid: a631e9e82b0ebbe4184ce5eb3869d8ec, type: 2}
     value: {fileID: 1140094801}
+  - key: {fileID: 168374309830016216, guid: a631e9e82b0ebbe4184ce5eb3869d8ec, type: 2}
+    value: {fileID: 1837557562}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1416113164
@@ -3879,7 +3881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84fa06021bed28b45ba04f39e6ea962e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Seconds: 1.2
+  Seconds: 1.7
 --- !u!1 &1610843073
 GameObject:
   m_ObjectHideFlags: 0
@@ -4366,6 +4368,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1837557560}
   - component: {fileID: 1837557561}
+  - component: {fileID: 1837557562}
   m_Layer: 0
   m_Name: Light 2D
   m_TagString: Untagged
@@ -4438,6 +4441,27 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!95 &1837557562
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837557559}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1890188860
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,11 +8,11 @@ public class HeaGetDamage : MonoBehaviour
 {
     public Slider CerberHealthSlider;
     public CerberController cerberController;
-    public static int Health = 75;
+    public static int Health = 65;
 
     public void Start()
     {
-        Health = 75;
+        Health = 65;
         PlayerPrefs.SetString("Cerber", "start");
     }
     public void Update()
