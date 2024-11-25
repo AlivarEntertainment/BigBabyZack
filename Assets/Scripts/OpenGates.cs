@@ -18,5 +18,9 @@ public class OpenGates : MonoBehaviour
             }
         }
     }
+    public void OnTriggerExit2D()
+    {
+        PressE.SetBool("IsInFade", true);
+    }
 
 }

@@ -125,6 +125,7 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int Damage)
     {
         currentHealth -= Damage;
+        EnemyAnimator.SetTrigger("Damage");
         if(currentHealth <= 0)
         {
             DieEnemy();
