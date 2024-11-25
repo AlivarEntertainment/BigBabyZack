@@ -5,6 +5,7 @@ using UnityEngine;
 public class OpenGates : MonoBehaviour
 {
     public Animator GatesAnimator;
+    public Animator PlateAnimator;
     [SerializeField]private Animator PressE;
 
     public void OnTriggerStay2D(Collider2D other)
@@ -15,6 +16,7 @@ public class OpenGates : MonoBehaviour
             if (Input.GetKey(KeyCode.E))
             {
                 GatesAnimator.SetTrigger("GatesOpen");
+                PlateAnimator.SetTrigger("OpenBlock");
             }
         }
     }
