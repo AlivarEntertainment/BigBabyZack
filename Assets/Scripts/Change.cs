@@ -15,9 +15,10 @@ public class Change : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D otherPlayer)
     {
         if (otherPlayer.gameObject.tag == "Player")
-        {
-            FadeAnimator.SetTrigger("EndLevel");
+        {   
             StartCoroutine("FadeEndCor");
+            FadeAnimator.SetTrigger("EndLevel");
+            
         }
     }
     public void ChangeSvene()
