@@ -14,6 +14,10 @@ public class StartGame : MonoBehaviour
     }
     public void OnStartGameButtonClick()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(18);
+    }
+    public void OnRestartButtonClick()
+    {
+        PlayerPrefs.DeleteAll();
     }
 }
