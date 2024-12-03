@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class NatanSpeal : MonoBehaviour
 {
-    [SerializeField]private Animator NatanDialogue;
-    [SerializeField]private Animator NatanAnimator;
+    [SerializeField]private PlayableDirector DialogTL;
     [SerializeField]private Animator PressE;
 
     public void OnTriggerStay2D(Collider2D other)
@@ -15,8 +15,7 @@ public class NatanSpeal : MonoBehaviour
             PressE.SetBool("IsInFade", false);
             if(Input.GetKey(KeyCode.E))
             {
-                NatanDialogue.SetTrigger("Speak");
-                NatanAnimator.SetBool("Speak", true);
+                DialogTL.Play();
                 //PressE.SetBool("IsInFade", true);
             }
         }
