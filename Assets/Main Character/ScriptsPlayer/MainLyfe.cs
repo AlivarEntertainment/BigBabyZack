@@ -7,6 +7,7 @@ public class MainLyfe : MonoBehaviour
 {
     public LyfeContr[] Lyfes;
     public Animator DeadPanelAnimator;
+    public Animator BloodAnim;
     public int lives = 3;
     public void Start()
     {
@@ -30,6 +31,14 @@ public class MainLyfe : MonoBehaviour
         if(Lyfes[2].IsDead == true)
         {
             Die();
+        }
+        if(Lyfes[1].IsDead == true)
+        {
+            BloodAnim.SetBool("IsLow", true);
+        }
+        else
+        {
+            BloodAnim.SetBool("IsLow", false);
         }
     }
     public void PlayerTakeDamage()
