@@ -16,12 +16,17 @@ public class ChaneAndPlay : MonoBehaviour
     {
         if (otherPlayer.gameObject.tag == "Player")
         {   
+            PlayTime();
+            
+        }
+    }
+    public void PlayTime()
+    {
+        Debug.Log("Start");
             playableDirector.Play();
             if (IsPerehod == false) {
                 StartCoroutine("TimelineCor");
             }
-            
-        }
     }
     public IEnumerator TimelineCor()
     {
