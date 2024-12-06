@@ -16,6 +16,10 @@ public class StartGame : MonoBehaviour
     {
         SceneManager.LoadScene(18);
     }
+    public void OnComics()
+    {
+        SceneManager.LoadScene(Comics);
+    }
     public void OnRestartButtonClick()
     {
         PlayerPrefs.DeleteAll();
