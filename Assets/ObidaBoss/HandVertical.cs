@@ -11,7 +11,7 @@ public class HandVertical : MonoBehaviour
     public Collider2D HandCollider;
     public int CurrentTarget = 0;
     public float speed = 10.0f;
-    bool FinPos = false;
+    public bool FinPos = false;
     void Start()
     {
         HandCollider.enabled = false;
@@ -26,9 +26,9 @@ public class HandVertical : MonoBehaviour
         if(transform.position.y == TargetTrans[CurrentTarget].position.y)
         {
             CurrentTarget += 1;
-            HandCollider.enabled = true;
+            
         }
-        else if(transform.position.y == TargetTrans[1].position.y && FinPos == false)
+        else if(CurrentTarget == 2 && FinPos == false)
         {
             CameraAnimator.SetTrigger("Punch");
             StartCoroutine("FlyAway");
@@ -40,6 +40,8 @@ public class HandVertical : MonoBehaviour
         }
         else if(CurrentTarget == 1){
             spriteRenderer.sortingOrder = 4;
+            HandCollider.enabled = true;
+
         }
     }
     IEnumerator FlyAway()

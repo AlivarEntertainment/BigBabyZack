@@ -13,6 +13,8 @@ public class BossController : MonoBehaviour
     public int VerrPunches = 0;
     public float timeBtwAttack;
     public float startTimeBtwAttack;
+    public int PhaseCounter;
+    
     void Start()
     {
         StartCoroutine("StartBossCor");
@@ -52,6 +54,10 @@ public class BossController : MonoBehaviour
                 timeBtwAttack -= Time.deltaTime;
             }
         }
+        else if(HorPunches == 4 && VerrPunches >= 3)
+        {
+            StartCoroutine("ReloadBossCor");
+        }
     }
     void AttackHor()
     {   
@@ -68,12 +74,32 @@ public class BossController : MonoBehaviour
         GameObject HandVert = VertHand[CurrentHand];
         HandVert.SetActive(true);
         VertHand.RemoveAt(CurrentHand);
+        if(PhaseCounter >= 2)
+        {
+            int CurrentHand2 = Random.Range(0, VertHand.Count);
+            GameObject HandVert2 = VertHand[CurrentHand2];
+            HandVert.SetActive(true);
+            VertHand.RemoveAt(CurrentHand2);
+        }
         VerrPunches += 1;
     }
-    
+    void ReloadBoss()
+    {
+        VerrPunches = 0;
+        HorPunches = 1;
+        CanAttackHor = true;
+        PhaseCounter += 1;
+    }
+
     IEnumerator StartBossCor()
     {
         yield return new WaitForSeconds(4f);
         AttackHor();
+    }
+    IEnumerator ReloadBossCor()
+    {
+        HorPunches = 5;
+        yield return new WaitForSeconds(6f);
+        ReloadBoss();
     }
 }
