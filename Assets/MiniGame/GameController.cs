@@ -7,10 +7,6 @@ public class GameController : MonoBehaviour
     [SerializeField] private KeyCode KeyOne;
     [SerializeField] private KeyCode KeyTwo;
     [SerializeField] private Vector2 VectorMove;
-<<<<<<< HEAD
-=======
-    
->>>>>>> b1046b8 (Roof)
 
     private void FixedUpdate()
     {
