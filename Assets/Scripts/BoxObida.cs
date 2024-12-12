@@ -7,6 +7,7 @@ public class BoxObida : MonoBehaviour
 {   
     public bool IsRoof;
     public PlayableDirector FinicLight;
+    public GameObject TriigerGame;
     public bool DoneQuest;
     public void OnTriggerEnter2D(Collider2D BoxStartTime)
     {
@@ -18,7 +19,7 @@ public class BoxObida : MonoBehaviour
         else if(BoxStartTime.gameObject.tag == "Player" && IsRoof == true)
         {
             FinicLight.Play();
-            DoneQuest = true;
+            TriigerGame.SetActive(true);
         }
     }
 }

@@ -18744,7 +18744,6 @@ GameObject:
   - component: {fileID: 1303948457306739306}
   - component: {fileID: 6435065759807560041}
   - component: {fileID: 3646077725842696286}
-  - component: {fileID: 9034953806702016235}
   - component: {fileID: 9034953806702016236}
   m_Layer: 0
   m_Name: Main Camera
@@ -20310,21 +20309,6 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7529061503439140762}
   m_Enabled: 1
---- !u!114 &9034953806702016235
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7529061503439140762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78bf76517102e9f44b90e4f850d3e382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BgMusic: {fileID: 5520024859487641916, guid: c73f8faa7fca3af419133430c86491de, type: 3}
-  objects11: []
-  IsGnevMusic: 0
 --- !u!95 &9034953806702016236
 Animator:
   serializedVersion: 5

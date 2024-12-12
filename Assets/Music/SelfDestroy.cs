@@ -11,12 +11,17 @@ public class SelfDestroy : MonoBehaviour
     {
         int scene = SceneManager.GetActiveScene().buildIndex;
         Debug.Log(scene);
-        if (scene == 2)
+        if (scene == 0 || scene == 25 || scene == 18)
+        {
+            audioSource.clip = audioClips[3];
+            audioSource.Play();
+        }
+        if (scene == 1)
         {
             audioSource.clip = audioClips[0];
             audioSource.Play();
         }
-        if (scene == 3)
+        if (scene >= 3 && audioSource.clip != audioClips[1] && scene <= 9)
         {
             audioSource.clip = audioClips[1];
             audioSource.Play();
