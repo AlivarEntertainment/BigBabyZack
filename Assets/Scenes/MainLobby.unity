@@ -567,6 +567,10 @@ GameObject:
   - component: {fileID: 379351148}
   - component: {fileID: 379351147}
   - component: {fileID: 379351149}
+<<<<<<< HEAD
+=======
+  - component: {fileID: 379351150}
+>>>>>>> b1046b8 (Roof)
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -723,7 +727,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
+<<<<<<< HEAD
   m_audioClip: {fileID: 8300000, guid: caa934cead24c764aac3195f3e180296, type: 3}
+=======
+  m_audioClip: {fileID: 0}
+>>>>>>> b1046b8 (Roof)
   m_PlayOnAwake: 1
   m_Volume: 0.414
   m_Pitch: 1
@@ -809,6 +817,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+<<<<<<< HEAD
+=======
+--- !u!114 &379351150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379351143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78bf76517102e9f44b90e4f850d3e382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgMusic: {fileID: 5520024859487641916, guid: c73f8faa7fca3af419133430c86491de, type: 3}
+  objects11: []
+  IsGnevMusic: 0
+>>>>>>> b1046b8 (Roof)
 --- !u!1 &386597525
 GameObject:
   m_ObjectHideFlags: 0
