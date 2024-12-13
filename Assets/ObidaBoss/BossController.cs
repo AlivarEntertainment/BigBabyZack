@@ -14,6 +14,10 @@ public class BossController : MonoBehaviour
     public float timeBtwAttack;
     public float startTimeBtwAttack;
     public int PhaseCounter;
+
+    [Header("BossDie")]
+    public Animator BossAniamtor;
+    public GameObject Heart;
     
     void Start()
     {
@@ -98,8 +102,11 @@ public class BossController : MonoBehaviour
     }
     IEnumerator ReloadBossCor()
     {
+        Heart.SetActive(true);
+        BossAniamtor.SetTrigger("Open");
         HorPunches = 5;
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(7.5f);
         ReloadBoss();
+        Heart.SetActive(false);
     }
 }
