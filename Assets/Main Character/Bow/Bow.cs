@@ -61,8 +61,7 @@ public class Bow : MonoBehaviour
         }
         else{
             GameObject newArrow = Instantiate(arrow, shotPoint.position, shotPoint.rotation);
-            Vector2 LeftCond = new Vector2(-lauchForce, 0);
-            newArrow.GetComponent<Rigidbody2D>().velocity = LeftCond;
+            newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * -1 * lauchForce;
            // GameObject newArrow = Instantiate(arrow, shotPoint.position, shotPoint.rotation);
         }
         //GameObject newArrow = Instantiate(arrow, shotPoint.position, shotPoint.rotation);

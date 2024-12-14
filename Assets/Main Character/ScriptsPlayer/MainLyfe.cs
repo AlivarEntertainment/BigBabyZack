@@ -10,8 +10,15 @@ public class MainLyfe : MonoBehaviour
     public Animator BloodAnim;
     public int lives = 3;
     public void Start()
-    {
-        lives = PlayerPrefs.GetInt("Lives");
+    {   
+        if(PlayerPrefs.HasKey("Lives"))
+        {
+            lives = PlayerPrefs.GetInt("Lives");
+        }
+        else
+        {
+            lives = 3;
+        }
         if(lives <= 2)
         {   
             Debug.Log(lives);

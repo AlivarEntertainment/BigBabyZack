@@ -19,6 +19,7 @@ public class Enemy : MonoBehaviour
     Transform player;
     public float StoppingDistance;
     bool chill = false;
+    public float Dist;
     bool angry = false;
     bool goBack = false;
 
@@ -27,7 +28,7 @@ public class Enemy : MonoBehaviour
     public LayerMask WhatIsPlayer;
     public Transform attackPoint;
     private float timeBtwAttack;
-    public float startTimeBtwAttack;
+    public float startTimeBtwAttack = 2;
 
   
     //121212
@@ -36,30 +37,35 @@ public class Enemy : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         currentHealth = maxHeath;
     }
-    void Update()
+    void FixedUpdate()
     {   
         if(Vector2.Distance(transform.position, point.position) < positionOfPatrol && angry == false)
         {
             chill = true;
         }
-        if(Vector2.Distance(transform.position, player.position) < StoppingDistance)
+        Dist = Vector2.Distance(transform.position, player.position);
+        if(Dist > StoppingDistance)
+        {
+            goBack = true;
+            angry = false;
+        }
+        if(Dist < StoppingDistance)
         {
            angry = true;
            chill = false;
            goBack = false;
         }
-        if(Vector2.Distance(transform.position, player.position) > StoppingDistance)
-        {
-            goBack = true;
-            angry = false;
-        }
+        
+        
         if(chill == true)
         {
             Chill();
+            
         }
         else if(angry == true)
         {
             Angry();
+            
         }
         else if(goBack == true)
         {
@@ -68,7 +74,7 @@ public class Enemy : MonoBehaviour
     }
     void Chill()
     {   
-      
+        
         speed = 2;
         if(transform.position.x > point.position.x + positionOfPatrol)
         {
@@ -100,15 +106,7 @@ public class Enemy : MonoBehaviour
     {
         transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
         speed = 3;
-        if(timeBtwAttack <= 0)
-        {
-            AttackPlayer();
-            timeBtwAttack = startTimeBtwAttack;
-        }
-        else
-        {
-            timeBtwAttack -= Time.deltaTime;
-        }
+        AttackPlayer();
         if(player.position.x > transform.position.x && facingRight == false)
         {
             Flip();
@@ -140,12 +138,21 @@ public class Enemy : MonoBehaviour
     }
     void AttackPlayer()
     {
-        EnemyAnimator.SetTrigger("Attack");
-        Collider2D[] hitPlayers = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, WhatIsPlayer);
-        foreach(Collider2D Playerr in hitPlayers)
+        if(timeBtwAttack <= 0.1f && angry == true)
         {
-            Playerr.GetComponent<MainLyfe>().PlayerTakeDamage();
+            Collider2D[] hitPlayers = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, WhatIsPlayer);
+            foreach(Collider2D Playerr in hitPlayers)
+            {   
+                EnemyAnimator.SetTrigger("Attack");
+                Playerr.GetComponent<MainLyfe>().PlayerTakeDamage();
+            }
+            timeBtwAttack = startTimeBtwAttack;
         }
+        else
+        {
+            timeBtwAttack -= Time.deltaTime;
+        }
+        
 
     }
     void Flip()

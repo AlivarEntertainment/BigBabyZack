@@ -12,17 +12,16 @@ public class OpenGates : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {   
-            PressE.SetBool("IsInFade", false);
-            if (Input.GetKey(KeyCode.E))
-            {
+            //PressE.SetBool("IsInFade", false);
+            
                 GatesAnimator.SetTrigger("GatesOpen");
                 PlateAnimator.SetTrigger("OpenBlock");
-            }
+            
         }
     }
     public void OnTriggerExit2D()
     {
-        PressE.SetBool("IsInFade", true);
+        //PressE.SetBool("IsInFade", true);
     }
 
 }

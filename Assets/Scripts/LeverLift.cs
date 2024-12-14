@@ -12,6 +12,7 @@ public class LeverLift : MonoBehaviour
     public bool BoxInPosition;
     [SerializeField]private Animator PressE;
     [SerializeField]private Animator LeverAnimator;
+    public SpriteRenderer spriteRenderer;
     public void OnTriggerStay2D(Collider2D PlayerLever)
     {
         if(PlayerLever.gameObject.tag == "Player")
@@ -34,6 +35,7 @@ public class LeverLift : MonoBehaviour
         {
             BoxInPosition = true;
             Debug.Log("Box");
+            spriteRenderer.color = Color.green;
         }
     }
      
