@@ -10,14 +10,15 @@ public class ComicsController : MonoBehaviour
     public int CurrentPage = -1;
 
     public void OnChangeButtonClick()
-    {
+    {   
+        if(CurrentPage == -1)
+        {
+            imageComics.enabled = true;
+        }
         CurrentPage += 1;
         ComImageAnimator.SetTrigger("Change");
-        StartCoroutine("ChangeSprite");
-    }
-    IEnumerator ChangeSprite()
-    {
-        yield return new WaitForSeconds(0.4f);
         imageComics.sprite = ComicsPages[CurrentPage];
+        //StartCoroutine("ChangeSprite");
     }
+  
 }
