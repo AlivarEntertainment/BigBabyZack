@@ -8,9 +8,12 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: cfxr screen distortion debug
-  m_Shader: {fileID: -6465566751694194690, guid: 304630dc6079b47419e5333f284382fd,
-    type: 3}
-  m_ValidKeywords: []
+  m_Shader: {fileID: -6465566751694194690, guid: 304630dc6079b47419e5333f284382fd, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords:
+  - _ALPHATEST_ON
+  - _FADING_ON
   m_InvalidKeywords:
   - EFFECT_BUMP
   - _
@@ -26,6 +29,7 @@ Material:
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -35,14 +39,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Cutoff: 0.1
+    - _Cutoff: 1
     - _DebugVisualize: 0
     - _EdgeFadePow: 1
-    - _ScreenDistortionScale: 1.75
+    - _ScreenDistortionScale: -0.309
     - _SoftParticlesFadeDistanceFar: 0.33
     - _SoftParticlesFadeDistanceNear: 0
-    - _UseAlphaClip: 0
+    - _UseAlphaClip: 1
     - _UseEF: 0
-    - _UseSP: 0
+    - _UseSP: 1
     m_Colors: []
   m_BuildTextureStacks: []
