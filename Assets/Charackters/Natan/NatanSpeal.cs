@@ -7,16 +7,18 @@ public class NatanSpeal : MonoBehaviour
 {
     [SerializeField]private PlayableDirector DialogTL;
     [SerializeField]private Animator PressE;
-
+    bool used = false;
     public void OnTriggerStay2D(Collider2D other)
     {
-        if(other.gameObject.tag == "Player")
+        if(other.gameObject.tag == "Player" && used == false)
         {   
             PressE.SetBool("IsInFade", false);
             if(Input.GetKey(KeyCode.E))
             {
                 DialogTL.Play();
                 //PressE.SetBool("IsInFade", true);
+                PressE.SetBool("IsInFade", true);
+                used = true;
             }
         }
     }

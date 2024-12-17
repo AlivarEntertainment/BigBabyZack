@@ -15,7 +15,7 @@ public class OpenGates : MonoBehaviour
             //PressE.SetBool("IsInFade", false);
             
                 GatesAnimator.SetTrigger("GatesOpen");
-                PlateAnimator.SetTrigger("OpenBlock");
+                PlateAnimator.SetTrigger("Pressed");
             
         }
     }
