@@ -7,7 +7,7 @@ public class StartGame : MonoBehaviour
 {
     [SerializeField]public Scene Tonnel;
     public int Comics;
-
+    public GameObject ResetPan;
     public void Start()
     {
         Debug.Log("!");
@@ -19,6 +19,14 @@ public class StartGame : MonoBehaviour
     public void OnComics()
     {
         SceneManager.LoadScene(Comics);
+    }
+    public void OnActiveRestart()
+    {
+        ResetPan.SetActive(true);
+    }
+    public void OnDeactRestart()
+    {
+        ResetPan.SetActive(false);
     }
     public void OnRestartButtonClick()
     {

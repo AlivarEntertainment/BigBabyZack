@@ -8,12 +8,20 @@ public class ComicsController : MonoBehaviour
     public Image imageComics;
     public Sprite[] ComicsPages;
     public int CurrentPage = -1;
-
+    public GameObject NextButton;
+    public void Start()
+    {
+        Debug.Log("StartCom");
+    }
     public void OnChangeButtonClick()
     {   
         if(CurrentPage == -1)
         {
             imageComics.enabled = true;
+        }
+        if(CurrentPage == 6)
+        {
+            NextButton.SetActive(false);
         }
         CurrentPage += 1;
         ComImageAnimator.SetTrigger("Change");
