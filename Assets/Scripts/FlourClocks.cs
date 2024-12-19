@@ -10,6 +10,7 @@ public class FlourClocks : MonoBehaviour
     public Animator PlayerAnim;
     public Animator ClocksAnim;
     public bool InPast = false;
+    public GameObject boxSoftBlocker;
     public void ChangeDownTime()
     {
         if(InPast == true)
@@ -17,12 +18,14 @@ public class FlourClocks : MonoBehaviour
             
             ClocksAnim.SetBool("Past", false);
             InPast = false;
+            boxSoftBlocker.SetActive(true);
         }
         else
         {   
             
             ClocksAnim.SetBool("Past", true);
             InPast = true;
+            boxSoftBlocker.SetActive(false);
         }
     }
     public void OnTriggerStay2D(Collider2D playerClock)

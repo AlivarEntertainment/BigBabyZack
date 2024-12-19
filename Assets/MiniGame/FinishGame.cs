@@ -15,9 +15,15 @@ public class FinishGame : MonoBehaviour
         if(collision.gameObject.tag == "Finish")
         {
             boxObida.DoneQuest = true;
-            Destroy(game);
+            StartCoroutine("DestroyGame");
             playerController.enabled = true;
             FinishLight.Play();
         }
+    }
+    IEnumerator DestroyGame()
+    {
+        yield return new WaitForSeconds(3f);
+        Destroy(game);
+        
     }
 }

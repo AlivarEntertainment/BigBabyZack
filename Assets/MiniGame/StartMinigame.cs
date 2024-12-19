@@ -12,9 +12,10 @@ public class StartMinigame : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            MiniGame.SetActive(true);
+            
             if(Input.GetKey(KeyCode.E) && PlayMode == false)
-            {
+            {   
+                MiniGame.SetActive(true);
                 PlayMode = true;
                 playerController.enabled = false;
             }
