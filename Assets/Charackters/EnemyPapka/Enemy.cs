@@ -29,7 +29,7 @@ public class Enemy : MonoBehaviour
     public Transform attackPoint;
     private float timeBtwAttack;
     public float startTimeBtwAttack = 2;
-
+    public bool IsFast = false;
   
     //121212
     void Start()
@@ -74,8 +74,14 @@ public class Enemy : MonoBehaviour
     }
     void Chill()
     {   
-        
-        speed = 2;
+        if(IsFast == false)
+        {
+            speed = 2;
+        }
+        else
+        {
+            speed = 6;
+        }
         if(transform.position.x > point.position.x + positionOfPatrol)
         {
             moveingRight = false;

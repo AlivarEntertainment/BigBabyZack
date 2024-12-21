@@ -13,6 +13,11 @@ public class LeverLift : MonoBehaviour
     [SerializeField]private Animator PressE;
     [SerializeField]private Animator LeverAnimator;
     public SpriteRenderer spriteRenderer;
+    public bool CanUse = true;
+    public void Start()
+    {
+        Debug.Log("StartLever");
+    }
     public void OnTriggerStay2D(Collider2D PlayerLever)
     {
         if(PlayerLever.gameObject.tag == "Player")
@@ -41,12 +46,12 @@ public class LeverLift : MonoBehaviour
      
     public void UseLever()
     {   
-        if(BoxInPosition == true)
+        if(BoxInPosition == true && CanUse == true)
         {
             LiftAnimator.SetTrigger("TakeBox");
             BoxDirector.Play();
             LowBox.SetActive(false);
-            
+            CanUse = false;
             StartCoroutine("AfterLift");
         }
         else if(BoxInPosition == false)
@@ -60,5 +65,6 @@ public class LeverLift : MonoBehaviour
     {
         yield return new WaitForSeconds(4.5f);
         HighBox.SetActive(true);
+        this.enabled = false;
     }
 }

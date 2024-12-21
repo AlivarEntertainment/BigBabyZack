@@ -33,6 +33,10 @@ public class ThirdTimeline : MonoBehaviour
             }
         }
     }
+    public void OnTriggerExit2D(Collider2D PlayerCol)
+    {
+        PressE.SetBool("IsInFade", true);
+    }
      public IEnumerator TimelineCor3()
     {
         yield return new WaitForSeconds(4.2f);

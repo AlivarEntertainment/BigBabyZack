@@ -179,7 +179,13 @@ public class CerberController : MonoBehaviour
     }
     IEnumerator StopChill()
     {
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(3.6f);
+        CerberAnimator.SetTrigger("GoingToRun");
+        StartCoroutine("WaitAfterChill");
+    }
+    IEnumerator WaitAfterChill()
+    {
+        yield return new WaitForSeconds(1.4f);
         CanMove = true;
         IsInFinalPos = false;
         CerberAnimator.SetBool("IsIdle", false);

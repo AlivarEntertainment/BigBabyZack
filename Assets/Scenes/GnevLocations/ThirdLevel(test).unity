@@ -4805,7 +4805,7 @@ Rigidbody2D:
   m_Mass: 5
   m_LinearDrag: 9
   m_AngularDrag: 1
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -11138,6 +11138,7 @@ GameObject:
   - component: {fileID: 1495705105}
   - component: {fileID: 1495705106}
   - component: {fileID: 1495705107}
+  - component: {fileID: 1495705108}
   m_Layer: 0
   m_Name: lever
   m_TagString: Untagged
@@ -11234,6 +11235,7 @@ MonoBehaviour:
   PressE: {fileID: 1057696137}
   LeverAnimator: {fileID: 1495705107}
   spriteRenderer: {fileID: 680784453}
+  CanUse: 1
 --- !u!61 &1495705105
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11343,6 +11345,33 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!50 &1495705108
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495705101}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &1519095862
 GameObject:
   m_ObjectHideFlags: 0
