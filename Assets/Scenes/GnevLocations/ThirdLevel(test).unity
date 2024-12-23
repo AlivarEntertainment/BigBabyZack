@@ -1030,6 +1030,7 @@ GameObject:
   m_Component:
   - component: {fileID: 181151317}
   - component: {fileID: 181151318}
+  - component: {fileID: 181151319}
   m_Layer: 0
   m_Name: "\u0417\u043D\u0430\u043A\u0438_0 (3)"
   m_TagString: Untagged
@@ -1104,6 +1105,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &181151319
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181151316}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 4a0ec1a41a3c14b1dbf5c264a7dc04d3, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 520
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 256
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1.6811366, y: 2.803112}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.46074042, y: 0.040412094}
+    oldSize: {x: 1.77, y: 3.78}
+    newSize: {x: 2.18, y: 3.53}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.5516901, y: 1.6482601}
+  m_EdgeRadius: 0
 --- !u!1 &188252947
 GameObject:
   m_ObjectHideFlags: 0
@@ -3806,7 +3852,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -7.6767263, y: -5.8279047}
+  - {x: -27.266317, y: -4.8367653}
+  - {x: -15.090154, y: -1.6232567}
   - {x: 8.305127, y: -4.8171387}
   - {x: 9.710406, y: -9.946551}
   - {x: 14.086337, y: -9.289568}
@@ -10546,8 +10593,8 @@ EdgeCollider2D:
   m_EdgeRadius: 0
   m_Points:
   - {x: -29.960222, y: 11.81365}
-  - {x: -29.014229, y: 13.850523}
-  - {x: -28.246845, y: 13.183985}
+  - {x: -30.016409, y: 14.316653}
+  - {x: -28.47991, y: 12.694547}
   - {x: -27.692154, y: 12.047128}
   - {x: -8.135061, y: 12.388675}
   - {x: -7.2690015, y: 11.471301}

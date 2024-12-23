@@ -605,7 +605,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 455555754916111193, guid: d411173e39e234e8e815aa6e453e9603, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.4761467
+      value: 6.4677696
       objectReference: {fileID: 0}
     - target: {fileID: 455555754916111193, guid: d411173e39e234e8e815aa6e453e9603, type: 3}
       propertyPath: m_LocalPosition.y
@@ -11350,6 +11350,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1940122796}
     - target: {fileID: 8245964082952944278, guid: e475b715f041f46aca547201222ad5d4, type: 3}
+      propertyPath: IsFast
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8245964082952944278, guid: e475b715f041f46aca547201222ad5d4, type: 3}
       propertyPath: maxHeath
       value: 20
       objectReference: {fileID: 0}
@@ -11361,6 +11365,10 @@ PrefabInstance:
       propertyPath: EnemyCollider
       value: 
       objectReference: {fileID: 1165211223}
+    - target: {fileID: 8245964082952944278, guid: e475b715f041f46aca547201222ad5d4, type: 3}
+      propertyPath: positionOfPatrol
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8245964082952944278, guid: e475b715f041f46aca547201222ad5d4, type: 3}
       propertyPath: startTimeBtwAttack
       value: 0.5
