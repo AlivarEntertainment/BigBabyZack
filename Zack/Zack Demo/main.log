@@ -1,0 +1,389 @@
+
+Message: 24.12.2024 00:34:57.770 22352 [build:148 date:2024-11-13 17:21:47 +0300] x64 libcurl/8.7.1 Schannel zlib/1.3.1 nghttp2/1.60.0
+CPU=INTEL_RPL,FPU,TSC,CX8,CLFSH,MMX,AES,ERMS,F16C,FMA3,VAES,VPCLMULQDQ,BMI1,BMI2,RDSEED,CLFLUSHOPT,CLWB,SSE,SSE2,SSE3,SSSE3,SSE4_1,SSE4_2,AVX,AVX_VNNI,AVX2,PCLMULQDQ,CX16,SHA,POPCNT,MOVBE,RDRND,SS,ADX,LZCNT,GFNI,MOVDIRI,MOVDIR64B,FS_REP_MOV,FS_REP_STOSB
+Phys: 31,82 GB/10,81 GB; PageFile: 36,57 GB/10,48 GB; Virtual: 128,00 TB/128,00 TB
+  StartCommandLine: E:\win64\bstool.exe "D:\Zack\Zack Demo\" -src=D:\Zack\ -token=b8deaa99cf29d3d9912a235d8dabb3c4db5d1227ff69b05976f653d0d424a680 -configscheckonly -skipselfupdate -skipuseractionurl -versioninfo=1
+  CurrentDirectory: D:\Zack\Zack Demo
+Message: 24.12.2024 00:34:57.772 22352 Free space D:\Zack\Zack Demo\ 3,54 TB
+Message: 24.12.2024 00:34:57.772 22352 Free space D:\Zack\Zack Demo\ 3,54 TB
+Exception: 24.12.2024 00:34:57.772 22352 Invalid commandline params: the folder in parameter "-src=" must not include the builder working folder
+Exception Stack: 24.12.2024 00:34:57.778 22352 Start stack HInstance=0000000000420000
+Raw:
+(00000000000570BC) [00000000004780BC]{bstool.exe          }
+(00000000000583FF) [00000000004793FF]{bstool.exe          }
+(0000000000058516) [0000000000479516]{bstool.exe          }
+(00000000000585BD) [00000000004795BD]{bstool.exe          }
+(000000000005877D) [000000000047977D]{bstool.exe          }
+(0000000000009083) [000000000042A083]{bstool.exe          }
+(00000000000090A1) [000000000042A0A1]{bstool.exe          }
+(00000000000D7054) [00000000004F8054]{bstool.exe          }
+(00000000000AAFA8) [00000000004CBFA8]{bstool.exe          }
+(00000000000DA064) [00000000004FB064]{bstool.exe          }
+(0000000000016374) [00007FF95E277374]{KERNEL32.DLL        }
+(000000000004BC91) [00007FF9602BCC91]{ntdll.dll           }
+Finish stack
+Message: 24.12.2024 00:34:57.778 22352 Finish with ERROR bstool.exe; Seconds: 0
+Error: 24.12.2024 00:34:57.778 22352 ExitCode=13
+
+
+Message: 24.12.2024 00:35:27.435 12244 [build:148 date:2024-11-13 17:21:47 +0300] x64 libcurl/8.7.1 Schannel zlib/1.3.1 nghttp2/1.60.0
+CPU=INTEL_RPL,FPU,TSC,CX8,CLFSH,MMX,AES,ERMS,F16C,FMA3,VAES,VPCLMULQDQ,BMI1,BMI2,RDSEED,CLFLUSHOPT,CLWB,SSE,SSE2,SSE3,SSSE3,SSE4_1,SSE4_2,AVX,AVX_VNNI,AVX2,PCLMULQDQ,CX16,SHA,POPCNT,MOVBE,RDRND,SS,ADX,LZCNT,GFNI,MOVDIRI,MOVDIR64B,FS_REP_MOV,FS_REP_STOSB
+Phys: 31,82 GB/10,78 GB; PageFile: 36,57 GB/10,60 GB; Virtual: 128,00 TB/128,00 TB
+  StartCommandLine: E:\win64\bstool.exe "D:\Zack\Zack Demo\" -src=D:\Zack\ -token=a681435c9f693c70adad148fd94c7c6a6edd9a084feee42d70eb5a89f770515c -configscheckonly -skipselfupdate -skipuseractionurl -versioninfo=1
+  CurrentDirectory: D:\Zack\Zack Demo
+Message: 24.12.2024 00:35:27.437 12244 Free space D:\Zack\Zack Demo\ 3,54 TB
+Message: 24.12.2024 00:35:27.437 12244 Free space D:\Zack\Zack Demo\ 3,54 TB
+Exception: 24.12.2024 00:35:27.437 12244 Invalid commandline params: the folder in parameter "-src=" must not include the builder working folder
+Exception Stack: 24.12.2024 00:35:27.440 12244 Start stack HInstance=0000000000420000
+Raw:
+(00000000000570BC) [00000000004780BC]{bstool.exe          }
+(00000000000583FF) [00000000004793FF]{bstool.exe          }
+(0000000000058516) [0000000000479516]{bstool.exe          }
+(00000000000585BD) [00000000004795BD]{bstool.exe          }
+(000000000005877D) [000000000047977D]{bstool.exe          }
+(0000000000009083) [000000000042A083]{bstool.exe          }
+(00000000000090A1) [000000000042A0A1]{bstool.exe          }
+(00000000000D7054) [00000000004F8054]{bstool.exe          }
+(00000000000AAFA8) [00000000004CBFA8]{bstool.exe          }
+(00000000000DA064) [00000000004FB064]{bstool.exe          }
+(0000000000016374) [00007FF95E277374]{KERNEL32.DLL        }
+(000000000004BC91) [00007FF9602BCC91]{ntdll.dll           }
+Finish stack
+Message: 24.12.2024 00:35:27.440 12244 Finish with ERROR bstool.exe; Seconds: 0
+Error: 24.12.2024 00:35:27.440 12244 ExitCode=13
+
+
+Message: 24.12.2024 00:38:38.363 39172 [build:148 date:2024-11-13 17:21:47 +0300] x64 libcurl/8.7.1 Schannel zlib/1.3.1 nghttp2/1.60.0
+CPU=INTEL_RPL,FPU,TSC,CX8,CLFSH,MMX,AES,ERMS,F16C,FMA3,VAES,VPCLMULQDQ,BMI1,BMI2,RDSEED,CLFLUSHOPT,CLWB,SSE,SSE2,SSE3,SSSE3,SSE4_1,SSE4_2,AVX,AVX_VNNI,AVX2,PCLMULQDQ,CX16,SHA,POPCNT,MOVBE,RDRND,SS,ADX,LZCNT,GFNI,MOVDIRI,MOVDIR64B,FS_REP_MOV,FS_REP_STOSB
+Phys: 31,82 GB/10,88 GB; PageFile: 36,57 GB/10,71 GB; Virtual: 128,00 TB/128,00 TB
+  StartCommandLine: E:\win64\bstool.exe "D:\Zack\Zack Demo\" -src=E:\BigBabyZack-main\BigBabyZack\ -token=a681435c9f693c70adad148fd94c7c6a6edd9a084feee42d70eb5a89f770515c -configscheckonly -skipselfupdate -skipuseractionurl -versioninfo=1
+  CurrentDirectory: D:\Zack\Zack Demo
+Message: 24.12.2024 00:38:38.365 39172 Free space D:\Zack\Zack Demo\ 3,54 TB
+Message: 24.12.2024 00:38:38.365 39172 Config (does not exist yet): D:\Zack\Zack Demo\build.ini
+Message: 24.12.2024 00:38:49.723 39172 Config: D:\Zack\Zack Demo\build.ini
+Message: 24.12.2024 00:38:49.723 39172 ServerUrl: http://adm-store.dl.mail.ru/admin.php; GameId: 0.2038580
+Message: 24.12.2024 00:38:49.896 39172 [Warning] New empty project.xml is created.
+Message: 24.12.2024 00:38:49.914 39172 Free space D:\Zack\Zack Demo\ 3,54 TB
+Message: 24.12.2024 00:38:49.914 39172 gc_id=0.2038580
+Message: 24.12.2024 00:38:49.914 39172 Finish OK bstool.exe; Seconds: 11
+Message: 24.12.2024 00:38:49.914 39172 ExitCode=0 OK
+
+
+Message: 24.12.2024 00:40:17.018 8428 [build:148 date:2024-11-13 17:21:47 +0300] x64 libcurl/8.7.1 Schannel zlib/1.3.1 nghttp2/1.60.0
+CPU=INTEL_RPL,FPU,TSC,CX8,CLFSH,MMX,AES,ERMS,F16C,FMA3,VAES,VPCLMULQDQ,BMI1,BMI2,RDSEED,CLFLUSHOPT,CLWB,SSE,SSE2,SSE3,SSSE3,SSE4_1,SSE4_2,AVX,AVX_VNNI,AVX2,PCLMULQDQ,CX16,SHA,POPCNT,MOVBE,RDRND,SS,ADX,LZCNT,GFNI,MOVDIRI,MOVDIR64B,FS_REP_MOV,FS_REP_STOSB
+Phys: 31,82 GB/10,96 GB; PageFile: 36,57 GB/10,57 GB; Virtual: 128,00 TB/128,00 TB
+  StartCommandLine: E:\win64\bstool.exe "D:\Zack\Zack Demo\" -src=E:\BigBabyZack-main\BigBabyZack\ -token=a681435c9f693c70adad148fd94c7c6a6edd9a084feee42d70eb5a89f770515c -skipselfupdate -skipuseractionurl -versioninfo=1
+  CurrentDirectory: D:\Zack\Zack Demo
+Message: 24.12.2024 00:40:17.019 8428 Free space D:\Zack\Zack Demo\ 3,54 TB
+Message: 24.12.2024 00:40:17.019 8428 Config: D:\Zack\Zack Demo\build.ini
+
+Message: 24.12.2024 00:40:31.798 42720 [build:148 date:2024-11-13 17:21:47 +0300] x64 libcurl/8.7.1 Schannel zlib/1.3.1 nghttp2/1.60.0
+CPU=INTEL_RPL,FPU,TSC,CX8,CLFSH,MMX,AES,ERMS,F16C,FMA3,VAES,VPCLMULQDQ,BMI1,BMI2,RDSEED,CLFLUSHOPT,CLWB,SSE,SSE2,SSE3,SSSE3,SSE4_1,SSE4_2,AVX,AVX_VNNI,AVX2,PCLMULQDQ,CX16,SHA,POPCNT,MOVBE,RDRND,SS,ADX,LZCNT,GFNI,MOVDIRI,MOVDIR64B,FS_REP_MOV,FS_REP_STOSB
+Phys: 31,82 GB/10,98 GB; PageFile: 36,57 GB/10,56 GB; Virtual: 128,00 TB/128,00 TB
+  StartCommandLine: E:\win64\bstool.exe "D:\Zack\Zack Demo\" -src=E:\BigBabyZack-main\BigBabyZack\ -token=a681435c9f693c70adad148fd94c7c6a6edd9a084feee42d70eb5a89f770515c -skipselfupdate -skipuseractionurl -versioninfo=1
+  CurrentDirectory: D:\Zack\Zack Demo
+Message: 24.12.2024 00:40:31.800 42720 Free space D:\Zack\Zack Demo\ 3,54 TB
+Message: 24.12.2024 00:40:31.800 42720 Config: D:\Zack\Zack Demo\build.ini
+Message: 24.12.2024 00:40:31.996 42720 ServerUrl: http://adm-store.dl.mail.ru/admin.php; GameId: 0.2038580
+Message: 24.12.2024 00:40:32.168 42720 [Warning] New empty project.xml is created.
+Message: 24.12.2024 00:40:32.358 42720 Forced CompressedFiles/non-pure because encryption is applied
+Message: 24.12.2024 00:40:43.580 42720 Login Timestamp=1734982832 QuotaSize=53687091200
+Message: 24.12.2024 00:40:43.580 42720 UserName=316039663@vk
+Message: 24.12.2024 00:40:43.580 42720 Process Distrib-Package trash. TrashDay=20
+
+Message: 24.12.2024 00:46:57.204 11700 [build:148 date:2024-11-13 17:21:47 +0300] x64 libcurl/8.7.1 Schannel zlib/1.3.1 nghttp2/1.60.0
+CPU=INTEL_RPL,FPU,TSC,CX8,CLFSH,MMX,AES,ERMS,F16C,FMA3,VAES,VPCLMULQDQ,BMI1,BMI2,RDSEED,CLFLUSHOPT,CLWB,SSE,SSE2,SSE3,SSSE3,SSE4_1,SSE4_2,AVX,AVX_VNNI,AVX2,PCLMULQDQ,CX16,SHA,POPCNT,MOVBE,RDRND,SS,ADX,LZCNT,GFNI,MOVDIRI,MOVDIR64B,FS_REP_MOV,FS_REP_STOSB
+Phys: 31,82 GB/10,88 GB; PageFile: 36,57 GB/10,52 GB; Virtual: 128,00 TB/128,00 TB
+  StartCommandLine: E:\win64\bstool.exe "E:\BigBabyZack-main\BigBabyZack\Zack Demo\" -src=E:\BigBabyZack-main\BigBabyZack\ -token=a681435c9f693c70adad148fd94c7c6a6edd9a084feee42d70eb5a89f770515c -skipselfupdate -skipuseractionurl -versioninfo=2
+  CurrentDirectory: E:\BigBabyZack-main\BigBabyZack\Zack Demo
+Message: 24.12.2024 00:46:57.206 11700 Free space E:\BigBabyZack-main\BigBabyZack\Zack Demo\ 117,53 GB
+Message: 24.12.2024 00:46:57.206 11700 Free space E:\BigBabyZack-main\BigBabyZack\Zack Demo\ 117,53 GB
+Exception: 24.12.2024 00:46:57.207 11700 Invalid commandline params: the folder in parameter "-src=" must not include the builder working folder
+Exception Stack: 24.12.2024 00:46:57.209 11700 Start stack HInstance=0000000000420000
+Raw:
+(00000000000570BC) [00000000004780BC]{bstool.exe          }
+(00000000000583FF) [00000000004793FF]{bstool.exe          }
+(0000000000058516) [0000000000479516]{bstool.exe          }
+(00000000000585BD) [00000000004795BD]{bstool.exe          }
+(000000000005877D) [000000000047977D]{bstool.exe          }
+(0000000000009083) [000000000042A083]{bstool.exe          }
+(00000000000090A1) [000000000042A0A1]{bstool.exe          }
+(00000000000D7054) [00000000004F8054]{bstool.exe          }
+(00000000000AAFA8) [00000000004CBFA8]{bstool.exe          }
+(00000000000DA064) [00000000004FB064]{bstool.exe          }
+(0000000000016374) [00007FF95E277374]{KERNEL32.DLL        }
+(000000000004BC91) [00007FF9602BCC91]{ntdll.dll           }
+Finish stack
+Message: 24.12.2024 00:46:57.210 11700 Finish with ERROR bstool.exe; Seconds: 0
+Error: 24.12.2024 00:46:57.210 11700 ExitCode=13
+
+
+Message: 24.12.2024 00:48:50.931 27440 [build:148 date:2024-11-13 17:21:47 +0300] x64 libcurl/8.7.1 Schannel zlib/1.3.1 nghttp2/1.60.0
+CPU=INTEL_RPL,FPU,TSC,CX8,CLFSH,MMX,AES,ERMS,F16C,FMA3,VAES,VPCLMULQDQ,BMI1,BMI2,RDSEED,CLFLUSHOPT,CLWB,SSE,SSE2,SSE3,SSSE3,SSE4_1,SSE4_2,AVX,AVX_VNNI,AVX2,PCLMULQDQ,CX16,SHA,POPCNT,MOVBE,RDRND,SS,ADX,LZCNT,GFNI,MOVDIRI,MOVDIR64B,FS_REP_MOV,FS_REP_STOSB
+Phys: 31,82 GB/10,89 GB; PageFile: 36,57 GB/10,56 GB; Virtual: 128,00 TB/128,00 TB
+  StartCommandLine: E:\win64\bstool.exe "E:\BigBabyZack-main\BigBabyZack\Zack Demo\" -src=E:\BigBabyZack-main\BigBabyZack\ -token=a681435c9f693c70adad148fd94c7c6a6edd9a084feee42d70eb5a89f770515c -skipselfupdate -skipuseractionurl -versioninfo=3
+  CurrentDirectory: E:\BigBabyZack-main\BigBabyZack\Zack Demo
+Message: 24.12.2024 00:48:50.933 27440 Free space E:\BigBabyZack-main\BigBabyZack\Zack Demo\ 117,53 GB
+Message: 24.12.2024 00:48:50.934 27440 Free space E:\BigBabyZack-main\BigBabyZack\Zack Demo\ 117,53 GB
+Exception: 24.12.2024 00:48:50.934 27440 Invalid commandline params: the folder in parameter "-src=" must not include the builder working folder
+Exception Stack: 24.12.2024 00:48:50.936 27440 Start stack HInstance=0000000000420000
+Raw:
+(00000000000570BC) [00000000004780BC]{bstool.exe          }
+(00000000000583FF) [00000000004793FF]{bstool.exe          }
+(0000000000058516) [0000000000479516]{bstool.exe          }
+(00000000000585BD) [00000000004795BD]{bstool.exe          }
+(000000000005877D) [000000000047977D]{bstool.exe          }
+(0000000000009083) [000000000042A083]{bstool.exe          }
+(00000000000090A1) [000000000042A0A1]{bstool.exe          }
+(00000000000D7054) [00000000004F8054]{bstool.exe          }
+(00000000000AAFA8) [00000000004CBFA8]{bstool.exe          }
+(00000000000DA064) [00000000004FB064]{bstool.exe          }
+(0000000000016374) [00007FF95E277374]{KERNEL32.DLL        }
+(000000000004BC91) [00007FF9602BCC91]{ntdll.dll           }
+Finish stack
+Message: 24.12.2024 00:48:50.937 27440 Finish with ERROR bstool.exe; Seconds: 0
+Error: 24.12.2024 00:48:50.937 27440 ExitCode=13
+
+
+Message: 24.12.2024 00:51:12.099 6336 [build:148 date:2024-11-13 17:21:47 +0300] x64 libcurl/8.7.1 Schannel zlib/1.3.1 nghttp2/1.60.0
+CPU=INTEL_RPL,FPU,TSC,CX8,CLFSH,MMX,AES,ERMS,F16C,FMA3,VAES,VPCLMULQDQ,BMI1,BMI2,RDSEED,CLFLUSHOPT,CLWB,SSE,SSE2,SSE3,SSSE3,SSE4_1,SSE4_2,AVX,AVX_VNNI,AVX2,PCLMULQDQ,CX16,SHA,POPCNT,MOVBE,RDRND,SS,ADX,LZCNT,GFNI,MOVDIRI,MOVDIR64B,FS_REP_MOV,FS_REP_STOSB
+Phys: 31,82 GB/10,88 GB; PageFile: 36,57 GB/10,52 GB; Virtual: 128,00 TB/128,00 TB
+  StartCommandLine: E:\win64\bstool.exe "E:\BigBabyZack-main\BigBabyZack\Zack Demo\" -src=E:\BigBabyZack-main\BigBabyZack\ -token=a681435c9f693c70adad148fd94c7c6a6edd9a084feee42d70eb5a89f770515c -skipselfupdate -skipuseractionurl -versioninfo=5
+  CurrentDirectory: E:\BigBabyZack-main\BigBabyZack\Zack Demo
+Message: 24.12.2024 00:51:12.100 6336 Free space E:\BigBabyZack-main\BigBabyZack\Zack Demo\ 117,53 GB
+Message: 24.12.2024 00:51:12.100 6336 Free space E:\BigBabyZack-main\BigBabyZack\Zack Demo\ 117,53 GB
+Exception: 24.12.2024 00:51:12.100 6336 Invalid commandline params: the folder in parameter "-src=" must not include the builder working folder
+Exception Stack: 24.12.2024 00:51:12.103 6336 Start stack HInstance=0000000000420000
+Raw:
+(00000000000570BC) [00000000004780BC]{bstool.exe          }
+(00000000000583FF) [00000000004793FF]{bstool.exe          }
+(0000000000058516) [0000000000479516]{bstool.exe          }
+(00000000000585BD) [00000000004795BD]{bstool.exe          }
+(000000000005877D) [000000000047977D]{bstool.exe          }
+(0000000000009083) [000000000042A083]{bstool.exe          }
+(00000000000090A1) [000000000042A0A1]{bstool.exe          }
+(00000000000D7054) [00000000004F8054]{bstool.exe          }
+(00000000000AAFA8) [00000000004CBFA8]{bstool.exe          }
+(00000000000DA064) [00000000004FB064]{bstool.exe          }
+(0000000000016374) [00007FF95E277374]{KERNEL32.DLL        }
+(000000000004BC91) [00007FF9602BCC91]{ntdll.dll           }
+Finish stack
+Message: 24.12.2024 00:51:12.103 6336 Finish with ERROR bstool.exe; Seconds: 0
+Error: 24.12.2024 00:51:12.103 6336 ExitCode=13
+
+
+Message: 24.12.2024 00:54:51.715 6688 [build:148 date:2024-11-13 17:21:47 +0300] x64 libcurl/8.7.1 Schannel zlib/1.3.1 nghttp2/1.60.0
+CPU=INTEL_RPL,FPU,TSC,CX8,CLFSH,MMX,AES,ERMS,F16C,FMA3,VAES,VPCLMULQDQ,BMI1,BMI2,RDSEED,CLFLUSHOPT,CLWB,SSE,SSE2,SSE3,SSSE3,SSE4_1,SSE4_2,AVX,AVX_VNNI,AVX2,PCLMULQDQ,CX16,SHA,POPCNT,MOVBE,RDRND,SS,ADX,LZCNT,GFNI,MOVDIRI,MOVDIR64B,FS_REP_MOV,FS_REP_STOSB
+Phys: 31,82 GB/10,83 GB; PageFile: 36,57 GB/10,45 GB; Virtual: 128,00 TB/128,00 TB
+  StartCommandLine: E:\win64\bstool.exe "E:\BigBabyZack-main\BigBabyZack\Bilds\Zack Demo\" -src=E:\BigBabyZack-main\BigBabyZack\ -token=4165e1214a62c88f115b008f5482c3034c35aa0c7a7d396d775fd769ba579e3d -configscheckonly -skipselfupdate -skipuseractionurl -versioninfo=7
+  CurrentDirectory: E:\BigBabyZack-main\BigBabyZack\Bilds\Zack Demo
+Message: 24.12.2024 00:54:51.717 6688 Free space E:\BigBabyZack-main\BigBabyZack\Bilds\Zack Demo\ 117,53 GB
+Message: 24.12.2024 00:54:51.718 6688 Free space E:\BigBabyZack-main\BigBabyZack\Bilds\Zack Demo\ 117,53 GB
+Exception: 24.12.2024 00:54:51.718 6688 Invalid commandline params: the folder in parameter "-src=" must not include the builder working folder
+Exception Stack: 24.12.2024 00:54:51.720 6688 Start stack HInstance=0000000000420000
+Raw:
+(00000000000570BC) [00000000004780BC]{bstool.exe          }
+(00000000000583FF) [00000000004793FF]{bstool.exe          }
+(0000000000058516) [0000000000479516]{bstool.exe          }
+(00000000000585BD) [00000000004795BD]{bstool.exe          }
+(000000000005877D) [000000000047977D]{bstool.exe          }
+(0000000000009083) [000000000042A083]{bstool.exe          }
+(00000000000090A1) [000000000042A0A1]{bstool.exe          }
+(00000000000D7054) [00000000004F8054]{bstool.exe          }
+(00000000000AAFA8) [00000000004CBFA8]{bstool.exe          }
+(00000000000DA064) [00000000004FB064]{bstool.exe          }
+(0000000000016374) [00007FF95E277374]{KERNEL32.DLL        }
+(000000000004BC91) [00007FF9602BCC91]{ntdll.dll           }
+Finish stack
+Message: 24.12.2024 00:54:51.721 6688 Finish with ERROR bstool.exe; Seconds: 0
+Error: 24.12.2024 00:54:51.721 6688 ExitCode=13
+
+
+Message: 24.12.2024 00:55:11.687 6912 [build:148 date:2024-11-13 17:21:47 +0300] x64 libcurl/8.7.1 Schannel zlib/1.3.1 nghttp2/1.60.0
+CPU=INTEL_RPL,FPU,TSC,CX8,CLFSH,MMX,AES,ERMS,F16C,FMA3,VAES,VPCLMULQDQ,BMI1,BMI2,RDSEED,CLFLUSHOPT,CLWB,SSE,SSE2,SSE3,SSSE3,SSE4_1,SSE4_2,AVX,AVX_VNNI,AVX2,PCLMULQDQ,CX16,SHA,POPCNT,MOVBE,RDRND,SS,ADX,LZCNT,GFNI,MOVDIRI,MOVDIR64B,FS_REP_MOV,FS_REP_STOSB
+Phys: 31,82 GB/10,82 GB; PageFile: 36,57 GB/10,45 GB; Virtual: 128,00 TB/128,00 TB
+  StartCommandLine: E:\win64\bstool.exe "E:\BigBabyZack-main\BigBabyZack\Bilds\Zack Demo\" -src=E:\BigBabyZack-main\BigBabyZack\ -token=ced833950e7f9edbf5f9deb1768113f649a1bb40b8074dd2b95b78f326556354 -configscheckonly -skipselfupdate -skipuseractionurl -versioninfo=7
+  CurrentDirectory: E:\BigBabyZack-main\BigBabyZack\Bilds\Zack Demo
+Message: 24.12.2024 00:55:11.689 6912 Free space E:\BigBabyZack-main\BigBabyZack\Bilds\Zack Demo\ 117,53 GB
+Message: 24.12.2024 00:55:11.689 6912 Free space E:\BigBabyZack-main\BigBabyZack\Bilds\Zack Demo\ 117,53 GB
+Exception: 24.12.2024 00:55:11.689 6912 Invalid commandline params: the folder in parameter "-src=" must not include the builder working folder
+Exception Stack: 24.12.2024 00:55:11.692 6912 Start stack HInstance=0000000000420000
+Raw:
+(00000000000570BC) [00000000004780BC]{bstool.exe          }
+(00000000000583FF) [00000000004793FF]{bstool.exe          }
+(0000000000058516) [0000000000479516]{bstool.exe          }
+(00000000000585BD) [00000000004795BD]{bstool.exe          }
+(000000000005877D) [000000000047977D]{bstool.exe          }
+(0000000000009083) [000000000042A083]{bstool.exe          }
+(00000000000090A1) [000000000042A0A1]{bstool.exe          }
+(00000000000D7054) [00000000004F8054]{bstool.exe          }
+(00000000000AAFA8) [00000000004CBFA8]{bstool.exe          }
+(00000000000DA064) [00000000004FB064]{bstool.exe          }
+(0000000000016374) [00007FF95E277374]{KERNEL32.DLL        }
+(000000000004BC91) [00007FF9602BCC91]{ntdll.dll           }
+Finish stack
+Message: 24.12.2024 00:55:11.692 6912 Finish with ERROR bstool.exe; Seconds: 0
+Error: 24.12.2024 00:55:11.692 6912 ExitCode=13
+
+
+Message: 24.12.2024 00:55:19.639 38584 [build:148 date:2024-11-13 17:21:47 +0300] x64 libcurl/8.7.1 Schannel zlib/1.3.1 nghttp2/1.60.0
+CPU=INTEL_RPL,FPU,TSC,CX8,CLFSH,MMX,AES,ERMS,F16C,FMA3,VAES,VPCLMULQDQ,BMI1,BMI2,RDSEED,CLFLUSHOPT,CLWB,SSE,SSE2,SSE3,SSSE3,SSE4_1,SSE4_2,AVX,AVX_VNNI,AVX2,PCLMULQDQ,CX16,SHA,POPCNT,MOVBE,RDRND,SS,ADX,LZCNT,GFNI,MOVDIRI,MOVDIR64B,FS_REP_MOV,FS_REP_STOSB
+Phys: 31,82 GB/10,84 GB; PageFile: 36,57 GB/10,48 GB; Virtual: 128,00 TB/128,00 TB
+  StartCommandLine: E:\win64\bstool.exe "E:\BigBabyZack-main\BigBabyZack\Bilds\Zack Demo\" -src=E:\BigBabyZack-main\BigBabyZack\ -token=ced833950e7f9edbf5f9deb1768113f649a1bb40b8074dd2b95b78f326556354 -configscheckonly -skipselfupdate -skipuseractionurl -versioninfo=1
+  CurrentDirectory: E:\BigBabyZack-main\BigBabyZack\Bilds\Zack Demo
+Message: 24.12.2024 00:55:19.641 38584 Free space E:\BigBabyZack-main\BigBabyZack\Bilds\Zack Demo\ 117,53 GB
+Message: 24.12.2024 00:55:19.641 38584 Free space E:\BigBabyZack-main\BigBabyZack\Bilds\Zack Demo\ 117,53 GB
+Exception: 24.12.2024 00:55:19.641 38584 Invalid commandline params: the folder in parameter "-src=" must not include the builder working folder
+Exception Stack: 24.12.2024 00:55:19.644 38584 Start stack HInstance=0000000000420000
+Raw:
+(00000000000570BC) [00000000004780BC]{bstool.exe          }
+(00000000000583FF) [00000000004793FF]{bstool.exe          }
+(0000000000058516) [0000000000479516]{bstool.exe          }
+(00000000000585BD) [00000000004795BD]{bstool.exe          }
+(000000000005877D) [000000000047977D]{bstool.exe          }
+(0000000000009083) [000000000042A083]{bstool.exe          }
+(00000000000090A1) [000000000042A0A1]{bstool.exe          }
+(00000000000D7054) [00000000004F8054]{bstool.exe          }
+(00000000000AAFA8) [00000000004CBFA8]{bstool.exe          }
+(00000000000DA064) [00000000004FB064]{bstool.exe          }
+(0000000000016374) [00007FF95E277374]{KERNEL32.DLL        }
+(000000000004BC91) [00007FF9602BCC91]{ntdll.dll           }
+Finish stack
+Message: 24.12.2024 00:55:19.644 38584 Finish with ERROR bstool.exe; Seconds: 0
+Error: 24.12.2024 00:55:19.645 38584 ExitCode=13
+
+
+Message: 24.12.2024 00:55:42.889 25704 [build:148 date:2024-11-13 17:21:47 +0300] x64 libcurl/8.7.1 Schannel zlib/1.3.1 nghttp2/1.60.0
+CPU=INTEL_RPL,FPU,TSC,CX8,CLFSH,MMX,AES,ERMS,F16C,FMA3,VAES,VPCLMULQDQ,BMI1,BMI2,RDSEED,CLFLUSHOPT,CLWB,SSE,SSE2,SSE3,SSSE3,SSE4_1,SSE4_2,AVX,AVX_VNNI,AVX2,PCLMULQDQ,CX16,SHA,POPCNT,MOVBE,RDRND,SS,ADX,LZCNT,GFNI,MOVDIRI,MOVDIR64B,FS_REP_MOV,FS_REP_STOSB
+Phys: 31,82 GB/10,85 GB; PageFile: 36,57 GB/10,45 GB; Virtual: 128,00 TB/128,00 TB
+  StartCommandLine: E:\win64\bstool.exe "E:\BigBabyZack-main\BigBabyZack\Bilds\Zack Demo\" -src=E:\BigBabyZack-main\BigBabyZack\ -token=ced833950e7f9edbf5f9deb1768113f649a1bb40b8074dd2b95b78f326556354 -configscheckonly -skipselfupdate -skipuseractionurl -versioninfo=3
+  CurrentDirectory: E:\BigBabyZack-main\BigBabyZack\Bilds\Zack Demo
+Message: 24.12.2024 00:55:42.890 25704 Free space E:\BigBabyZack-main\BigBabyZack\Bilds\Zack Demo\ 117,53 GB
+Message: 24.12.2024 00:55:42.891 25704 Free space E:\BigBabyZack-main\BigBabyZack\Bilds\Zack Demo\ 117,53 GB
+Exception: 24.12.2024 00:55:42.891 25704 Invalid commandline params: the folder in parameter "-src=" must not include the builder working folder
+Exception Stack: 24.12.2024 00:55:42.893 25704 Start stack HInstance=0000000000420000
+Raw:
+(00000000000570BC) [00000000004780BC]{bstool.exe          }
+(00000000000583FF) [00000000004793FF]{bstool.exe          }
+(0000000000058516) [0000000000479516]{bstool.exe          }
+(00000000000585BD) [00000000004795BD]{bstool.exe          }
+(000000000005877D) [000000000047977D]{bstool.exe          }
+(0000000000009083) [000000000042A083]{bstool.exe          }
+(00000000000090A1) [000000000042A0A1]{bstool.exe          }
+(00000000000D7054) [00000000004F8054]{bstool.exe          }
+(00000000000AAFA8) [00000000004CBFA8]{bstool.exe          }
+(00000000000DA064) [00000000004FB064]{bstool.exe          }
+(0000000000016374) [00007FF95E277374]{KERNEL32.DLL        }
+(000000000004BC91) [00007FF9602BCC91]{ntdll.dll           }
+Finish stack
+Message: 24.12.2024 00:55:42.894 25704 Finish with ERROR bstool.exe; Seconds: 0
+Error: 24.12.2024 00:55:42.894 25704 ExitCode=13
+
+
+Message: 24.12.2024 00:55:45.427 31868 [build:148 date:2024-11-13 17:21:47 +0300] x64 libcurl/8.7.1 Schannel zlib/1.3.1 nghttp2/1.60.0
+CPU=INTEL_RPL,FPU,TSC,CX8,CLFSH,MMX,AES,ERMS,F16C,FMA3,VAES,VPCLMULQDQ,BMI1,BMI2,RDSEED,CLFLUSHOPT,CLWB,SSE,SSE2,SSE3,SSSE3,SSE4_1,SSE4_2,AVX,AVX_VNNI,AVX2,PCLMULQDQ,CX16,SHA,POPCNT,MOVBE,RDRND,SS,ADX,LZCNT,GFNI,MOVDIRI,MOVDIR64B,FS_REP_MOV,FS_REP_STOSB
+Phys: 31,82 GB/10,84 GB; PageFile: 36,57 GB/10,46 GB; Virtual: 128,00 TB/128,00 TB
+  StartCommandLine: E:\win64\bstool.exe "E:\BigBabyZack-main\BigBabyZack\Bilds\Zack Demo\" -src=E:\BigBabyZack-main\BigBabyZack\ -token=ced833950e7f9edbf5f9deb1768113f649a1bb40b8074dd2b95b78f326556354 -configscheckonly -skipselfupdate -skipuseractionurl -versioninfo=3
+  CurrentDirectory: E:\BigBabyZack-main\BigBabyZack\Bilds\Zack Demo
+Message: 24.12.2024 00:55:45.428 31868 Free space E:\BigBabyZack-main\BigBabyZack\Bilds\Zack Demo\ 117,53 GB
+Message: 24.12.2024 00:55:45.428 31868 Free space E:\BigBabyZack-main\BigBabyZack\Bilds\Zack Demo\ 117,53 GB
+Exception: 24.12.2024 00:55:45.429 31868 Invalid commandline params: the folder in parameter "-src=" must not include the builder working folder
+Exception Stack: 24.12.2024 00:55:45.431 31868 Start stack HInstance=0000000000420000
+Raw:
+(00000000000570BC) [00000000004780BC]{bstool.exe          }
+(00000000000583FF) [00000000004793FF]{bstool.exe          }
+(0000000000058516) [0000000000479516]{bstool.exe          }
+(00000000000585BD) [00000000004795BD]{bstool.exe          }
+(000000000005877D) [000000000047977D]{bstool.exe          }
+(0000000000009083) [000000000042A083]{bstool.exe          }
+(00000000000090A1) [000000000042A0A1]{bstool.exe          }
+(00000000000D7054) [00000000004F8054]{bstool.exe          }
+(00000000000AAFA8) [00000000004CBFA8]{bstool.exe          }
+(00000000000DA064) [00000000004FB064]{bstool.exe          }
+(0000000000016374) [00007FF95E277374]{KERNEL32.DLL        }
+(000000000004BC91) [00007FF9602BCC91]{ntdll.dll           }
+Finish stack
+Message: 24.12.2024 00:55:45.431 31868 Finish with ERROR bstool.exe; Seconds: 0
+Error: 24.12.2024 00:55:45.431 31868 ExitCode=13
+
+
+Message: 24.12.2024 00:55:53.425 22100 [build:148 date:2024-11-13 17:21:47 +0300] x64 libcurl/8.7.1 Schannel zlib/1.3.1 nghttp2/1.60.0
+CPU=INTEL_RPL,FPU,TSC,CX8,CLFSH,MMX,AES,ERMS,F16C,FMA3,VAES,VPCLMULQDQ,BMI1,BMI2,RDSEED,CLFLUSHOPT,CLWB,SSE,SSE2,SSE3,SSSE3,SSE4_1,SSE4_2,AVX,AVX_VNNI,AVX2,PCLMULQDQ,CX16,SHA,POPCNT,MOVBE,RDRND,SS,ADX,LZCNT,GFNI,MOVDIRI,MOVDIR64B,FS_REP_MOV,FS_REP_STOSB
+Phys: 31,82 GB/10,85 GB; PageFile: 36,57 GB/10,49 GB; Virtual: 128,00 TB/128,00 TB
+  StartCommandLine: E:\win64\bstool.exe "E:\BigBabyZack-main\BigBabyZack\Bilds\Zack Demo\" -src=E:\BigBabyZack-main\BigBabyZack\ -token=a681435c9f693c70adad148fd94c7c6a6edd9a084feee42d70eb5a89f770515c9 -configscheckonly -skipselfupdate -skipuseractionurl -versioninfo=3
+  CurrentDirectory: E:\BigBabyZack-main\BigBabyZack\Bilds\Zack Demo
+Message: 24.12.2024 00:55:53.427 22100 Free space E:\BigBabyZack-main\BigBabyZack\Bilds\Zack Demo\ 117,53 GB
+Message: 24.12.2024 00:55:53.427 22100 Free space E:\BigBabyZack-main\BigBabyZack\Bilds\Zack Demo\ 117,53 GB
+Exception: 24.12.2024 00:55:53.427 22100 Invalid commandline params: the folder in parameter "-src=" must not include the builder working folder
+Exception Stack: 24.12.2024 00:55:53.430 22100 Start stack HInstance=0000000000420000
+Raw:
+(00000000000570BC) [00000000004780BC]{bstool.exe          }
+(00000000000583FF) [00000000004793FF]{bstool.exe          }
+(0000000000058516) [0000000000479516]{bstool.exe          }
+(00000000000585BD) [00000000004795BD]{bstool.exe          }
+(000000000005877D) [000000000047977D]{bstool.exe          }
+(0000000000009083) [000000000042A083]{bstool.exe          }
+(00000000000090A1) [000000000042A0A1]{bstool.exe          }
+(00000000000D7054) [00000000004F8054]{bstool.exe          }
+(00000000000AAFA8) [00000000004CBFA8]{bstool.exe          }
+(00000000000DA064) [00000000004FB064]{bstool.exe          }
+(0000000000016374) [00007FF95E277374]{KERNEL32.DLL        }
+(000000000004BC91) [00007FF9602BCC91]{ntdll.dll           }
+Finish stack
+Message: 24.12.2024 00:55:53.430 22100 Finish with ERROR bstool.exe; Seconds: 0
+Error: 24.12.2024 00:55:53.430 22100 ExitCode=13
+
+
+Message: 24.12.2024 00:56:07.741 3512 [build:148 date:2024-11-13 17:21:47 +0300] x64 libcurl/8.7.1 Schannel zlib/1.3.1 nghttp2/1.60.0
+CPU=INTEL_RPL,FPU,TSC,CX8,CLFSH,MMX,AES,ERMS,F16C,FMA3,VAES,VPCLMULQDQ,BMI1,BMI2,RDSEED,CLFLUSHOPT,CLWB,SSE,SSE2,SSE3,SSSE3,SSE4_1,SSE4_2,AVX,AVX_VNNI,AVX2,PCLMULQDQ,CX16,SHA,POPCNT,MOVBE,RDRND,SS,ADX,LZCNT,GFNI,MOVDIRI,MOVDIR64B,FS_REP_MOV,FS_REP_STOSB
+Phys: 31,82 GB/10,82 GB; PageFile: 36,57 GB/10,41 GB; Virtual: 128,00 TB/128,00 TB
+  StartCommandLine: E:\win64\bstool.exe "E:\BigBabyZack-main\BigBabyZack\Bilds\Zack Demo\" -src=E:\BigBabyZack-main\BigBabyZack\ -token=b17a231a0ee5d5af53d66b5eca588f60d277d4011a29f2ae645d971cc9ebcaaa -configscheckonly -skipselfupdate -skipuseractionurl -versioninfo=3
+  CurrentDirectory: E:\BigBabyZack-main\BigBabyZack\Bilds\Zack Demo
+Message: 24.12.2024 00:56:07.743 3512 Free space E:\BigBabyZack-main\BigBabyZack\Bilds\Zack Demo\ 117,53 GB
+Message: 24.12.2024 00:56:07.743 3512 Free space E:\BigBabyZack-main\BigBabyZack\Bilds\Zack Demo\ 117,53 GB
+Exception: 24.12.2024 00:56:07.743 3512 Invalid commandline params: the folder in parameter "-src=" must not include the builder working folder
+Exception Stack: 24.12.2024 00:56:07.747 3512 Start stack HInstance=0000000000420000
+Raw:
+(00000000000570BC) [00000000004780BC]{bstool.exe          }
+(00000000000583FF) [00000000004793FF]{bstool.exe          }
+(0000000000058516) [0000000000479516]{bstool.exe          }
+(00000000000585BD) [00000000004795BD]{bstool.exe          }
+(000000000005877D) [000000000047977D]{bstool.exe          }
+(0000000000009083) [000000000042A083]{bstool.exe          }
+(00000000000090A1) [000000000042A0A1]{bstool.exe          }
+(00000000000D7054) [00000000004F8054]{bstool.exe          }
+(00000000000AAFA8) [00000000004CBFA8]{bstool.exe          }
+(00000000000DA064) [00000000004FB064]{bstool.exe          }
+(0000000000016374) [00007FF95E277374]{KERNEL32.DLL        }
+(000000000004BC91) [00007FF9602BCC91]{ntdll.dll           }
+Finish stack
+Message: 24.12.2024 00:56:07.747 3512 Finish with ERROR bstool.exe; Seconds: 0
+Error: 24.12.2024 00:56:07.747 3512 ExitCode=13
+
+
+Message: 24.12.2024 00:56:12.361 7604 [build:148 date:2024-11-13 17:21:47 +0300] x64 libcurl/8.7.1 Schannel zlib/1.3.1 nghttp2/1.60.0
+CPU=INTEL_RPL,FPU,TSC,CX8,CLFSH,MMX,AES,ERMS,F16C,FMA3,VAES,VPCLMULQDQ,BMI1,BMI2,RDSEED,CLFLUSHOPT,CLWB,SSE,SSE2,SSE3,SSSE3,SSE4_1,SSE4_2,AVX,AVX_VNNI,AVX2,PCLMULQDQ,CX16,SHA,POPCNT,MOVBE,RDRND,SS,ADX,LZCNT,GFNI,MOVDIRI,MOVDIR64B,FS_REP_MOV,FS_REP_STOSB
+Phys: 31,82 GB/10,78 GB; PageFile: 36,57 GB/10,39 GB; Virtual: 128,00 TB/128,00 TB
+  StartCommandLine: E:\win64\bstool.exe "E:\BigBabyZack-main\BigBabyZack\Bilds\Zack Demo\" -src=E:\BigBabyZack-main\BigBabyZack\ -token=b17a231a0ee5d5af53d66b5eca588f60d277d4011a29f2ae645d971cc9ebcaaa -configscheckonly -skipselfupdate -skipuseractionurl -versioninfo=3
+  CurrentDirectory: E:\BigBabyZack-main\BigBabyZack\Bilds\Zack Demo
+Message: 24.12.2024 00:56:12.363 7604 Free space E:\BigBabyZack-main\BigBabyZack\Bilds\Zack Demo\ 117,53 GB
+Message: 24.12.2024 00:56:12.364 7604 Free space E:\BigBabyZack-main\BigBabyZack\Bilds\Zack Demo\ 117,53 GB
+Exception: 24.12.2024 00:56:12.364 7604 Invalid commandline params: the folder in parameter "-src=" must not include the builder working folder
+Exception Stack: 24.12.2024 00:56:12.366 7604 Start stack HInstance=0000000000420000
+Raw:
+(00000000000570BC) [00000000004780BC]{bstool.exe          }
+(00000000000583FF) [00000000004793FF]{bstool.exe          }
+(0000000000058516) [0000000000479516]{bstool.exe          }
+(00000000000585BD) [00000000004795BD]{bstool.exe          }
+(000000000005877D) [000000000047977D]{bstool.exe          }
+(0000000000009083) [000000000042A083]{bstool.exe          }
+(00000000000090A1) [000000000042A0A1]{bstool.exe          }
+(00000000000D7054) [00000000004F8054]{bstool.exe          }
+(00000000000AAFA8) [00000000004CBFA8]{bstool.exe          }
+(00000000000DA064) [00000000004FB064]{bstool.exe          }
+(0000000000016374) [00007FF95E277374]{KERNEL32.DLL        }
+(000000000004BC91) [00007FF9602BCC91]{ntdll.dll           }
+Finish stack
+Message: 24.12.2024 00:56:12.367 7604 Finish with ERROR bstool.exe; Seconds: 0
+Error: 24.12.2024 00:56:12.367 7604 ExitCode=13
+

@@ -1380,8 +1380,8 @@ MonoBehaviour:
   - {fileID: 4016187590314166151}
   - {fileID: 1465942373}
   - {fileID: 3947276568003113764}
-  PrefIdin: 0
-  ArrIdin: 0
+  PrefIdin: 1
+  ArrIdin: 1
 --- !u!1 &1358585810
 GameObject:
   m_ObjectHideFlags: 0
@@ -6310,6 +6310,7 @@ MonoBehaviour:
   Tonnel:
     m_Handle: 0
   Comics: 0
+  ResetPan: {fileID: 0}
 --- !u!114 &1491177968
 MonoBehaviour:
   m_ObjectHideFlags: 0
