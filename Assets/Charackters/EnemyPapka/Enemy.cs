@@ -112,7 +112,11 @@ public class Enemy : MonoBehaviour
     {
         transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
         speed = 3;
-        AttackPlayer();
+        if(Dist <= 1.7f)
+        {
+            EnemyAnimator.SetTrigger("Attack");
+        }
+        //AttackPlayer();
         if(player.position.x > transform.position.x && facingRight == false)
         {
             Flip();
@@ -144,20 +148,20 @@ public class Enemy : MonoBehaviour
     }
     void AttackPlayer()
     {
-        if(timeBtwAttack <= 0.1f && angry == true)
-        {
+        //if(timeBtwAttack <= 0.1f && angry == true)
+        //{
             Collider2D[] hitPlayers = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, WhatIsPlayer);
             foreach(Collider2D Playerr in hitPlayers)
             {   
-                EnemyAnimator.SetTrigger("Attack");
+                
                 Playerr.GetComponent<MainLyfe>().PlayerTakeDamage();
             }
-            timeBtwAttack = startTimeBtwAttack;
-        }
-        else
-        {
-            timeBtwAttack -= Time.deltaTime;
-        }
+           // timeBtwAttack = startTimeBtwAttack;
+        //}
+       // else
+        //{
+            //timeBtwAttack -= Time.deltaTime;
+        //}
         
 
     }

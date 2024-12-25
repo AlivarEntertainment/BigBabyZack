@@ -31,5 +31,10 @@ public class StartGame : MonoBehaviour
     public void OnRestartButtonClick()
     {
         PlayerPrefs.DeleteAll();
+        ResetPan.SetActive(false);
+    }
+    public void OnExitGameClick()
+    {
+        Application.Quit();
     }
 }

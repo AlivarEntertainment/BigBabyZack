@@ -1,0 +1,100 @@
+
+Message: 25.12.2024 23:56:35.273 21012 [build:148 date:2024-11-13 17:21:47 +0300] x64 libcurl/8.7.1 Schannel zlib/1.3.1 nghttp2/1.60.0
+CPU=INTEL_RPL,FPU,TSC,CX8,CLFSH,MMX,AES,ERMS,F16C,FMA3,VAES,VPCLMULQDQ,BMI1,BMI2,RDSEED,CLFLUSHOPT,CLWB,SSE,SSE2,SSE3,SSSE3,SSE4_1,SSE4_2,AVX,AVX_VNNI,AVX2,PCLMULQDQ,CX16,SHA,POPCNT,MOVBE,RDRND,SS,ADX,LZCNT,GFNI,MOVDIRI,MOVDIR64B,FS_REP_MOV,FS_REP_STOSB
+Phys: 31,82 GB/10,01 GB; PageFile: 36,57 GB/9,78 GB; Virtual: 128,00 TB/128,00 TB
+  StartCommandLine: E:\win64\bstool.exe E:\Bilds\ZackDem02\ -src=E:\BigBabyZack-main\BigBabyZack\ -token=b17a231a0ee5d5af53d66b5eca588f60d277d4011a29f2ae645d971cc9ebcaaa -configscheckonly -skipselfupdate -skipuseractionurl -versioninfo=3
+  CurrentDirectory: E:\Bilds\ZackDem02
+Message: 25.12.2024 23:56:35.319 21012 Free space E:\Bilds\ZackDem02\ 115,56 GB
+Message: 25.12.2024 23:56:35.319 21012 Config (does not exist yet): E:\Bilds\ZackDem02\build.ini
+Message: 25.12.2024 23:56:46.649 21012 Free space E:\Bilds\ZackDem02\ 115,56 GB
+Exception: 25.12.2024 23:56:46.649 21012 It is necessary to pass gc_id. duration=0
+Exception Stack: 25.12.2024 23:56:46.655 21012 Start stack HInstance=0000000000D80000
+Raw:
+(00000000000570BC) [0000000000DD80BC]{bstool.exe          }
+(00000000000583FF) [0000000000DD93FF]{bstool.exe          }
+(0000000000058516) [0000000000DD9516]{bstool.exe          }
+(00000000000585BD) [0000000000DD95BD]{bstool.exe          }
+(000000000005877D) [0000000000DD977D]{bstool.exe          }
+(0000000000009083) [0000000000D8A083]{bstool.exe          }
+(00000000000090A1) [0000000000D8A0A1]{bstool.exe          }
+(0000000000098E76) [0000000000E19E76]{bstool.exe          }
+(0000000000099249) [0000000000E1A249]{bstool.exe          }
+(00000000000992CA) [0000000000E1A2CA]{bstool.exe          }
+(000000000009AFE1) [0000000000E1BFE1]{bstool.exe          }
+(00000000000A19FD) [0000000000E229FD]{bstool.exe          }
+(00000000000D755B) [0000000000E5855B]{bstool.exe          }
+(00000000000AAFA8) [0000000000E2BFA8]{bstool.exe          }
+(00000000000DA064) [0000000000E5B064]{bstool.exe          }
+(0000000000016374) [00007FF95E277374]{KERNEL32.DLL        }
+(000000000004BC91) [00007FF9602BCC91]{ntdll.dll           }
+Finish stack
+Message: 25.12.2024 23:56:46.655 21012 Finish with ERROR bstool.exe; Seconds: 11
+Error: 25.12.2024 23:56:46.655 21012 ExitCode=13
+
+
+Message: 25.12.2024 23:57:01.537 43868 [build:148 date:2024-11-13 17:21:47 +0300] x64 libcurl/8.7.1 Schannel zlib/1.3.1 nghttp2/1.60.0
+CPU=INTEL_RPL,FPU,TSC,CX8,CLFSH,MMX,AES,ERMS,F16C,FMA3,VAES,VPCLMULQDQ,BMI1,BMI2,RDSEED,CLFLUSHOPT,CLWB,SSE,SSE2,SSE3,SSSE3,SSE4_1,SSE4_2,AVX,AVX_VNNI,AVX2,PCLMULQDQ,CX16,SHA,POPCNT,MOVBE,RDRND,SS,ADX,LZCNT,GFNI,MOVDIRI,MOVDIR64B,FS_REP_MOV,FS_REP_STOSB
+Phys: 31,82 GB/10,01 GB; PageFile: 36,57 GB/9,77 GB; Virtual: 128,00 TB/128,00 TB
+  StartCommandLine: E:\win64\bstool.exe E:\Bilds\ZackDem02\ -src=E:\BigBabyZack-main\BigBabyZack\ -token=621ef2bd4d7e55f6dcdbe4737d598e87cebaafe29f3288cb2dea2de9b3a9d796 -configscheckonly -skipselfupdate -skipuseractionurl -versioninfo=3
+  CurrentDirectory: E:\Bilds\ZackDem02
+Message: 25.12.2024 23:57:01.539 43868 Free space E:\Bilds\ZackDem02\ 115,56 GB
+Message: 25.12.2024 23:57:01.539 43868 Config (does not exist yet): E:\Bilds\ZackDem02\build.ini
+Message: 25.12.2024 23:57:23.935 43868 Config: E:\Bilds\ZackDem02\build.ini
+Message: 25.12.2024 23:57:23.935 43868 ServerUrl: http://adm-store.dl.mail.ru/admin.php; GameId: 0.2038580
+Message: 25.12.2024 23:57:35.345 43868 Free space E:\Bilds\ZackDem02\ 115,56 GB
+Message: 25.12.2024 23:57:35.346 43868 gc_id=0.2038580
+Message: 25.12.2024 23:57:35.346 43868 Finish OK bstool.exe; Seconds: 34
+Message: 25.12.2024 23:57:35.346 43868 ExitCode=0 OK
+
+
+Message: 25.12.2024 23:58:58.367 39484 [build:148 date:2024-11-13 17:21:47 +0300] x64 libcurl/8.7.1 Schannel zlib/1.3.1 nghttp2/1.60.0
+CPU=INTEL_RPL,FPU,TSC,CX8,CLFSH,MMX,AES,ERMS,F16C,FMA3,VAES,VPCLMULQDQ,BMI1,BMI2,RDSEED,CLFLUSHOPT,CLWB,SSE,SSE2,SSE3,SSSE3,SSE4_1,SSE4_2,AVX,AVX_VNNI,AVX2,PCLMULQDQ,CX16,SHA,POPCNT,MOVBE,RDRND,SS,ADX,LZCNT,GFNI,MOVDIRI,MOVDIR64B,FS_REP_MOV,FS_REP_STOSB
+Phys: 31,82 GB/9,97 GB; PageFile: 36,57 GB/9,77 GB; Virtual: 128,00 TB/128,00 TB
+  StartCommandLine: E:\win64\bstool.exe E:\Bilds\ZackDem02\ -src=E:\BigBabyZack-main\BigBabyZack\ -token=621ef2bd4d7e55f6dcdbe4737d598e87cebaafe29f3288cb2dea2de9b3a9d796 -skipselfupdate -skipuseractionurl -versioninfo=1
+  CurrentDirectory: E:\Bilds\ZackDem02
+Message: 25.12.2024 23:58:58.369 39484 Free space E:\Bilds\ZackDem02\ 115,56 GB
+Message: 25.12.2024 23:58:58.369 39484 Config: E:\Bilds\ZackDem02\build.ini
+Message: 25.12.2024 23:59:09.659 39484 ServerUrl: http://adm-store.dl.mail.ru/admin.php; GameId: 0.2038580
+Message: 25.12.2024 23:59:10.206 39484 Forced CompressedFiles/non-pure because encryption is applied
+Message: 25.12.2024 23:59:10.367 39484 Login Timestamp=1735153150 QuotaSize=53687091200
+Message: 25.12.2024 23:59:10.367 39484 UserName=316039663@vk
+Message: 25.12.2024 23:59:10.367 39484 Auto delete the existing last build been in the test line, #3
+Message: 25.12.2024 23:59:10.367 39484 Trash package 0_2038580distrib3
+Message: 25.12.2024 23:59:10.367 39484 Process Distrib-Package trash. TrashDay=20
+Message: 25.12.2024 23:59:10.538 39484 Process Patch-Package trash. PatchTrashDay=160
+Message: 25.12.2024 23:59:10.709 39484 Process packages autoremoving based on quota-size limit (50,00 GB)
+Message: 25.12.2024 23:59:10.894 39484 Apply Package Changes
+Message: 25.12.2024 23:59:11.064 39484 Save project.xml
+Message: 25.12.2024 23:59:11.065 39484 Uploading actual project.xml
+Message: 25.12.2024 23:59:11.737 39484 Actual project.xml has been uploaded
+Message: 25.12.2024 23:59:11.737 39484 Synchronizing local files from server
+Message: 25.12.2024 23:59:11.737 39484 Checking local files integrity
+Message: 25.12.2024 23:59:11.737 39484 Step1_Load
+Message: 25.12.2024 23:59:11.738 39484 Will create new build #4
+Message: 25.12.2024 23:59:12.218 39484 Step1_ProcessAllFileNamesList
+Message: 25.12.2024 23:59:12.219 39484 Step1_ProcessDistrib
+Message: 25.12.2024 23:59:12.219 39484 Free space E:\Bilds\ZackDem02\ 115,56 GB
+Exception: 25.12.2024 23:59:12.219 39484 Main client Exe(64bit) file does not exist in the source folder: E:\BigBabyZack-main\BigBabyZack\Zack's Story.exe
+Exception Stack: 25.12.2024 23:59:12.222 39484 Start stack HInstance=0000000000D80000
+Raw:
+(00000000000570BC) [0000000000DD80BC]{bstool.exe          }
+(00000000000583FF) [0000000000DD93FF]{bstool.exe          }
+(0000000000058516) [0000000000DD9516]{bstool.exe          }
+(00000000000585BD) [0000000000DD95BD]{bstool.exe          }
+(000000000005877D) [0000000000DD977D]{bstool.exe          }
+(0000000000009083) [0000000000D8A083]{bstool.exe          }
+(00000000000090A1) [0000000000D8A0A1]{bstool.exe          }
+(00000000000A9E84) [0000000000E2AE84]{bstool.exe          }
+(00000000000C0AA9) [0000000000E41AA9]{bstool.exe          }
+(00000000000C0C92) [0000000000E41C92]{bstool.exe          }
+(00000000000D29E4) [0000000000E539E4]{bstool.exe          }
+(00000000000D3F08) [0000000000E54F08]{bstool.exe          }
+(00000000000AAFD2) [0000000000E2BFD2]{bstool.exe          }
+(00000000000DA064) [0000000000E5B064]{bstool.exe          }
+(0000000000016374) [00007FF95E277374]{KERNEL32.DLL        }
+(000000000004BC91) [00007FF9602BCC91]{ntdll.dll           }
+Finish stack
+Message: 25.12.2024 23:59:12.223 39484 gc_id=0.2038580
+Message: 25.12.2024 23:59:12.223 39484 Finish with ERROR bstool.exe; Seconds: 14
+Error: 25.12.2024 23:59:12.223 39484 ExitCode=13
+
