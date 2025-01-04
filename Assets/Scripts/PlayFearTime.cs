@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Playables;
 public class PlayFearTime : MonoBehaviour
 {
@@ -13,7 +14,12 @@ public class PlayFearTime : MonoBehaviour
         {   
             SpiderDirector.Play();
             playerPlayable.SetActive(false);
+            StartCoroutine("ChangeScene");
         }
     }
-   
+   IEnumerator ChangeScene()
+   {
+        yield return new WaitForSeconds(15f);
+        SceneManager.LoadScene(20);
+   }
 }
