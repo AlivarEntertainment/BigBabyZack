@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     [Header("StandartMove")]
     public float speed;
     public float jumpForce;
-    private float MoveInput;
+    private static float MoveInput;
     public Rigidbody2D rb;
     public bool facingRight = true;
     public Animator PlayerAnimator;
@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour
         {
             PlayerAnimator.speed = 1.7f;
         }
+        
     }
     private void FixedUpdate()
     {   
