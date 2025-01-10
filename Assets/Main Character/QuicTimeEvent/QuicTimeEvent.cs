@@ -3,8 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class QuicTimeEvent : MonoBehaviour
-{
+{   
+    public enum ButtonToPress
+    {
+        D,
+        A,
+        Space,
+        W
+    }
     public bool Pressed;
+    public ButtonToPress buttonToPress;
+    public float TimeToPress;
+    public int pressTimes;
     public void Start()
     {
         StartCoroutine("FailCor");
@@ -19,16 +29,32 @@ public class QuicTimeEvent : MonoBehaviour
         {
             Time.timeScale += Time.deltaTime * 8;
         }
-        if (Input.GetKey(KeyCode.D))
+        if(buttonToPress == ButtonToPress.D)
         {
-            Pressed = true;
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+            
             Debug.Log("Pressed");
+            pressTimes -=1;
+            }
         }
-       
+        if(buttonToPress == ButtonToPress.Space)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+            
+            Debug.Log("Pressed");
+            pressTimes -=1;
+            }
+        }
+       if(pressTimes <= 0)
+       {
+            Pressed = true;
+       }
     }
     IEnumerator FailCor()
     {
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(TimeToPress);
         if(Pressed == false)
         {
             Application.Quit();

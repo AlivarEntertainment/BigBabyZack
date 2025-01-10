@@ -14,6 +14,10 @@ public class BossController : MonoBehaviour
     public float timeBtwAttack;
     public float startTimeBtwAttack;
     public int PhaseCounter;
+    [Header("PlayerBody")]
+    public SpriteRenderer[] playerBodies;
+    public Sprite[] normalBodies;
+    public int BodyCounter;
 
     [Header("BossDie")]
     public Animator BossAniamtor;
@@ -99,7 +103,8 @@ public class BossController : MonoBehaviour
         VerrPunches = 0;
         HorPunches = 1;
         CanAttackHor = true;
-        
+        BodyCounter += 1;
+        playerBodies[BodyCounter].sprite = normalBodies[BodyCounter];
     }
     public void DestroyBoss()
     {
