@@ -36,7 +36,7 @@ public class HandVertical : MonoBehaviour
             }
             if(CurrentTarget == 3)
             {   
-                
+                HandCollider.enabled = true;
                 TargetPos = new Vector2(this.transform.position.x + Random.Range(-8, 8), TargetTrans[CurrentTarget].position.y);
             }
         }
@@ -45,6 +45,7 @@ public class HandVertical : MonoBehaviour
         {
             CameraAnimator.SetTrigger("Punch");
             StartCoroutine("FlyAway");
+            HandCollider.enabled = false;
             FinPos = true;
         }
         

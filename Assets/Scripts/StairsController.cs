@@ -11,6 +11,10 @@ public class StairsController : MonoBehaviour
     public float timeBtwAttack;
     public float startTimeBtwAttack;
     public bool InPast = false;
+    public void Start()
+    {
+        Debug.Log("7");
+    }
     public void OnTriggerStay2D(Collider2D playerClock)
     {
         if(playerClock.gameObject.tag == "Player")

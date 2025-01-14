@@ -107,7 +107,10 @@ public class BossController : MonoBehaviour
         playerBodies[BodyCounter].sprite = normalBodies[BodyCounter];
     }
     public void DestroyBoss()
-    {
+    {   
+        playerBodies[BodyCounter].sprite = normalBodies[BodyCounter];
+        BodyCounter += 1;
+        playerBodies[BodyCounter].sprite = normalBodies[BodyCounter];
         BossAniamtor.SetTrigger("Destroy");
         this.enabled = false;
         CanAttackHor = false;
