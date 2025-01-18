@@ -20,6 +20,6 @@ public class PlayFearTime : MonoBehaviour
    IEnumerator ChangeScene()
    {
         yield return new WaitForSeconds(15f);
-        SceneManager.LoadScene(20);
+        SceneManager.LoadScene(21);
    }
 }
