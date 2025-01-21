@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class HealthOnBoss : MonoBehaviour
-{
+{   
+    //isObidaBoss
     public MainLyfe mainLyfe;
     public PlayerController playerController;
     public Collider2D playerCollider;
@@ -16,7 +17,7 @@ public class HealthOnBoss : MonoBehaviour
             {
                 mainLyfe.lives = 3;
                 PlayerPrefs.SetInt("Lives", 3);
-                SceneManager.LoadScene(24);
+                SceneManager.LoadScene(26);
             }
             else
             {   

@@ -19,7 +19,7 @@ public class DieObidaLight : MonoBehaviour
         if(playerCol.gameObject.tag == "Player")
         {
             PlayerPrefs.SetInt("ObidaLocation", SceneManager.GetActiveScene().buildIndex);
-            SceneManager.LoadScene(17);
+            SceneManager.LoadScene(25);
         }
     }
     public IEnumerator GoBackToObida()

@@ -42,7 +42,7 @@ public class HeaGetDamage : MonoBehaviour
             {
                 mainLyfe.lives = 3;
                 PlayerPrefs.SetInt("Lives", 3);
-                SceneManager.LoadScene(12);
+                SceneManager.LoadScene(15);
             }
             else
             {   

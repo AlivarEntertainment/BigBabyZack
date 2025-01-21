@@ -20,6 +20,6 @@ public class DogTimeline : MonoBehaviour
     public IEnumerator ToBossScene2()
     {
         yield return new WaitForSeconds(18f);
-        SceneManager.LoadScene(11);
+        SceneManager.LoadScene(14);
     }
 }

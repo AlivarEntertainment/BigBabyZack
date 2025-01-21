@@ -1278,7 +1278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd15270231baa4f3f9dd2fa0db2de2f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneToReach: 1
+  SceneToReach: 4
   IsStart: 1
 --- !u!114 &1725071497
 MonoBehaviour:
@@ -1372,6 +1372,7 @@ MonoBehaviour:
   Tonnel:
     m_Handle: 0
   Comics: 0
+  ResetPan: {fileID: 0}
 --- !u!114 &1938485675
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -86,7 +86,7 @@ public class MainLyfe : MonoBehaviour
         lives = 3;
         PlayerPrefs.SetInt("GnevLocation", SceneManager.GetActiveScene().buildIndex);
         PlayerPrefs.SetInt("Lives", 3);
-        SceneManager.LoadScene(14);
+        SceneManager.LoadScene(17);
     }
     
 }

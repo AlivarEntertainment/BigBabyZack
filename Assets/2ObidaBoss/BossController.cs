@@ -22,7 +22,7 @@ public class BossController : MonoBehaviour
     [Header("BossDie")]
     public Animator BossAniamtor;
     public GameObject Heart;
-    
+    public GameObject ChangeDie;
     void Start()
     {
         StartCoroutine("StartBossCor");
@@ -112,6 +112,7 @@ public class BossController : MonoBehaviour
         BodyCounter += 1;
         playerBodies[BodyCounter].sprite = normalBodies[BodyCounter];
         BossAniamtor.SetTrigger("Destroy");
+        ChangeDie.SetActive(true);
         this.enabled = false;
         CanAttackHor = false;
     }
