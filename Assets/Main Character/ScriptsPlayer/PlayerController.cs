@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     public bool IsClimbing = false;
 
     public bool OnBoss;
+    public bool OnOgurec;
     public Transform PlayerPos;
     
 
@@ -48,6 +49,10 @@ public class PlayerController : MonoBehaviour
             if(OnBoss == true)
             {
                 rb.gravityScale = 2.5f;
+            }
+            else if(OnOgurec == true)
+            {
+                rb.gravityScale = 2.2f;
             }
             else{
                 rb.gravityScale = 1;
