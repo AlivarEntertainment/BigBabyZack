@@ -14,6 +14,6 @@ public class LoadBossScene : MonoBehaviour
     IEnumerator ToBossScene()
     {
         yield return new WaitForSeconds(Seconds);
-        SceneManager.LoadScene(11);
+        SceneManager.LoadScene(14);
     }
 }
