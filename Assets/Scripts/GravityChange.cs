@@ -11,14 +11,18 @@ public class GravityChange : MonoBehaviour
     public float RotationStep;
     public bool Flipped;
     public PlayerController playerController;
+    public Collider2D[] colliders;
+    int CurrentCol = -1;
     public void Update()
     {
         PlayeroObj.transform.rotation = Quaternion.Lerp(PlayeroObj.transform.rotation, direction, RotationStep);
         if (timeBtwAttack >= 0)
-        {  
+        {   
+            
              timeBtwAttack -= Time.deltaTime;
              RotationStep = 5 * Time.deltaTime;
         }
+       
         
     }
     public void OnTriggerEnter2D(Collider2D playerCol)
@@ -51,6 +55,8 @@ public class GravityChange : MonoBehaviour
             }
             timeBtwAttack = startTimeBtwAttack;
             //RotationStep = 7 * Time.deltaTime;
+            CurrentCol += 1;
+            colliders[CurrentCol].enabled = false;
         }
     }
 }
