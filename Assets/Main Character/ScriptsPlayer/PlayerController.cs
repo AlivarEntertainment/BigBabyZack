@@ -27,7 +27,6 @@ public class PlayerController : MonoBehaviour
     public bool OnOgurec;
     public Transform PlayerPos;
     
-
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -144,5 +143,18 @@ public class PlayerController : MonoBehaviour
         Scaler.x *= -1;
         transform.localScale = Scaler;
     }
-    
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Wall")
+        {
+            rb.gravityScale = 0;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Wall")
+        {
+            rb.gravityScale = 2.2f;
+        }
+    }
 }
