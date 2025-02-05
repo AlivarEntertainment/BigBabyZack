@@ -29,14 +29,17 @@ public class BossController : MonoBehaviour
         CanAttackHor = false;
         PhaseCounter = 0;
     }
-
-    // Update is called once per frame
-    void FixedUpdate()
+    public void Update()
     {
         if(PhaseCounter == 3)
         {
             DestroyBoss();
         }
+    }
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+        
         if(HorPunches <= 3 && CanAttackHor == true && HorPunches != 0 && PhaseCounter <= 3)
         {   
             startTimeBtwAttack = 3.5f;
@@ -99,7 +102,8 @@ public class BossController : MonoBehaviour
         VerrPunches += 1;
     }
     void ReloadBoss()
-    {
+    {   
+        
         VerrPunches = 0;
         HorPunches = 1;
         CanAttackHor = true;
@@ -108,12 +112,13 @@ public class BossController : MonoBehaviour
     }
     public void DestroyBoss()
     {   
+        StartCoroutine("BossDestroy");
+        Debug.Log("DieBoss");
+        BossAniamtor.SetTrigger("Destroy");
         playerBodies[BodyCounter].sprite = normalBodies[BodyCounter];
+        PhaseCounter +=1;
         BodyCounter += 1;
         playerBodies[BodyCounter].sprite = normalBodies[BodyCounter];
-        BossAniamtor.SetTrigger("Destroy");
-        ChangeDie.SetActive(true);
-        this.enabled = false;
         CanAttackHor = false;
     }
 
@@ -127,9 +132,16 @@ public class BossController : MonoBehaviour
         Heart.SetActive(true);
         BossAniamtor.SetTrigger("Open");
         HorPunches = 5;
-        PhaseCounter += 1;
+         PhaseCounter += 1;
         yield return new WaitForSeconds(7.5f);
         ReloadBoss();
         Heart.SetActive(false);
+    }
+    IEnumerator BossDestroy()
+    {
+        yield return new WaitForSeconds(6f);
+       ChangeDie.SetActive(true);
+       this.enabled = false;
+        
     }
 }

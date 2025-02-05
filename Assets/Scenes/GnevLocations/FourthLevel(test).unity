@@ -4609,7 +4609,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.10324049, y: -0.25542748}
+  m_Offset: {x: 0.10324049, y: 0.04379499}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4620,7 +4620,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.663519, y: 5.9108543}
+  m_Size: {x: 0.663519, y: 5.3124094}
   m_EdgeRadius: 0
 --- !u!1 &583954242
 GameObject:
@@ -24624,6 +24624,7 @@ MonoBehaviour:
   MoveInputYY: 0
   IsClimbing: 0
   OnBoss: 0
+  OnOgurec: 0
   PlayerPos: {fileID: 5941419455734296110}
 --- !u!212 &4269287153007749216
 SpriteRenderer:
@@ -26019,7 +26020,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4aae075bb9f8448fbbf3f11f30a66090, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ThisLevelId: 0
+  ThisLevelId: 10
 --- !u!4 &6193550103579093826
 Transform:
   m_ObjectHideFlags: 0

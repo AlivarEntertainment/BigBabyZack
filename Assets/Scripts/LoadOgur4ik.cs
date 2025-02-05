@@ -8,15 +8,16 @@ public class LoadOgur4ik : MonoBehaviour
     private int SceneToLoad;
     public Light2D LightSource;
     public Color color;
+    bool IsBoss;
     public void Awake()
     {
         SceneToLoad = PlayerPrefs.GetInt("OgurecLocation");
         StartCoroutine("GoBackToOgur4k");
-        if(SceneToLoad == 29)
+        if(SceneToLoad == 29 && IsBoss == false)
         {
             LightSource.GetComponent<Light2D>().color = color;
         }
-        else if(SceneToLoad == 33)
+        else if(SceneToLoad == 33 && IsBoss == false)
         {   
             LightSource.GetComponent<Light2D>().color =new  Color(0, 4, 0, 0.3f);
             

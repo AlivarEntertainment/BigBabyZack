@@ -6,7 +6,8 @@ public class LobbyCont : MonoBehaviour
 {
     public GameObject NavigationPan;
     public Animator FadeAnim;
-    
+    public GameObject ChapterBlocks;
+    public GameObject ChapterPan;
     public void OnNavigationButtonClikc()
     {
         NavigationPan.SetActive(true);
@@ -16,5 +17,10 @@ public class LobbyCont : MonoBehaviour
     {
         NavigationPan.SetActive(false);
         FadeAnim.SetTrigger("ChangeNav");
+    }
+    public void OnChapterButtonClick()
+    {
+        ChapterBlocks.SetActive(true);
+        ChapterPan.SetActive(false);
     }
 }

@@ -5120,6 +5120,7 @@ MonoBehaviour:
   MoveInputYY: 0
   IsClimbing: 0
   OnBoss: 1
+  OnOgurec: 0
   PlayerPos: {fileID: 685000087}
 --- !u!70 &685000084
 CapsuleCollider2D:
@@ -13018,7 +13019,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4aae075bb9f8448fbbf3f11f30a66090, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ThisLevelId: 0
+  ThisLevelId: 14
 --- !u!1 &1999879149
 GameObject:
   m_ObjectHideFlags: 0
