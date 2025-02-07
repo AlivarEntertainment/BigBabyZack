@@ -7,17 +7,18 @@ public class StartMinigame : MonoBehaviour
     public GameObject MiniGame;
     public PlayerController playerController;
     public bool PlayMode = false;
-    
+    [SerializeField] private Animator PressE;
     public void OnTriggerStay2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Player")
         {
-            
-            if(Input.GetKey(KeyCode.E) && PlayMode == false)
+            PressE.SetBool("IsInFade", false);
+            if (Input.GetKey(KeyCode.E) && PlayMode == false)
             {   
                 MiniGame.SetActive(true);
                 PlayMode = true;
                 playerController.enabled = false;
+                PressE.SetBool("IsInFade", true);
             }
         }
     }
@@ -28,6 +29,7 @@ public class StartMinigame : MonoBehaviour
             MiniGame.SetActive(false);
             PlayMode = false;
             playerController.enabled = true;
+            PressE.SetBool("IsInFade", true);
         }
     }
 }

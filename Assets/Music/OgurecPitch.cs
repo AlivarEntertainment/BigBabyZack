@@ -9,6 +9,9 @@ public class OgurecPitch : MonoBehaviour
     public PlayerController playerController;
     [SerializeField]public bool IsLimbo;
     [SerializeField] public bool IsStartOgurec;
+    [Header("ChangeOboi")]
+    public GameObject OboiFr;
+    public GameObject OboiSc;
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Player")
@@ -24,6 +27,8 @@ public class OgurecPitch : MonoBehaviour
                 playerController.jumpForce = 14;
                 playerController.checkRadius = 1.1f;
             }
+            OboiFr.SetActive(false);
+            OboiSc.SetActive(true);
         }
     }
 }

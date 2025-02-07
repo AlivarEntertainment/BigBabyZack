@@ -5122,6 +5122,7 @@ MonoBehaviour:
   OnBoss: 1
   OnOgurec: 0
   PlayerPos: {fileID: 685000087}
+  InWall: 0
 --- !u!70 &685000084
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -10453,7 +10454,7 @@ MonoBehaviour:
   - {fileID: 195674266}
   NextPoint: 0
   LastPoint: 0
-  speed: 10
+  speed: 9
   facingRight: 0
   direction: {x: 0, y: 0, z: 0, w: 0}
   RotationStep: 0

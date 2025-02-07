@@ -1692,7 +1692,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 715394826}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3857721c0849545eb9c06f2e86249ce8, type: 3}
   m_Name: 
@@ -1736,8 +1736,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.039736956, y: -0.7609575}
-  m_Size: {x: 0.18469656, y: 2.8165293}
+  m_Offset: {x: 0.039736956, y: -0.13437927}
+  m_Size: {x: 0.18469656, y: 2.0714095}
   m_Direction: 0
 --- !u!1 &717534217
 GameObject:
@@ -3139,6 +3139,7 @@ MonoBehaviour:
   FightButton: {fileID: 1035702224793954923}
   leverGameObject: {fileID: 7664661081795955442}
   bowScr: {fileID: 0}
+  Lever: {fileID: 715394829}
 --- !u!61 &1161069210
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7273,7 +7274,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7664661081795955442}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3857721c0849545eb9c06f2e86249ce8, type: 3}
   m_Name: 

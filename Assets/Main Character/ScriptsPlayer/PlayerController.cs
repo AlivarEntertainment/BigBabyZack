@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
     public bool OnBoss;
     public bool OnOgurec;
     public Transform PlayerPos;
-    
+    public bool InWall;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -39,7 +39,8 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {   
         PlayerPos.position = transform.position;
-        if(IsClimbing == true)
+        
+        if (IsClimbing == true)
         {
             Laddering();
         }
@@ -64,8 +65,21 @@ public class PlayerController : MonoBehaviour
             {
                  PlayerAnimator.speed = 1.7f;
             }
+            
             MoveGround();
             PlayerAnimator.SetBool("Leddering", false);
+        }
+        if (InWall == true)
+        {
+            Flip();
+            if (facingRight == false)
+            {
+                rb.velocity = new Vector2(-1, 2) * speed;
+            }
+            else
+            {
+                rb.velocity = new Vector2(1, 2) * speed;
+            }
         }
     }
     private void Update()
@@ -143,18 +157,24 @@ public class PlayerController : MonoBehaviour
         Scaler.x *= -1;
         transform.localScale = Scaler;
     }
-    private void OnTriggerStay2D(Collider2D collision)
+    
+    public void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Wall")
         {
-            rb.gravityScale = 0;
+            StartCoroutine("SmallCor");
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Wall")
         {
-            rb.gravityScale = 2.2f;
+            InWall = false;
         }
+    }
+    IEnumerator SmallCor()
+    {
+        yield return new WaitForSeconds(0.3f);
+        InWall = true;
     }
 }

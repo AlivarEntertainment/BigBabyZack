@@ -495,7 +495,7 @@ Transform:
   m_GameObject: {fileID: 63115420}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.6766328, w: 0.7363206}
-  m_LocalPosition: {x: -5.5716867, y: -13.173847, z: 0}
+  m_LocalPosition: {x: -5.7, y: -12.87, z: 0}
   m_LocalScale: {x: 3.5599, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7837,7 +7837,7 @@ Transform:
   m_GameObject: {fileID: 955974346}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.5522996, w: 0.8336457}
-  m_LocalPosition: {x: -5.18, y: -7.95, z: 0}
+  m_LocalPosition: {x: -3.67, y: -6.83, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7875,7 +7875,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.24219441, y: 0}
+  m_Offset: {x: -2.008833, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -7886,7 +7886,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.4843888, y: 1}
+  m_Size: {x: 5.017665, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &973242944
 GameObject:
@@ -17261,7 +17261,9 @@ MonoBehaviour:
   MoveInputYY: 0
   IsClimbing: 0
   OnBoss: 0
+  OnOgurec: 0
   PlayerPos: {fileID: 0}
+  InWall: 0
 --- !u!1 &192741204406799736
 GameObject:
   m_ObjectHideFlags: 0
@@ -20378,7 +20380,9 @@ MonoBehaviour:
   MoveInputYY: 0
   IsClimbing: 0
   OnBoss: 0
+  OnOgurec: 0
   PlayerPos: {fileID: 5941419456986800966}
+  InWall: 0
 --- !u!4 &4052667469239644251
 Transform:
   m_ObjectHideFlags: 0

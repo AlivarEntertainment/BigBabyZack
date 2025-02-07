@@ -11,6 +11,7 @@ public class OpenChest : MonoBehaviour
     [SerializeField] private FightClose FightButton;
     [SerializeField] private GameObject leverGameObject;
     [SerializeField] private Bow bowScr;
+    [SerializeField] private Lever Lever;
     public void Start()
     {
         //bowScr.enabled = false;
@@ -27,7 +28,7 @@ public class OpenChest : MonoBehaviour
                 animatorChest.SetTrigger("Open");
                 FightButton.enabled = true;
                 leverGameObject.SetActive(true);
-                
+                Lever.enabled = true;
            }
         }
     }
