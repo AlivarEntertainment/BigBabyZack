@@ -15,7 +15,9 @@ public class OgurecPitch : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Player")
-        {
+        {   
+            OboiFr.SetActive(false);
+            OboiSc.SetActive(true);
            audioSource12 = GameObject.FindGameObjectWithTag("Sound").GetComponent<AudioSource>();
             audioSource12.pitch = pitchAudio;
             if(IsLimbo == true)
@@ -27,8 +29,7 @@ public class OgurecPitch : MonoBehaviour
                 playerController.jumpForce = 14;
                 playerController.checkRadius = 1.1f;
             }
-            OboiFr.SetActive(false);
-            OboiSc.SetActive(true);
+            
         }
     }
 }
