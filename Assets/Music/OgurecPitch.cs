@@ -7,8 +7,9 @@ public class OgurecPitch : MonoBehaviour
     private AudioSource audioSource12;
     public float pitchAudio;
     public PlayerController playerController;
+    public ChuchukaController chuchukaController;
     [SerializeField]public bool IsLimbo;
-    [SerializeField] public bool IsStartOgurec;
+    [SerializeField] public bool IsTrainsOgurec;
     [Header("ChangeOboi")]
     public GameObject OboiFr;
     public GameObject OboiSc;
@@ -18,17 +19,23 @@ public class OgurecPitch : MonoBehaviour
         {   
             OboiFr.SetActive(false);
             OboiSc.SetActive(true);
-           audioSource12 = GameObject.FindGameObjectWithTag("Sound").GetComponent<AudioSource>();
-            audioSource12.pitch = pitchAudio;
-            if(IsLimbo == true)
-            {
+            
                 playerController.jumpForce = 18;
-            }
-            else
+                Debug.Log("1");
+            if(IsLimbo == false)
             {
                 playerController.jumpForce = 14;
                 playerController.checkRadius = 1.1f;
+                chuchukaController.speed = 5.3f;
             }
+            if(IsTrainsOgurec == true)
+            {
+                 Screen.SetResolution(640, 480, true);
+                 Debug.Log("Chanh");
+            }
+           audioSource12 = GameObject.FindGameObjectWithTag("Sound").GetComponent<AudioSource>();
+            audioSource12.pitch = pitchAudio;
+            
             
         }
     }

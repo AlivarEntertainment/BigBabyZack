@@ -34,7 +34,10 @@ public class PlayerController : MonoBehaviour
         {
             PlayerAnimator.speed = 1.7f;
         }
-        
+        if(OnOgurec == true)
+        {
+                rb.gravityScale = 2.2f;
+        }
     }
     private void FixedUpdate()
     {   
@@ -50,11 +53,7 @@ public class PlayerController : MonoBehaviour
             {
                 rb.gravityScale = 2.5f;
             }
-            else if(OnOgurec == true)
-            {
-                rb.gravityScale = 2.2f;
-            }
-            else{
+            else if(OnOgurec == false){
                 rb.gravityScale = 1;
             }
             if(OnBoss == false)

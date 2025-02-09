@@ -10,8 +10,8 @@ public class LimboBox : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             rb.bodyType = RigidbodyType2D.Dynamic;
-            rb.mass = 10;
-            rb.drag  = 2f;
+            rb.mass = 9;
+            rb.drag  = 1.6f;
             rb.gravityScale= 3.5f;
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
