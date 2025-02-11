@@ -17,29 +17,34 @@ public class SelfDestroy : MonoBehaviour
             audioSource.volume = 0.1f;
             audioSource.Play();
         }*/
-        if (scene == 0 && audioSource.clip == audioClips[0] || scene >= 15 && audioSource.clip == audioClips[0] || scene == 0 && audioSource.clip != audioClips[3])
+        if (scene == 0 && audioSource.clip == audioClips[0] || scene == 0 && audioSource.clip != audioClips[3])
         {
             audioSource.clip = audioClips[3];
             audioSource.Play();
         }
-        if (scene == 1)
+        if (scene >= 4 && scene <= 5)
         {
             audioSource.clip = audioClips[0];
             audioSource.Play();
         }
-        if (scene >= 3 && audioSource.clip != audioClips[1] && scene <= 9)
+        if (scene >= 6 && audioSource.clip != audioClips[1] && scene <= 12)
         {
             audioSource.clip = audioClips[1];
             audioSource.Play();
         }
-        if (scene == 10)
+        if (scene == 13)
         {
             audioSource.clip = null;
             audioSource.Play();
         }
-        if (scene == 11)
+        if (scene == 14 || scene == 24)
         {
             audioSource.clip = audioClips[2];
+            audioSource.Play();
+        }
+        if (scene >= 19 && scene <= 23)
+        {
+            audioSource.clip = audioClips[6];
             audioSource.Play();
         }
         if (scene == 28)
