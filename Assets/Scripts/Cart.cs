@@ -9,6 +9,7 @@ public class Cart : MonoBehaviour
     public PlayableDirector CartAnimator;
     public GameObject playerController;
     public ChaneAndPlay chaneAndPlay;
+    public AudioSource audioSource;
     
     public void OnTriggerEnter2D(Collider2D PlayerInCart)
     {
@@ -17,6 +18,7 @@ public class Cart : MonoBehaviour
             CartAnimator.Play();
             Destroy(playerController);
             StartCoroutine("PlayTimeLine");
+            audioSource.Play();
         }
     }
     IEnumerator PlayTimeLine()

@@ -9,7 +9,7 @@ public class AudioFlyObject : MonoBehaviour
     public AudioSource audioSource;
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if(collision.gameObject.tag == "Player" || collision.gameObject.tag == "Arrow")
         {
             StartCoroutine("PlayAudio");
             FlyAssetAnimator.SetTrigger("Fly");

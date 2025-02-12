@@ -12,6 +12,7 @@ public class OpenChest : MonoBehaviour
     [SerializeField] private GameObject leverGameObject;
     [SerializeField] private Bow bowScr;
     [SerializeField] private Lever Lever;
+    public AudioSource ChestAudioSource;
     public void Start()
     {
         //bowScr.enabled = false;
@@ -23,11 +24,13 @@ public class OpenChest : MonoBehaviour
         {   
             PressE.SetBool("IsInFade", false);
            if (Input.GetKey(KeyCode.E))
-           {
+           {    
+            ChestAudioSource.Play();
                 StartCoroutine(OpneChestCor());
                 animatorChest.SetTrigger("Open");
                 FightButton.enabled = true;
                 leverGameObject.SetActive(true);
+                
                 Lever.enabled = true;
            }
         }

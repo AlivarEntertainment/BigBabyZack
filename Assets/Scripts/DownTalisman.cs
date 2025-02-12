@@ -10,6 +10,7 @@ public class DownTalisman : MonoBehaviour
     public Animator PlayerAnim;
     public Animator ProjectorBlockers;
     public bool InPast = false;
+    public AudioSource StairsAs;
     void Start()
     {
         
@@ -21,14 +22,20 @@ public class DownTalisman : MonoBehaviour
         
     }
     public void ChangeDownTime()
-    {
+    {   
+        StairsAs.mute = false;
+        StartCoroutine("MuteAudio");
         if(InPast == true)
-        {
+        {   
+            StairsAs.pitch = 1.4f;
+                    StairsAs.Play();
             ProjectorBlockers.SetBool("First", true);
             InPast = false;
         }
         else
         {   
+            StairsAs.pitch = 0.7f;
+                    StairsAs.Play();
             ProjectorBlockers.SetBool("First", false);
             InPast = true;
         }
@@ -60,5 +67,10 @@ public class DownTalisman : MonoBehaviour
         { 
             LightAnimator.SetBool("ClosePrj", false);
         }
+    }
+    IEnumerator MuteAudio()
+    {
+        yield return new WaitForSeconds(2);
+        StairsAs.mute = true;
     }
 }

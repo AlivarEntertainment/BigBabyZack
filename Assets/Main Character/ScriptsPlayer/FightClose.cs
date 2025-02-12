@@ -18,11 +18,18 @@ public class FightClose : MonoBehaviour
     public float TimeDashing;
     public bool IsDashing = true;
     public Animator playerAnim;
+    public AudioSource SwordAuSor;
+    public void Start()
+    {
+        SwordAuSor = attackPoint.gameObject.GetComponent<AudioSource>();
+    }
     public void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
             pressedAttacking = true;
+            
+
         }
         if (Input.GetMouseButtonUp(0))
         {
@@ -35,7 +42,9 @@ public class FightClose : MonoBehaviour
         {   
             TimeStart += Time.deltaTime;
             if(TimeStart >= timeToHold)
-            {
+            {   
+                SwordAuSor.pitch = Random.Range(0.8f, 1.2f);
+                SwordAuSor.Play();
                 Debug.Log("Колющий удар");
                 playerAnim.SetTrigger("Kolit");
                 AttackDamage = 3;
@@ -48,7 +57,8 @@ public class FightClose : MonoBehaviour
         }
         else if (TimeStart < timeToHold && TimeStart >= 0.01f)
         {
-
+            SwordAuSor.pitch = Random.Range(0.8f, 1.2f);
+            SwordAuSor.Play();
             Debug.Log("рубящий удар");
             playerAnim.SetTrigger("Rubit");
             AttackDamage = 1;

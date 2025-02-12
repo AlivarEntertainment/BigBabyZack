@@ -14,6 +14,7 @@ public class LeverLift : MonoBehaviour
     [SerializeField]private Animator LeverAnimator;
     public SpriteRenderer spriteRenderer;
     public bool CanUse = true;
+    public AudioSource audioSource;
     public void Start()
     {
         Debug.Log("StartLever");
@@ -46,6 +47,9 @@ public class LeverLift : MonoBehaviour
      
     public void UseLever()
     {   
+        audioSource.mute = false;
+        audioSource.Play();
+        StartCoroutine("MuteAudio");
         if(BoxInPosition == true && CanUse == true)
         {
             LiftAnimator.SetTrigger("TakeBox");
@@ -66,5 +70,10 @@ public class LeverLift : MonoBehaviour
         yield return new WaitForSeconds(4.5f);
         HighBox.SetActive(true);
         this.enabled = false;
+    }
+    IEnumerator MuteAudio()
+    {
+        yield return new WaitForSeconds(6);
+        audioSource.mute = true;
     }
 }

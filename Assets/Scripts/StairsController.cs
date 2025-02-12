@@ -11,6 +11,7 @@ public class StairsController : MonoBehaviour
     public float timeBtwAttack;
     public float startTimeBtwAttack;
     public bool InPast = false;
+    public AudioSource StairsAs;
     public void Start()
     {
         Debug.Log("7");
@@ -42,10 +43,14 @@ public class StairsController : MonoBehaviour
         }
     }
     public void ChangeTime()
-    {
+    {   
+        StairsAs.mute = false;
+        StartCoroutine("MuteAudio");
                 if(InPast == true)
-                {
+                {   
                     
+                    StairsAs.pitch = 1.4f;
+                    StairsAs.Play();
                     StairsAnimator.SetTrigger("Destroy");
                     StairsCollider.enabled = false;
                     ClockAnimator.SetTrigger("Future");
@@ -53,6 +58,8 @@ public class StairsController : MonoBehaviour
                 }
                 else
                 {   
+                    StairsAs.pitch = 0.7f;
+                    StairsAs.Play();
                     Debug.Log("ch");
                     StairsAnimator.SetTrigger("Build");
                     StartCoroutine("ColliderCoroutine");
@@ -71,5 +78,11 @@ public class StairsController : MonoBehaviour
     {
         yield return new WaitForSeconds(1.8f);
         StairsCollider.enabled = true;
+        StairsAs.mute = true;
+    }
+    IEnumerator MuteAudio()
+    {
+        yield return new WaitForSeconds(2);
+        StairsAs.mute = true;
     }
 }

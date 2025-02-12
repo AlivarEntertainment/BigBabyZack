@@ -12,6 +12,8 @@ public class MegaDoor : MonoBehaviour
     public Animator LockDoorAnimator;
     public Animator LeverAnimator;
     [SerializeField] private Animator PressE;
+    public AudioSource LeverAS;
+    public AudioClip CartaudioClip;
     public bool IsUsed;
     public void Start()
     {
@@ -23,7 +25,8 @@ public class MegaDoor : MonoBehaviour
         {
             PressE.SetBool("IsInFade", false);
             if (Input.GetKey(KeyCode.E) && IsUsed == false)
-            {
+            {   
+                LeverAS.Play();
                 StartCoroutine("greenOnCor");
                 GreenLocks += 1;
                 Debug.Log(GreenLocks);
@@ -31,7 +34,9 @@ public class MegaDoor : MonoBehaviour
                 IsUsed = true;
                 LeverAnimator.SetTrigger("UseLever");
                 if (GreenLocks == 3)
-                {
+                {   
+                    LeverAS.clip = CartaudioClip;
+                LeverAS.Play();
                     LockDoorAnimator.SetTrigger("OpenLockDoor");
                 }
             }
@@ -40,11 +45,14 @@ public class MegaDoor : MonoBehaviour
         {
             StartCoroutine("greenOnCor");
             GreenLocks += 1;
+            LeverAS.Play();
             CameraToLockDirector.Play();
             IsUsed = true;
             LeverAnimator.SetTrigger("UseLever");
             if (GreenLocks == 3)
-            {
+            {   
+                LeverAS.clip = CartaudioClip;
+                LeverAS.Play();
                 LockDoorAnimator.SetTrigger("OpenLockDoor");
             }
         }
@@ -57,5 +65,6 @@ public class MegaDoor : MonoBehaviour
     {
         yield return new WaitForSeconds(1.7f);
         LockSpriteRenderer.color = Color.green;
+        LeverAS.mute = true;
     }
 }
