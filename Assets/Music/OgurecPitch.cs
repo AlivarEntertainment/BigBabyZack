@@ -26,11 +26,12 @@ public class OgurecPitch : MonoBehaviour
             {
                 playerController.jumpForce = 14;
                 playerController.checkRadius = 1.1f;
-                chuchukaController.speed = 5.3f;
+                chuchukaController.speed = 6f;
             }
             if(IsTrainsOgurec == true)
             {
-                 Screen.SetResolution(640, 480, true);
+                 Screen.SetResolution(700, 300, true);
+                 chuchukaController.speed = 9f;
                  Debug.Log("Chanh");
             }
            audioSource12 = GameObject.FindGameObjectWithTag("Sound").GetComponent<AudioSource>();

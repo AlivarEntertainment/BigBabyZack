@@ -11,7 +11,7 @@ public class СhangeFOV : MonoBehaviour
     {
         if(vcam.m_Lens.OrthographicSize <= TargetFov && CanChange == true)
             {
-                vcam.m_Lens.OrthographicSize += Time.deltaTime * 2;
+                vcam.m_Lens.OrthographicSize += Time.deltaTime / 2;
             }
     }
     public void OnTriggerEnter2D(Collider2D collision)

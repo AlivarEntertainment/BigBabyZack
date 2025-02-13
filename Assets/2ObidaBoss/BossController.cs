@@ -14,6 +14,7 @@ public class BossController : MonoBehaviour
     public float timeBtwAttack;
     public float startTimeBtwAttack;
     public int PhaseCounter;
+    public GameObject SpamSpace;
     [Header("PlayerBody")]
     public SpriteRenderer[] playerBodies;
     public Sprite[] normalBodies;
@@ -109,6 +110,7 @@ public class BossController : MonoBehaviour
         CanAttackHor = true;
         BodyCounter += 1;
         playerBodies[BodyCounter].sprite = normalBodies[BodyCounter];
+        SpamSpace.SetActive(false);
     }
     public void DestroyBoss()
     {   
@@ -128,7 +130,8 @@ public class BossController : MonoBehaviour
         AttackHor();
     }
     IEnumerator ReloadBossCor()
-    {
+    {   
+        SpamSpace.SetActive(true);
         Heart.SetActive(true);
         BossAniamtor.SetTrigger("Open");
         HorPunches = 5;

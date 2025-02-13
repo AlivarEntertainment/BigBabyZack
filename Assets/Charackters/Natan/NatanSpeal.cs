@@ -8,6 +8,7 @@ public class NatanSpeal : MonoBehaviour
     [SerializeField]private PlayableDirector DialogTL;
     [SerializeField]private Animator PressE;
     bool used = false;
+    public AudioSource audioSource;
     public void OnTriggerStay2D(Collider2D other)
     {
         if(other.gameObject.tag == "Player" && used == false)
@@ -19,6 +20,7 @@ public class NatanSpeal : MonoBehaviour
                 //PressE.SetBool("IsInFade", true);
                 PressE.SetBool("IsInFade", true);
                 used = true;
+                audioSource.Play();
             }
         }
     }
