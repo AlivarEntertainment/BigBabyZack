@@ -8,7 +8,7 @@ public class OpenDootByStone : MonoBehaviour
     public GameObject[] Doors;
     public void OnTriggerEnter2D(Collider2D Stone)
     {
-        if(Stone.gameObject.tag == "Boulder")
+        if(Stone.gameObject.tag == "Player" || Stone.gameObject.tag == "Boulder")
         {
             changeToBoss.enabled = true;
             Doors[0].SetActive(false);
