@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class OpenChest : MonoBehaviour
 {   
-    [SerializeField]private bool IsOpened = false;
+    [SerializeField]public bool IsOpened = false;
     public GameObject sword;
     public Animator animatorChest;
     [SerializeField]private Animator PressE;

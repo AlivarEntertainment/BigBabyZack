@@ -47,10 +47,14 @@ public class SelfDestroy : MonoBehaviour
             audioSource.clip = audioClips[6];
             audioSource.Play();
         }
+        if (scene == 30)
+        {
+            audioSource.clip = audioClips[7];
+            audioSource.Play();
+        }
         if (scene == 28)
         {
             audioSource.clip = null;
-            audioSource.Play();
         }
         if(scene == 33)
         {

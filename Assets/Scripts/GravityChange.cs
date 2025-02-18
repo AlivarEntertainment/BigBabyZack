@@ -27,7 +27,7 @@ public class GravityChange : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D playerCol)
     {
-        if(playerCol.gameObject.tag == "Player")
+        if(playerCol.gameObject.tag == "Player" || playerCol.gameObject.tag == "Box")
         {
             
             if(Flipped == true)

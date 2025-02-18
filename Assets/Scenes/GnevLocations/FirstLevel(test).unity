@@ -3294,6 +3294,7 @@ GameObject:
   - component: {fileID: 1161069211}
   - component: {fileID: 1161069212}
   - component: {fileID: 1161069213}
+  - component: {fileID: 1161069214}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Untagged
@@ -3593,6 +3594,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1161069214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161069205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f4b11cf8818b41438aada9bdeaefb81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openChest: {fileID: 1161069209}
+  DoSmthID: 0
 --- !u!1 &1192124587
 GameObject:
   m_ObjectHideFlags: 0
@@ -7664,7 +7679,7 @@ Transform:
   m_GameObject: {fileID: 3647038897045036129}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.352869, y: -0.61973643, z: -10}
+  m_LocalPosition: {x: 10.355576, y: -0.6197803, z: -10}
   m_LocalScale: {x: 0.64645, y: 0.64645, z: 0.64645}
   m_ConstrainProportionsScale: 0
   m_Children: []

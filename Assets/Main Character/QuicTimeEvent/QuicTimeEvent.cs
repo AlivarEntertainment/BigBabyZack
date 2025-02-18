@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class QuicTimeEvent : MonoBehaviour
 {   
     public enum ButtonToPress
@@ -23,14 +23,11 @@ public class QuicTimeEvent : MonoBehaviour
     }
     public void Update()
     {   
-        if(Time.timeScale >= 0.2f && Pressed == false)
+        if(Time.timeScale >= 0.3f && Pressed == false)
         {
             Time.timeScale -= Time.deltaTime * 4f;
-            
-        }
-        if(Time.timeScale >= 0.4f && Pressed == false)
-        {
             audioSource.pitch -= Time.deltaTime * 4f;
+            
         }
         else if(Pressed == true && Time.timeScale <= 1)
         {
@@ -73,9 +70,11 @@ public class QuicTimeEvent : MonoBehaviour
     {
         yield return new WaitForSeconds(TimeToPress);
         if(Pressed == false)
-        {
-            Application.Quit();
-            Time.timeScale = 0;
+        {   
+            Time.timeScale = 1;
+            PlayerPrefs.SetInt("OgurecLocation", SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadScene(35);
+            
         }
     }
 }

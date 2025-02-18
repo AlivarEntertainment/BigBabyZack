@@ -2889,6 +2889,7 @@ MonoBehaviour:
   OnBoss: 0
   OnOgurec: 0
   PlayerPos: {fileID: 958572988}
+  InWall: 0
 --- !u!70 &958572992
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -5672,13 +5673,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1748430373}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.3119639, w: 0.95009404}
   m_LocalPosition: {x: 40.886513, y: -5.482834, z: -0.048280355}
-  m_LocalScale: {x: 1, y: 4.275, z: 1}
+  m_LocalScale: {x: 1, y: 45.93915, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -36.355}
 --- !u!4 &1750217161 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8254640188969507407, guid: 208f045c9673ca64784d5b6c66d1b23c, type: 3}

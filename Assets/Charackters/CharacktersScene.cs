@@ -11,17 +11,29 @@ public class CharacktersScene : MonoBehaviour
     {
         PrefIdin = PlayerPrefs.GetInt("LevelReached");
         Debug.Log(PrefIdin);
-        if(PrefIdin >= 2)
+        if(PrefIdin >= 4)
         {
             ArrIdin = 1;
         }
-        if (PrefIdin >= 3)
+        if (PrefIdin >= 5)
         {
             ArrIdin = 3;
         }
-        if (PrefIdin >= 10)
+        if (PrefIdin >= 14)
         {
             ArrIdin = 5;
+        }
+        if (PrefIdin >= 19)
+        {
+            ArrIdin = 6;
+        }
+        if (PrefIdin >= 24)
+        {
+            ArrIdin = 7;
+        }
+        if (PrefIdin >= 29)
+        {
+            ArrIdin = 8;
         }
         for (int i = 0; i < ArrIdin; i++)
         {

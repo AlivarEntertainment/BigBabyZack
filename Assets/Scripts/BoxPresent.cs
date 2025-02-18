@@ -5,7 +5,7 @@ using UnityEngine;
 public class BoxPresent : MonoBehaviour
 {
     public Animator animatorChest;
-    [SerializeField]private bool IsOpened = false;
+    [SerializeField]public bool IsOpened = false;
     [SerializeField]private Animator PressE;
     public StairsController stairsController;
     public PlayerController playerController;

@@ -15,6 +15,9 @@ public class BossController : MonoBehaviour
     public float startTimeBtwAttack;
     public int PhaseCounter;
     public GameObject SpamSpace;
+    [Header("Zoom")]
+    public Animator CamAnimator;
+    public Animator Vinet;
     [Header("PlayerBody")]
     public SpriteRenderer[] playerBodies;
     public Sprite[] normalBodies;
@@ -111,6 +114,7 @@ public class BossController : MonoBehaviour
         BodyCounter += 1;
         playerBodies[BodyCounter].sprite = normalBodies[BodyCounter];
         SpamSpace.SetActive(false);
+        Vinet.SetBool("IsViniet", false);
     }
     public void DestroyBoss()
     {   
@@ -130,7 +134,9 @@ public class BossController : MonoBehaviour
         AttackHor();
     }
     IEnumerator ReloadBossCor()
-    {   
+    {  
+        Vinet.SetBool("IsViniet", true);
+        CamAnimator.SetTrigger("Zoom");
         SpamSpace.SetActive(true);
         Heart.SetActive(true);
         BossAniamtor.SetTrigger("Open");

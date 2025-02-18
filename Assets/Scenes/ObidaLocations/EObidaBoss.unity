@@ -5865,6 +5865,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1990330783156042466, guid: 1a2ec2ff4dc0d0d4984a73bfce285b86, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4579326347395088985, guid: 1a2ec2ff4dc0d0d4984a73bfce285b86, type: 3}
       propertyPath: m_Name
       value: PannelSet
@@ -6722,6 +6726,11 @@ PrefabInstance:
       addedObject: {fileID: 1643567590}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c968ff3bf87644d7ab75c62487838e85, type: 3}
+--- !u!95 &647057223 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3054146365811569460, guid: 1a2ec2ff4dc0d0d4984a73bfce285b86, type: 3}
+  m_PrefabInstance: {fileID: 582050866}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &649725732 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2936448546081087952, guid: c968ff3bf87644d7ab75c62487838e85, type: 3}
@@ -17103,6 +17112,8 @@ MonoBehaviour:
   startTimeBtwAttack: 4
   PhaseCounter: 0
   SpamSpace: {fileID: 682241797}
+  CamAnimator: {fileID: 2131852338}
+  Vinet: {fileID: 647057223}
   playerBodies:
   - {fileID: 1306013230}
   - {fileID: 1378952599}
@@ -26430,8 +26441,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2131852333}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.11, y: -0.4, z: -10}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.109999985, y: -0.39999998, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -28704,8 +28715,8 @@ GameObject:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 2131852336}
   - {fileID: 682241799}
+  - {fileID: 2131852336}
   - {fileID: 1650918943}
   - {fileID: 1587576530}
   - {fileID: 1898453336}
