@@ -15,7 +15,7 @@ public class LoadSecondLobby : MonoBehaviour
         {
             LobbySecond.SetActive(true);
         }
-        else if (ObidaFin <= 23 && boss != "finish")
+        else if (ObidaFin <= 23)
         {
             LobbyFirst.SetActive(true);
         }
