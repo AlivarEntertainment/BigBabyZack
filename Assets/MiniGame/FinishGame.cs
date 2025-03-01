@@ -9,6 +9,7 @@ public class FinishGame : MonoBehaviour
     public PlayerController playerController;
     public GameObject game;
     public PlayableDirector FinishLight;
+    public AudioSource ProvodAS;
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
@@ -16,12 +17,21 @@ public class FinishGame : MonoBehaviour
         {
             boxObida.DoneQuest = true;
             StartCoroutine("DestroyGame");
-            playerController.enabled = true;
+            
             FinishLight.Play();
+            ProvodAS.Play();
+            StartCoroutine("MuteProvod");
         }
+    }   
+    IEnumerator MuteProvod()
+    {
+        yield return new WaitForSeconds(2f);
+        //LockSpriteRenderer.color = Color.green;
+        ProvodAS.mute = true;
+        playerController.enabled = true;
     }
     IEnumerator DestroyGame()
-    {
+    {   
         yield return new WaitForSeconds(3f);
         Destroy(game);
         

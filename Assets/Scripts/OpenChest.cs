@@ -13,6 +13,7 @@ public class OpenChest : MonoBehaviour
     [SerializeField] private Bow bowScr;
     [SerializeField] private Lever Lever;
     public AudioSource ChestAudioSource;
+    public AudioSource AchiveAudio;
     public void Start()
     {
         //bowScr.enabled = false;
@@ -25,6 +26,7 @@ public class OpenChest : MonoBehaviour
             PressE.SetBool("IsInFade", false);
            if (Input.GetKey(KeyCode.E))
            {    
+            AchiveAudio.Play();
             ChestAudioSource.Play();
                 StartCoroutine(OpneChestCor());
                 animatorChest.SetTrigger("Open");

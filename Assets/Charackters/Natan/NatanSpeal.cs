@@ -13,6 +13,7 @@ public class NatanSpeal : MonoBehaviour
     float PlayerSpeed;
     public bool UpperDialogue;
     private int SpeakTime;
+    public AudioSource AchiveAudio;
     void Start()
     {
         PlayerSpeed = playerController.speed;
@@ -26,13 +27,14 @@ public class NatanSpeal : MonoBehaviour
             PressE.SetBool("IsInFade", false);
             if(Input.GetKey(KeyCode.E))
             {   
-                
+                AchiveAudio.Play();
                 DialogTL.Play();
                 //PressE.SetBool("IsInFade", true);
                 PressE.SetBool("IsInFade", true);
                 used = true;
                 SpeakTime+= 1;
                 PlayerPrefs.SetInt("Natan", SpeakTime);
+                
                 audioSource.Play();
                 if(UpperDialogue == true)
                 {

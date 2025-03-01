@@ -9,6 +9,7 @@ public class BoxPresent : MonoBehaviour
     [SerializeField]private Animator PressE;
     public StairsController stairsController;
     public PlayerController playerController;
+    public AudioSource AchiveAudio;
      public void OnTriggerStay2D(Collider2D player)
     {
 
@@ -16,7 +17,8 @@ public class BoxPresent : MonoBehaviour
         {   
             PressE.SetBool("IsInFade", false);
            if (Input.GetKey(KeyCode.E) && playerController.PlayerAnimator.GetBool("IsWalking") == false)
-           {
+           {    
+            AchiveAudio.Play();
                 StartCoroutine(OpneChestCor());
                 animatorChest.SetTrigger("Open");
                 

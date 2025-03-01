@@ -9,17 +9,26 @@ public class BoxObida : MonoBehaviour
     public PlayableDirector FinicLight;
     public GameObject TriigerGame;
     public bool DoneQuest;
+    public AudioSource ProvodAS;
     public void OnTriggerEnter2D(Collider2D BoxStartTime)
-    {
+    {   
         if(BoxStartTime.gameObject.tag == "Box" && IsRoof == false)
         {
             FinicLight.Play();
             DoneQuest = true;
+            ProvodAS.Play();
+            StartCoroutine("MuteProvod");
         }
         else if(BoxStartTime.gameObject.tag == "Player" && IsRoof == true)
         {
             FinicLight.Play();
             TriigerGame.SetActive(true);
         }
+    }
+    IEnumerator MuteProvod()
+    {
+        yield return new WaitForSeconds(3);
+        //LockSpriteRenderer.color = Color.green;
+        ProvodAS.mute = true;
     }
 }
