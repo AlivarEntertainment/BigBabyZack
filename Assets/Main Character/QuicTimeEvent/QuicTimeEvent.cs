@@ -8,6 +8,7 @@ public class QuicTimeEvent : MonoBehaviour
     {
         D,
         A,
+        E,
         Space,
         W
     }
@@ -16,6 +17,7 @@ public class QuicTimeEvent : MonoBehaviour
     public float TimeToPress;
     public int pressTimes;
     public AudioSource audioSource;
+    public bool IsTrain;
     public void Start()
     {
         StartCoroutine("FailCor");
@@ -23,13 +25,13 @@ public class QuicTimeEvent : MonoBehaviour
     }
     public void Update()
     {   
-        if(Time.timeScale >= 0.3f && Pressed == false)
+        if(Time.timeScale >= 0.3f && Pressed == false && IsTrain == false)
         {
             Time.timeScale -= Time.deltaTime * 4f;
             audioSource.pitch -= Time.deltaTime * 4f;
             
         }
-        else if(Pressed == true && Time.timeScale <= 1)
+        else if(Pressed == true && Time.timeScale <= 1 && IsTrain == false)
         {
             Time.timeScale += Time.deltaTime * 8;
             audioSource.pitch+= Time.deltaTime * 8;
@@ -37,6 +39,24 @@ public class QuicTimeEvent : MonoBehaviour
         if(buttonToPress == ButtonToPress.D)
         {
             if (Input.GetKeyDown(KeyCode.D))
+            {
+            
+            Debug.Log("Pressed");
+            pressTimes -=1;
+            }
+        }
+        if(buttonToPress == ButtonToPress.A)
+        {
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+            
+            Debug.Log("Pressed");
+            pressTimes -=1;
+            }
+        }
+        if(buttonToPress == ButtonToPress.E)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
             {
             
             Debug.Log("Pressed");
