@@ -231,7 +231,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &17991270
 Transform:
   m_ObjectHideFlags: 0
@@ -254,6 +254,7 @@ Transform:
   - {fileID: 1568846203}
   - {fileID: 1257449815}
   - {fileID: 617028241}
+  - {fileID: 767422368}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &24476327
@@ -14729,6 +14730,7 @@ GameObject:
   m_Component:
   - component: {fileID: 617028241}
   - component: {fileID: 617028242}
+  - component: {fileID: 617028243}
   m_Layer: 0
   m_Name: DogFull
   m_TagString: Untagged
@@ -14744,15 +14746,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 617028240}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.7296081, w: 0.68386555}
-  m_LocalPosition: {x: -2.94, y: 3.98, z: 0.07253163}
-  m_LocalScale: {x: 0.61109, y: 0.61109, z: 0.61109}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.971, y: -5.153, z: 0.07253163}
+  m_LocalScale: {x: -0.5408758, y: 0.5408758, z: 0.5408758}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1232898512}
   - {fileID: 2038492800}
   m_Father: {fileID: 17991270}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 93.707}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 2.854}
 --- !u!210 &617028242
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -14763,8 +14765,29 @@ SortingGroup:
   m_Enabled: 1
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 23
   m_SortAtRoot: 0
+--- !u!95 &617028243
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617028240}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -26129,6 +26152,103 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2036626049}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &767422367
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 767422368}
+  - component: {fileID: 767422370}
+  - component: {fileID: 767422369}
+  m_Layer: 0
+  m_Name: ThridTimeLine
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &767422368
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 767422367}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.56, y: -3.2, z: 0}
+  m_LocalScale: {x: 1, y: 5.6125, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 17991270}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!320 &767422369
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 767422367}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 53515242ade70f947afeedeaa75a8c96, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 5371525685552750090, guid: 53515242ade70f947afeedeaa75a8c96, type: 2}
+    value: {fileID: 617028243}
+  m_ExposedReferences:
+    m_References: []
+--- !u!61 &767422370
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 767422367}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &782161075
 GameObject:
   m_ObjectHideFlags: 0
@@ -40248,7 +40368,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1232898512
 Transform:
   m_ObjectHideFlags: 0
@@ -48760,6 +48880,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DogStand
       objectReference: {fileID: 0}
+    - target: {fileID: -8653719598885068355, guid: a4cba47d70af14ac5b2b18faa219e064, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -8089108032486474258, guid: a4cba47d70af14ac5b2b18faa219e064, type: 3}
       propertyPath: m_SortingOrder
       value: 14
@@ -50598,7 +50722,7 @@ Transform:
   m_GameObject: {fileID: 7529061503439140762}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.1484642, y: -1.363203, z: -9.927468}
+  m_LocalPosition: {x: 2.511282, y: 0.83476835, z: -10}
   m_LocalScale: {x: 0.64645, y: 0.64645, z: 0.64645}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -51345,7 +51469,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1395951581497366450
 GameObject:
   m_ObjectHideFlags: 0
@@ -52767,9 +52891,9 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 34
+  field of view: 31.59
   orthographic: 1
-  orthographic size: 5.48
+  orthographic size: 4.6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -56368,7 +56492,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7592050238964240732
 Transform:
   m_ObjectHideFlags: 0
