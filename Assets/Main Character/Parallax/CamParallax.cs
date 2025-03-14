@@ -9,15 +9,24 @@ public class CamParallax : MonoBehaviour
     public ParallaxCameraDelegate onCameraTranslate;
 
     private float oldPosition;
+    public bool IsFinal;
 
     void Start()
-    {
-        oldPosition = transform.position.x;
+    {   
+        if(IsFinal == false)
+        {
+            oldPosition = transform.position.x;
+        }
+        else if(IsFinal == true)
+        {
+            oldPosition = transform.position.y;
+        }
+        
     }
 
     void FixedUpdate()
     {
-        if (transform.position.x != oldPosition)
+        if (transform.position.x != oldPosition && IsFinal == false)
         {
             if (onCameraTranslate != null)
             {
@@ -26,6 +35,16 @@ public class CamParallax : MonoBehaviour
             }
 
             oldPosition = transform.position.x;
+        }
+        else if (transform.position.y != oldPosition && IsFinal == true)
+        {
+            if (onCameraTranslate != null)
+            {
+                float delta = oldPosition - transform.position.y;
+                onCameraTranslate(delta);
+            }
+
+            oldPosition = transform.position.y;
         }
     }
 }
