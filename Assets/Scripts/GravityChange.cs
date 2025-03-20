@@ -13,6 +13,11 @@ public class GravityChange : MonoBehaviour
     public PlayerController playerController;
     public Collider2D[] colliders;
     int CurrentCol = -1;
+    public void Start()
+    {
+        Physics2D.gravity = new Vector2(0, -9.81f);
+        Screen.SetResolution(1920, 1080, true);
+    }
     public void Update()
     {
         PlayeroObj.transform.rotation = Quaternion.Lerp(PlayeroObj.transform.rotation, direction, RotationStep);

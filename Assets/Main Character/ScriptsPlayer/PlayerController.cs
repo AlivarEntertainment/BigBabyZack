@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
             {
                 rb.gravityScale = 2.5f;
             }
-            else if(OnOgurec == false){
+            if(OnOgurec == false){
                 rb.gravityScale = 1;
             }
             if(OnBoss == false)
