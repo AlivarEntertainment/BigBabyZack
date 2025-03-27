@@ -630,8 +630,21 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6ad5efdc44c3c4d3ba38287e2f511619, type: 3}
   - {fileID: 21300000, guid: eecd9ca49e43148908989e6054815a50, type: 3}
   - {fileID: 21300000, guid: c9990ce60ad1f4969b4913b5a976e904, type: 3}
+  - {fileID: 21300000, guid: a6169be5a16db4cbb8752aa60359d835, type: 3}
+  - {fileID: 21300000, guid: a97289f56646c4b80aae804d4fb3a5ea, type: 3}
+  - {fileID: 21300000, guid: fb8ea5fe59b3d43dd827e98373764ca7, type: 3}
+  - {fileID: 21300000, guid: 2f4154c2a6e5c4419a28ef235d4fa9b8, type: 3}
+  - {fileID: 21300000, guid: 6743669b120a24c1fb78bee7564fc9e0, type: 3}
+  - {fileID: 21300000, guid: 0a59b687f4e2749d1947f4eb40dab338, type: 3}
+  - {fileID: 21300000, guid: 094c495c4b04a45b9b71e6f664f74427, type: 3}
+  - {fileID: 21300000, guid: a24f8ce0baee84dfc882976e284c0c1f, type: 3}
+  - {fileID: 21300000, guid: 05da51c0b440a42aabb6a7ec216dc9e9, type: 3}
+  - {fileID: 21300000, guid: 430cc2702fdd94098b000e6ce072eb1e, type: 3}
+  - {fileID: 21300000, guid: ef5e150e4a17841f481cd6ab87bb4b22, type: 3}
+  - {fileID: 21300000, guid: ef5e150e4a17841f481cd6ab87bb4b22, type: 3}
   CurrentPage: 1
   NextButton: {fileID: 1945593279}
+  IsEpilog: 1
 --- !u!114 &869234313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1133,7 +1146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

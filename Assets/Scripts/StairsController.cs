@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class StairsController : MonoBehaviour
-{
+{   
+    public bool CanWork = false;
     public Animator ClockAnimator;
     public Animator StairsAnimator;
     public Collider2D StairsCollider;
@@ -26,7 +27,7 @@ public class StairsController : MonoBehaviour
                 if (timeBtwAttack <= 0)
                 {
             
-                    if(Input.GetKey(KeyCode.E))
+                    if(Input.GetKey(KeyCode.E) && CanWork == true)
                     {
                     timeBtwAttack = startTimeBtwAttack;
                     PlayerAnim.SetTrigger("Medal");

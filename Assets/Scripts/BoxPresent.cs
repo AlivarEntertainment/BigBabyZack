@@ -10,6 +10,7 @@ public class BoxPresent : MonoBehaviour
     public StairsController stairsController;
     public PlayerController playerController;
     public AudioSource AchiveAudio;
+    public GameObject Podskazka;
      public void OnTriggerStay2D(Collider2D player)
     {
 
@@ -37,6 +38,8 @@ public class BoxPresent : MonoBehaviour
         IsOpened = true;
         PressE.SetBool("IsInFade", true);
         stairsController.enabled = true;
+        stairsController.CanWork = true;
        playerController.enabled = true;
+       Podskazka.SetActive(true);
     }
 }

@@ -849,8 +849,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0482402, y: 4.0729923}
-  m_Size: {x: 1.0393128, y: 11.684809}
+  m_Offset: {x: -0.04823749, y: 4.7491546}
+  m_Size: {x: 1.0393124, y: 10.332481}
   m_Direction: 0
 --- !u!1 &123579712
 GameObject:
@@ -1530,7 +1530,7 @@ GameObject:
   - component: {fileID: 242911585}
   m_Layer: 0
   m_Name: Natan
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1545,7 +1545,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.94, y: -3.63, z: 0.07253163}
-  m_LocalScale: {x: 1.5723449, y: 1.5723449, z: 1.5723449}
+  m_LocalScale: {x: 1.5723449, y: 1.572345, z: 1.572345}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 377178208}
@@ -26244,6 +26244,8 @@ PlayableDirector:
     value: {fileID: 1327044725}
   - key: {fileID: -5768450616916283727, guid: 53515242ade70f947afeedeaa75a8c96, type: 2}
     value: {fileID: 945748670}
+  - key: {fileID: -2313788627803771576, guid: 53515242ade70f947afeedeaa75a8c96, type: 2}
+    value: {fileID: 242911587}
   m_ExposedReferences:
     m_References: []
 --- !u!61 &767422370
@@ -46550,7 +46552,7 @@ GameObject:
   m_Layer: 0
   m_Name: ChaneFallBound
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -46621,13 +46623,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1837035183}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.21, y: -10.94, z: -0.12522356}
+  m_LocalRotation: {x: -0, y: -0, z: 0.6806544, w: 0.73260474}
+  m_LocalPosition: {x: 11.89, y: -7.04, z: -0.12522356}
   m_LocalScale: {x: 10.025, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 85.79}
 --- !u!1 &1839669962
 GameObject:
   m_ObjectHideFlags: 0
@@ -50613,7 +50615,7 @@ GameObject:
   - component: {fileID: 2133833260}
   m_Layer: 0
   m_Name: "\u041D\u0430\u0442\u0430\u043D \u044E\u0431\u043A\u0430"
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51472,7 +51474,7 @@ Transform:
   m_GameObject: {fileID: 7529061503439140762}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.7995529, y: 0.83811647, z: -10}
+  m_LocalPosition: {x: 1.8066826, y: 0.83808357, z: -10}
   m_LocalScale: {x: 0.64645, y: 0.64645, z: 0.64645}
   m_ConstrainProportionsScale: 0
   m_Children:
