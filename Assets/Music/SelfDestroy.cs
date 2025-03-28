@@ -47,7 +47,7 @@ public class SelfDestroy : MonoBehaviour
             audioSource.clip = audioClips[6];
             audioSource.Play();
         }
-        if (scene == 30)
+        if (scene >= 30 && scene <= 32 && audioSource.clip != audioClips[7])
         {
             audioSource.clip = audioClips[7];
             audioSource.Play();
@@ -56,7 +56,7 @@ public class SelfDestroy : MonoBehaviour
         {
             audioSource.clip = null;
         }
-        if(scene == 33)
+        if(scene == 33 || scene == 34 )
         {
             audioSource.clip = audioClips[5];
             audioSource.pitch = 1;
@@ -66,7 +66,12 @@ public class SelfDestroy : MonoBehaviour
         {
             audioSource.clip = null;
         }
-
+        if (scene == 37)
+        {
+            audioSource.clip = audioClips[9];
+            audioSource.pitch = 1;
+            audioSource.Play();
+        }
     }
-    
+   
 }
