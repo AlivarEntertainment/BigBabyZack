@@ -14,6 +14,11 @@ public class CerberController : MonoBehaviour
     public Animator CerberAnimator;
     public bool IsInFinalPos;
     public bool CanMove;
+    [Header("CerberRev")]
+    public AudioClip[] CerberRev;
+    public AudioClip MegaRik;
+    public AudioSource CerberAudio;
+
     [Header("ThirdState")]
     public Animator LavaAnimator;
     public Transform[] RightleftRun;
@@ -24,6 +29,7 @@ public class CerberController : MonoBehaviour
     public void Awake()
     {
         StartCoroutine("StartKD");
+        StartCoroutine("BossRev");
     }
     public void FixedUpdate()
     {   
@@ -181,13 +187,25 @@ public class CerberController : MonoBehaviour
     {
         yield return new WaitForSeconds(3.6f);
         CerberAnimator.SetTrigger("GoingToRun");
+        CerberAudio.clip = MegaRik;
+        CerberAudio.Play();
         StartCoroutine("WaitAfterChill");
     }
     IEnumerator WaitAfterChill()
     {
         yield return new WaitForSeconds(1.4f);
+        CerberAudio.Play();
         CanMove = true;
         IsInFinalPos = false;
         CerberAnimator.SetBool("IsIdle", false);
+    }
+    IEnumerator BossRev()
+    {
+        for(int i = 0; i < 100; i++)
+        {
+            yield return new WaitForSeconds(10f);
+            CerberAudio.clip = CerberRev[Random.Range(0, CerberRev.Length)];
+            CerberAudio.Play();
+        }
     }
 }

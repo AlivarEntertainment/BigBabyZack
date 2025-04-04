@@ -8,6 +8,7 @@ public class StartMinigame : MonoBehaviour
     public PlayerController playerController;
     public bool PlayMode = false;
     [SerializeField] private Animator PressE;
+    
     public void OnTriggerStay2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Player")
@@ -19,6 +20,7 @@ public class StartMinigame : MonoBehaviour
                 PlayMode = true;
                 playerController.enabled = false;
                 PressE.SetBool("IsInFade", true);
+                StartCoroutine("LeaveCol");
             }
         }
     }
@@ -30,6 +32,12 @@ public class StartMinigame : MonoBehaviour
             PlayMode = false;
             playerController.enabled = true;
             PressE.SetBool("IsInFade", true);
+            StartCoroutine("LeaveCol");
         }
+    }
+    IEnumerator LeaveCol()
+    {
+        yield return new WaitForSeconds(4);
+         PressE.SetBool("IsInFade", true);
     }
 }

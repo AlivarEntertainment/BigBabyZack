@@ -27,21 +27,17 @@ public class AchivementCont : MonoBehaviour
         if(achiveType == AchiveType.LevelReach)
         {
             LevelRiched = PlayerPrefs.GetInt("LevelReached");
-            
-           
-           if(LevelRiched <= LevelToReach)
+            Debug.Log(LevelRiched);
+           if(PreviousCard.activeSelf == false)
            {     
-            Debug.Log("lvl");
-                if(PreviousCard.active == false)
-                {   
-                    Debug.Log("NotActive");
-                    this.gameObject.SetActive(false);
-                }
-                else
-                {
-                    ThisCard.sprite = CardGrey;
-                }
+                this.gameObject.SetActive(false);
+                
            }
+           if(LevelRiched < LevelToReach && PreviousCard.activeSelf == true)
+           {
+                ThisCard.sprite = CardGrey;
+           }
+           
            
         }
         if(achiveType == AchiveType.DoSmth)
@@ -60,7 +56,7 @@ public class AchivementCont : MonoBehaviour
             {
                 this.gameObject.SetActive(false);
             }
-            else if(ThisNatan -1 == Natan && PreviousCard.active == true)
+            else if(ThisNatan -1 == Natan && PreviousCard.activeSelf== true)
             {
                 ThisCard.sprite = CardGrey;
             }
